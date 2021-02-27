@@ -1,0 +1,211 @@
+.coordonnees-container
+{
+    .container-large
+    {
+        position: relative;
+        align-items: flex-start;
+    }
+    ul
+    {
+        list-style: none;
+        li
+        {
+            margin-bottom: 20px;
+        }
+        .icon-container
+        {
+            display: inline-flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .text
+        {
+            margin: 6px 0 0 18px;
+        }
+    }
+    .image-container
+    {
+        position: absolute;
+        right: 440px;
+        bottom: 0;
+        .silhouette
+        {
+            position: absolute;
+            left: 50%;
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
+        .silhouette_chat
+        {
+            top: 0;
+            transform: translate3d(-50%, -82%, 0);
+        }
+        .silhouette_chien01
+        {
+            bottom: 0;
+            transform: translate3d(-392%, -71%, 0);
+        }
+        .silhouette_chien02
+        {
+            bottom: 0;
+            transform: translate3d(-380%, -63%, 0);
+        }
+        .silhouette_chien03
+        {
+            bottom: 0;
+            transform: translate3d(-166%, -92%, 0);
+        }
+    }
+    .cadre
+    {
+        margin-bottom: 64px;
+        border: 1px solid black;
+        padding: 12px;
+        background-color: white;
+        img, iframe
+        {
+            border: 1px solid black;
+        }
+    }
+    .facade-container
+    {
+        border-radius: 50%;
+        img
+        {
+            border-radius: 50%;        
+        }
+    }
+}
+
+@media screen and (max-width: 1075px)
+{
+    .coordonnees-container
+    {
+        .content
+        {
+            order: 1;
+        }
+        ul
+        {
+            text-align: center;
+            .icon-container
+            {
+                flex-direction: column;
+            }
+            .text
+            {
+                margin-left: 0;
+            }
+        }
+        .image-container
+        {
+            order: 0;
+            margin-bottom: 20px;
+            position: static;
+            .silhouette
+            {
+                bottom: unset;
+                top: 50%;
+            }
+            .silhouette_chien01
+            {
+                transform: translate3d(-163%, 18%, 0);
+            }
+            .silhouette_chien02
+            {
+                transform: translate3d(121%, -4%, 0);
+            }
+            .silhouette_chien03
+            {
+                transform: translate3d(-260%, 42px, 0);
+            }
+            .silhouette_chat
+            {
+                transform: translate3d(120%, 28%, 0);
+            }
+            img
+            {
+                max-width: 250px;
+                height: auto;
+            }
+        }
+        .cadre
+        {
+            order: 2;
+            margin: 20px auto 0;
+            padding: 0;
+            width: 100%;
+            background-color: unset;
+            img
+            {
+                border: 2px solid $color-dark02;
+            }
+        }
+        .gm-container
+        {
+            border-radius: 0;
+            iframe
+            {
+                width: 100%;
+                border: none;
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px)
+{
+    .coordonnees-container
+    {
+        .image-container
+        {
+            .silhouette_chien03
+            {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 580px)
+{
+    .coordonnees-container
+    {
+        .image-container
+        {
+            .silhouette_chien02
+            {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px)
+{
+    .coordonnees-container
+    {
+        .image-container
+        {
+            .silhouette_chien01
+            {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 305px)
+{
+    .coordonnees-container
+    {
+        .image-container
+        {
+            .silhouette_chat
+            {
+                opacity: 0;
+            }
+        }
+    }
+}

@@ -210,6 +210,105 @@ nav li {
     display: none; }
   .toiletteuse-container .image-container {
     flex: none; } }
+.coordonnees-container .container-large {
+  position: relative;
+  align-items: flex-start; }
+.coordonnees-container ul {
+  list-style: none; }
+  .coordonnees-container ul li {
+    margin-bottom: 20px; }
+  .coordonnees-container ul .icon-container {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center; }
+  .coordonnees-container ul .text {
+    margin: 6px 0 0 18px; }
+.coordonnees-container .image-container {
+  position: absolute;
+  right: 440px;
+  bottom: 0; }
+  .coordonnees-container .image-container .silhouette {
+    position: absolute;
+    left: 50%;
+    opacity: 1;
+    transition: opacity 0.5s; }
+  .coordonnees-container .image-container .silhouette_chat {
+    top: 0;
+    transform: translate3d(-50%, -82%, 0); }
+  .coordonnees-container .image-container .silhouette_chien01 {
+    bottom: 0;
+    transform: translate3d(-392%, -71%, 0); }
+  .coordonnees-container .image-container .silhouette_chien02 {
+    bottom: 0;
+    transform: translate3d(-380%, -63%, 0); }
+  .coordonnees-container .image-container .silhouette_chien03 {
+    bottom: 0;
+    transform: translate3d(-166%, -92%, 0); }
+.coordonnees-container .cadre {
+  margin-bottom: 64px;
+  border: 1px solid black;
+  padding: 12px;
+  background-color: white; }
+  .coordonnees-container .cadre img, .coordonnees-container .cadre iframe {
+    border: 1px solid black; }
+.coordonnees-container .facade-container {
+  border-radius: 50%; }
+  .coordonnees-container .facade-container img {
+    border-radius: 50%; }
+
+@media screen and (max-width: 1075px) {
+  .coordonnees-container .content {
+    order: 1; }
+  .coordonnees-container ul {
+    text-align: center; }
+    .coordonnees-container ul .icon-container {
+      flex-direction: column; }
+    .coordonnees-container ul .text {
+      margin-left: 0; }
+  .coordonnees-container .image-container {
+    order: 0;
+    margin-bottom: 20px;
+    position: static; }
+    .coordonnees-container .image-container .silhouette {
+      bottom: unset;
+      top: 50%; }
+    .coordonnees-container .image-container .silhouette_chien01 {
+      transform: translate3d(-163%, 18%, 0); }
+    .coordonnees-container .image-container .silhouette_chien02 {
+      transform: translate3d(121%, -4%, 0); }
+    .coordonnees-container .image-container .silhouette_chien03 {
+      transform: translate3d(-260%, 42px, 0); }
+    .coordonnees-container .image-container .silhouette_chat {
+      transform: translate3d(120%, 28%, 0); }
+    .coordonnees-container .image-container img {
+      max-width: 250px;
+      height: auto; }
+  .coordonnees-container .cadre {
+    order: 2;
+    margin: 20px auto 0;
+    padding: 0;
+    width: 100%;
+    background-color: unset; }
+    .coordonnees-container .cadre img {
+      border: 2px solid #6d809b; }
+  .coordonnees-container .gm-container {
+    border-radius: 0; }
+    .coordonnees-container .gm-container iframe {
+      width: 100%;
+      border: none;
+      border-radius: 0; } }
+@media screen and (max-width: 900px) {
+  .coordonnees-container .image-container .silhouette_chien03 {
+    opacity: 0; } }
+@media screen and (max-width: 580px) {
+  .coordonnees-container .image-container .silhouette_chien02 {
+    opacity: 0; } }
+@media screen and (max-width: 500px) {
+  .coordonnees-container .image-container .silhouette_chien01 {
+    opacity: 0; } }
+@media screen and (max-width: 305px) {
+  .coordonnees-container .image-container .silhouette_chat {
+    opacity: 0; } }
 .animeWhenVisible-translateFromBot-init {
   transform: translate3d(0, 0, 0);
   transition: transform 2s ease-out, perspective-origin 2s ease-out; }
