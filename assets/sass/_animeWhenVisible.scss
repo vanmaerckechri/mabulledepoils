@@ -1,0 +1,29 @@
+.animeWhenVisible-translateFromBot-init
+{
+	transform: translate3d(0, 0, 0);
+	transition: transform 2s ease-out, perspective-origin 2s ease-out;
+}
+.animeWhenVisible-translateFromBot
+{
+	perspective-origin: 50% 200%!important;
+	transform: translate3d(0, 100%, 0);
+}
+.animeWhenVisible-unhide-init
+{
+	opacity: 1;
+	transition: opacity 1s ease-in;
+}
+.animeWhenVisible-unhide
+{
+	opacity: 0;
+	transition: opacity 0.5s linear;
+}
+.animeWhenVisible-rescale-init
+{
+	transform: scale3d(1, 1, 1);
+	transition: transform 1s ease-out;
+}
+.animeWhenVisible-rescale
+{
+	transform: scale3d(0, 0, 1);
+}

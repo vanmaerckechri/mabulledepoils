@@ -1,0 +1,36 @@
+// SIZES
+$maxWidth-l: calc(1180px + 128px);
+$header-height: 64px;
+
+// FONTS
+$fontFamily-main: 'Ubuntu', sans-serif;
+
+// COLORS
+
+	// Grey
+	$grey01: #272b33; // darkest
+	$grey02: #6d809b;
+	$grey03: #eff2f7;
+	$grey04: white; // lightest
+
+	// Green
+	$green01: #67bca3;
+	$green02: #a5d1c4;
+	$green03: #c3e1d6;
+	$green04: #d9ebe6;
+
+	// Pink
+	$pink01: #ed417e;
+	$pink02: #e3a4c1;
+	$pink03: #edbcd7;
+	$pink04: #efdae6;
+
+	// Distribution
+	$color-main01: $pink01;
+	$color-main02: $pink02;
+	$color-main03: $pink03;
+	$color-main04: $pink04;
+	$color-dark01: $grey01;
+	$color-dark02: $grey02;
+	$color-light01: $grey03;
+	$color-light02: $grey04;

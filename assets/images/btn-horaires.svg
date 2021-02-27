@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="btn-horaires" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="48px" height="48px" viewBox="0 2 48 48" enable-background="new 0 2 48 48" xml:space="preserve">
+<circle fill="#ED427E" cx="24.229" cy="7.948" r="2.057"/>
+<circle fill="#ED427E" cx="25.715" cy="44.628" r="1.671"/>
+<circle fill="#ED427E" cx="43.768" cy="27.258" r="1.628"/>
+<circle fill="#ED427E" cx="5.489" cy="26.002" r="1.828"/>
+<circle fill="#ED427E" cx="35.313" cy="10.347" r="1.114"/>
+<circle fill="#ED427E" cx="41.825" cy="17.775" r="0.91"/>
+<circle fill="#ED427E" cx="41.367" cy="35.371" r="1.028"/>
+<circle fill="#ED427E" cx="34.742" cy="42.228" r="1.143"/>
+<circle fill="#ED427E" cx="16.116" cy="43.255" r="0.942"/>
+<circle fill="#ED427E" cx="8.917" cy="36.515" r="1.372"/>
+<circle fill="#ED427E" cx="8.003" cy="17.775" r="0.914"/>
+<circle fill="#ED427E" cx="13.945" cy="10.919" r="1.143"/>
+<polygon fill="#ED427E" points="21.638,25.773 21.638,29.658 27.766,29.764 34.59,27.372 27.281,25.697 "/>
+<polygon fill="#ED427E" points="22.527,30.763 26.855,30.763 26.814,25.261 24.474,11.376 22.4,25.408 "/>
+<path fill="#ED427E" d="M12.9,4.728C1.151,10.858-3.404,25.352,2.727,37.101c6.13,11.749,20.624,16.304,32.372,10.173
+	c11.75-6.131,16.306-20.625,10.174-32.373C39.143,3.151,24.648-1.404,12.9,4.728z M34.664,45.696
+	c-11.021,5.751-24.618,1.479-30.37-9.542c-5.75-11.022-1.477-24.619,9.544-30.37c11.022-5.75,24.619-1.479,30.369,9.543
+	C49.958,26.349,45.686,39.945,34.664,45.696z"/>
+</svg>

@@ -1,0 +1,98 @@
+.section
+{
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	&:first-of-type
+	{
+		padding-top: $header-height;
+	}
+}
+.container-large
+{
+	margin: 0 auto;
+	padding: 64px;
+	max-width: $maxWidth-l;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.content
+{
+	width: 100%;
+	h2
+	{
+		margin-bottom: 40px;
+		font-weight: normal;
+		font-size: 48px;
+	}
+	h2, p
+	{
+		font-weight: 300;
+		white-space: nowrap;
+	}
+	a, p, span
+	{
+		color: black;
+		font-size: 16px;
+		line-height: 30px;
+		font-weight: 300;
+	}
+}
+.section-light
+{
+	background-color: $color-light01;
+	h2
+	{
+		color: $color-dark02;
+	}
+	h2, p
+	{
+		text-shadow: 2px 0 0 $color-light01, 2px 2px 0 $color-light01, 0 2px 0 $color-light01, -2px 2px 0 $color-light01, -2px 0 0 $color-light01, -2px -2px 0 $color-light01, 0 -2px 0 $color-light01, 2px -2px 0 $color-light01;
+	}
+}
+.section-dark
+{
+    background-color: $color-main02;
+	h2
+    {
+        color: $color-light02;
+    }
+	h2, p
+	{
+		text-shadow: 2px 0 0 $color-main02, 2px 2px 0 $color-main02, 0 2px 0 $color-main02, -2px 2px 0 $color-main02, -2px 0 0 $color-main02, -2px -2px 0 $color-main02, 0 -2px 0 $color-main02, 2px -2px 0 $color-main02;
+	}
+}
+@media screen and (max-width: 1075px)
+{
+    .container-large
+    {
+        margin-top: 0;
+        padding: 16px 32px;
+        flex-direction: column;
+		.image-container
+		{
+			margin: 0 auto 20px;
+			order: 0;
+		}
+		.content
+		{
+			order: 1;
+			h2, p
+			{
+				white-space: normal;
+				text-align: center;
+			}
+			h2
+			{
+				font-size: 32px;
+			}
+		}
+    }
+}

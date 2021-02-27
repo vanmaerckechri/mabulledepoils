@@ -1,0 +1,23 @@
+html, body, header, nav, footer, section, div, span, h1, h2, p, a, img, ul, li
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html
+{
+	font-size: 100%;
+	font-family: $fontFamily-main;
+}
+body
+{
+	display: flex;
+	flex-direction: column;
+	background-color: $color-light01;
+	overflow-x: hidden;
+}
+img
+{
+	vertical-align: middle;
+}
