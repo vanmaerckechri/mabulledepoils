@@ -7,14 +7,17 @@ header
     width: 100%;
     height: $header-height;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    box-shadow: 0px 1px 2px 1px rgb(109, 128, 155);
+    box-shadow: 0px 1px 2px 1px #6d809b3d;
     background-color: $color-light02;
-    .container-large
+    .container
     {
-        padding: 0 12px;
-        max-width: 1720px;
+        padding: 0 64px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     .logo-container
     {
@@ -53,6 +56,17 @@ nav
         .btn-text
         {
             margin-top: 2px;
+        }
+    }
+}
+
+@media screen and (max-width: 905px)
+{
+    header
+    {
+        .container
+        {
+            padding: 0 16px;
         }
     }
 }

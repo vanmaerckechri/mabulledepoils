@@ -17,6 +17,12 @@ body
 	background-color: $color-light01;
 	overflow-x: hidden;
 }
+h1
+{
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
 img
 {
 	vertical-align: middle;
