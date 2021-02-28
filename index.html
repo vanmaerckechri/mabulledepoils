@@ -144,11 +144,12 @@
         <script src="assets/js/Namespaces.js"></script>
         <script src="assets/js/AnimeWhenVisible.js"></script>
         <script src="assets/js/Parallax.js"></script>
+        <script src="assets/js/RequestAnimationFrame.js"></script>
         <script>
             (function()
             {
                 "use strict";
-                
+
                 // Salon:
                 var parallaxMousse = new CVM.Parallax(document.getElementById("parallax-mousse"), "scroll", {h_origin: 50, v_origin: 100, h_fixed: 50, v_focus: 100});
 
@@ -160,6 +161,16 @@
                 // Soins:
                 var parallaxSoins_bulles = new CVM.Parallax(document.getElementById("parallax-soins-bulles"), "scroll", {h_origin: 50, v_origin: 50, h_fixed: 50, v_focus: 150});
                 var animeWhenVisibleSoins_images = new CVM.AnimeWhenVisible(window, document.getElementById("soins-content"), document.getElementById("soins-content"), "animeWhenVisible-unhide", 0.25, true, true, true);
+
+                // Limit dom refresh per sec:
+                var parallaxList = [parallaxMousse, parallaxToiletteuse_bulles, parallaxSoins_bulles];
+                var refreshDom = new CVM.RequestAnimationFrame(function()
+                {
+                    for (var i = parallaxList.length - 1; i >= 0; i--)
+                    {
+                        parallaxList[i].refreshDom();
+                    }
+                },10);
             }());
         </script>
     </body>
