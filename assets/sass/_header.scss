@@ -9,11 +9,11 @@ header
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 1px 2px 1px #6d809b3d;
+    box-shadow: 0px 1px 2px 1px $color-boxShadow;
     background-color: $color-light02;
-    overflow: hidden;
     .container
     {
+        position: relative;
         padding: 0 64px;
         width: 100%;
         display: flex;
@@ -73,15 +73,14 @@ nav
 }
 .mainMenu-container
 {
-	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	input
 	{
 		position: absolute;
-		top: 0;
-		right: 0;
+		top: 6px;
+		right: 13px;
 		width: 40px;
 		height: 40px;
 		opacity: 0;
@@ -117,17 +116,16 @@ nav
 		flex-wrap: wrap;
 		ul
 		{
-            position: fixed;
+            position: absolute;
             left: 0;
-            top: $header-height;
+            top: calc(#{$header-height} - 4px);
             flex-direction: column;
 			max-height: 0;
 			width: 100vw;
 			text-align: center;
 			overflow: hidden;
             background-color: $color-light02;
-            box-shadow: 0px 4px 2px -2px #6d809b3d;
-			transition: max-height 0.4s ease-out;
+			transition: max-height 0.4s ease-out, box-shadow 0s 0.4s;
 			li
 			{
 				margin-left: 0;
@@ -219,6 +217,8 @@ nav
 		input:checked ~ ul
 		{
 			max-height: 256px;
+            box-shadow: 0px 1px 2px 1px $color-boxShadow;
+			transition: max-height 0.4s ease-out, box-shadow 0s;
 		}
 		input:checked ~ .mainMenu-icon
 		{

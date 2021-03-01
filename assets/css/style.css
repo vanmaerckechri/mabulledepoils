@@ -141,11 +141,11 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0px 1px 2px 1px #6d809b3d;
-          box-shadow: 0px 1px 2px 1px #6d809b3d;
-  background-color: white;
-  overflow: hidden; }
+  -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 25, 0.2);
+          box-shadow: 0px 1px 2px 1px rgba(0, 0, 25, 0.2);
+  background-color: white; }
   header .container {
+    position: relative;
     padding: 0 64px;
     width: 100%;
     display: -webkit-box;
@@ -202,7 +202,6 @@ nav li {
             transform: scale3d(0.8, 0.8, 1); }
 
 .mainMenu-container {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,8 +213,8 @@ nav li {
           align-items: center; }
   .mainMenu-container input {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 6px;
+    right: 13px;
     width: 40px;
     height: 40px;
     opacity: 0;
@@ -234,9 +233,9 @@ nav li {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
     .mainMenu-container ul {
-      position: fixed;
+      position: absolute;
       left: 0;
-      top: 64px;
+      top: calc(64px - 4px);
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -246,10 +245,10 @@ nav li {
       text-align: center;
       overflow: hidden;
       background-color: white;
-      -webkit-box-shadow: 0px 4px 2px -2px #6d809b3d;
-              box-shadow: 0px 4px 2px -2px #6d809b3d;
-      -webkit-transition: max-height 0.4s ease-out;
-      transition: max-height 0.4s ease-out; }
+      -webkit-transition: max-height 0.4s ease-out, -webkit-box-shadow 0s 0.4s;
+      transition: max-height 0.4s ease-out, -webkit-box-shadow 0s 0.4s;
+      transition: max-height 0.4s ease-out, box-shadow 0s 0.4s;
+      transition: max-height 0.4s ease-out, box-shadow 0s 0.4s, -webkit-box-shadow 0s 0.4s; }
       .mainMenu-container ul li {
         margin-left: 0;
         padding: 6px 0;
@@ -319,7 +318,13 @@ nav li {
     .mainMenu-container input:hover {
       cursor: pointer; }
   .mainMenu-container input:checked ~ ul {
-    max-height: 256px; }
+    max-height: 256px;
+    -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 25, 0.2);
+            box-shadow: 0px 1px 2px 1px rgba(0, 0, 25, 0.2);
+    -webkit-transition: max-height 0.4s ease-out, -webkit-box-shadow 0s;
+    transition: max-height 0.4s ease-out, -webkit-box-shadow 0s;
+    transition: max-height 0.4s ease-out, box-shadow 0s;
+    transition: max-height 0.4s ease-out, box-shadow 0s, -webkit-box-shadow 0s; }
   .mainMenu-container input:checked ~ .mainMenu-icon span {
     -webkit-transition: -webkit-transform 0.2s 0.1s;
     transition: -webkit-transform 0.2s 0.1s;
