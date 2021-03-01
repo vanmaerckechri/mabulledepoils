@@ -53,12 +53,41 @@ nav
             color: $color-main01;
             font-size: 14px;
             font-weight: 300;
+            img
+            {
+                transition: transform 0.2s ease-out;
+            }
         }
         .btn-text
         {
             margin-top: 2px;
         }
+        &:hover
+        {
+            img
+            {
+                transform: scale3d(0.8, 0.8, 1);
+            }
+        }
     }
+}
+.mainMenu-container
+{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	input
+	{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 40px;
+		height: 40px;
+		opacity: 0;
+		pointer-events: none;
+		z-index: -1;
+	}
 }
 @media screen and (max-width: 845px)
 {
@@ -72,4 +101,144 @@ nav
 }
 @media screen and (max-width: 750px)
 {
+    header
+    {
+        .logo-container
+        {
+            .logo-text
+            {
+                margin-left: 10px;
+                font-size: 12px;
+            }
+        }
+    }
+    .mainMenu-container
+	{
+		flex-wrap: wrap;
+		ul
+		{
+            position: fixed;
+            left: 0;
+            top: $header-height;
+            flex-direction: column;
+			max-height: 0;
+			width: 100vw;
+			text-align: center;
+			overflow: hidden;
+            background-color: $color-light02;
+            box-shadow: 0px 4px 2px -2px #6d809b3d;
+			transition: max-height 0.4s ease-out;
+			li
+			{
+				margin-left: 0;
+                padding: 6px 0;
+                border-top: 1px solid $color-main02;
+                border-style: dashed;
+                .btn-text
+                {
+                    position: relative;
+                    &:before, &:after
+                    {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        content: '';
+                        border-radius: 50%;
+                        width: 8px;
+                        height: 8px;
+                        background-color: $color-main01;
+                        transition: transform 0.3s ease-out;
+                    }
+                    &:before
+                    {
+                        transform: translate3d(-120px, -50%, 0) scale3d(0, 0, 1);
+                    }
+                    &:after
+                    {
+                        transform: translate3d(112px, -50%, 0) scale3d(0, 0, 1);
+                    }
+                }
+                &:hover
+                {
+                    .btn-text
+                    {
+                        &:before
+                        {
+                            transform: translate3d(-60px, -50%, 0) scale3d(1, 1, 1);
+                        }
+                        &:after
+                        {
+                            transform: translate3d(52px, -50%, 0) scale3d(1, 1, 1);
+                        }
+                    }
+                }
+			}
+		}
+        .mainMenu-icon
+        {
+            margin-left: auto;
+            width: 40px;
+            height: 40px;
+            span
+            {
+                margin-left: auto;
+                width: 40px;
+                height: 3px;
+                display: block;
+                background-color: $color-main01;
+                pointer-events: none;
+                transition: transform 0.2s;
+                &:nth-of-type(1)
+                {
+                    transform-origin: left top;
+                }
+                &:nth-of-type(2)
+                {
+                    transform: translate3d(0, 16px, 0);
+                    transition: transform 0.1s 0.2s;
+                }
+                &:nth-of-type(3)
+                {
+                    transform-origin: left bottom;
+                    transform: translate3d(0, 31px, 0);
+                }
+            }
+        }
+	}
+	.mainMenu-container
+	{
+		input
+		{
+            z-index: 1;
+			pointer-events: auto;
+			&:hover
+			{
+				cursor: pointer;
+			}
+		}
+		input:checked ~ ul
+		{
+			max-height: 256px;
+		}
+		input:checked ~ .mainMenu-icon
+		{
+			span
+			{
+                transition: transform 0.2s 0.1s;
+				&:nth-of-type(1)
+				{
+					transform: translate3d(7px, 6px, 0) rotate3d(0, 0, 1, 45deg);
+				}
+				&:nth-of-type(2)
+				{
+					transform: translate3d(0, 16px, 0) scale3d(0, 1, 1);
+                    transition: transform 0.1s;
+				}			
+				&:nth-of-type(3)
+				{
+					transform: translate3d(7px, 27px, 0) rotate3d(0, 0, 1, -45deg);
+				}
+			}
+		}
+	}
 }
