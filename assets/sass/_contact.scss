@@ -7,10 +7,13 @@
     }
     ul
     {
-        list-style: none;
         li
         {
             margin-bottom: 20px;
+            &:last-of-type
+            {
+                margin-bottom: 0;
+            }
         }
         .icon-container
         {
@@ -25,6 +28,7 @@
     }
     .image-container
     {
+        z-index: 1;
         position: absolute;
         right: 440px;
         bottom: 0;
@@ -75,6 +79,10 @@
             border-radius: 50%;        
         }
     }
+    .gm-container
+    {
+        transform: translate3d(0, 47px, 0) rotate3d(0, 0, 1, 5deg);
+    }
 }
 
 @media screen and (max-width: 1075px)
@@ -87,6 +95,7 @@
         }
         ul
         {
+            margin-bottom: 40px;
             text-align: center;
             .icon-container
             {
@@ -109,19 +118,19 @@
             }
             .silhouette_chien01
             {
-                transform: translate3d(-163%, 18%, 0);
+                transform: translate3d(-163%, 12%, 0);
             }
             .silhouette_chien02
             {
-                transform: translate3d(121%, -4%, 0);
+                transform: translate3d(121%, -9%, 0);
             }
             .silhouette_chien03
             {
-                transform: translate3d(-260%, 42px, 0);
+                transform: translate3d(-260%, 35px, 0);
             }
             .silhouette_chat
             {
-                transform: translate3d(120%, 28%, 0);
+                transform: translate3d(120%, 20%, 0);
             }
             img
             {
@@ -132,7 +141,7 @@
         .cadre
         {
             order: 2;
-            margin: 20px auto 0;
+            margin: 0 auto;
             padding: 0;
             width: 100%;
             background-color: unset;
@@ -141,9 +150,14 @@
                 border: 2px solid $color-dark02;
             }
         }
+        .facade-container
+        {
+            border: none;
+        }
         .gm-container
         {
             border-radius: 0;
+            transform: none;
             iframe
             {
                 width: 100%;

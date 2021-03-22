@@ -1,3 +1,27 @@
+// Common
+.animeWhenVisible-translateFromLeft-init
+{
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+	transition: transform 0.4s cubic-bezier(0.33, 0, 1, 1.1), opacity 0.4s cubic-bezier(0.33, 0, 1, 1);
+}
+.animeWhenVisible-translateFromLeft
+{
+	opacity: 0;
+	transform: translate3d(-100%, 0, 0);
+	transition: none;
+}
+.animeWhenVisible-unhide-init
+{
+	opacity: 1;
+	transition: opacity 1s 0.25s ease-in;
+}
+.animeWhenVisible-unhide
+{
+	opacity: 0;
+	transition: none;
+}
+// home
 .animeWhenVisible-translateFromBot-init
 {
 	transform: translate3d(0, 0, 0);
@@ -7,16 +31,19 @@
 {
 	perspective-origin: 50% 200%!important;
 	transform: translate3d(0, 100%, 0);
+	transition: none;
 }
-.animeWhenVisible-unhide-init
+.animeWhenVisible-translateFromRigth-init
 {
 	opacity: 1;
-	transition: opacity 1s ease-in;
+	transform: translate3d(0, 0, 0);
+	transition: transform 0.4s cubic-bezier(0.33, 0, 1, 1.1), opacity 0.4s cubic-bezier(0.33, 0, 1, 1);
 }
-.animeWhenVisible-unhide
+.animeWhenVisible-translateFromRigth
 {
 	opacity: 0;
-	transition: opacity 0.5s linear;
+	transform: translate3d(100%, 0, 0);
+	transition: none;
 }
 .animeWhenVisible-rescale-init
 {
@@ -26,4 +53,17 @@
 .animeWhenVisible-rescale
 {
 	transform: scale3d(0, 0, 1);
+	transition: none;
+}
+// horaires
+.animeWhenVisible-load-init
+{
+	transform: translate3d(0, 0, 0);
+	transition: transform 0.3s cubic-bezier(0.86, 0.6, 0.08, 1.2);
+
+}
+.animeWhenVisible-load
+{
+	transform: translate3d(0, 100%, 0);
+	transition: none;
 }

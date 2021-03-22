@@ -23,6 +23,11 @@
         this.elem.classList.add(this.cssClassname);
         this.event = {elem: this.scrollContainer, listener: 'scroll', method: this.launchAnimation.bind(this)};
         this.event.elem.addEventListener(this.event.listener, this.event.method);
+
+        setTimeout(function() {
+            this.event.elem.addEventListener(this.event.listener, this.event.method);
+            this.launchAnimation();
+        }.bind(this), 1);
 	};
 
 	CVM.AnimeWhenVisible.prototype.launchAnimation = function()

@@ -1,0 +1,241 @@
+@keyframes parallaxZoom
+{
+    0%
+    {
+        perspective: 200px;
+    }
+    100%
+    {
+        perspective: 100px;
+    }
+}
+
+.horaires-container
+{
+    .container-large
+    {
+        position: relative;
+    }
+    ul
+    {
+        margin-top: 40px;
+        width: 75%;
+    }
+    li
+    {
+        padding: 0 24px;
+        position: relative;
+        overflow: hidden;
+        &:nth-child(odd)
+        {
+            background-color: $color-dark02;
+            span
+            {
+                text-shadow: none;
+                color: white;
+            }
+        }
+        &:nth-child(even)
+        {
+            &.active
+            {
+                &:after
+                {
+                    border-color: transparent transparent transparent $color-dark02;
+                }
+            }
+        }
+        &.active
+        {
+            &:after
+            {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 10px 0 10px 17.3px;
+                border-color: transparent transparent transparent $color-light01;
+                transform: translate3d(0, -50%, 0);
+            }
+        }
+        span
+        {
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        &:nth-child(1)
+        {
+            .jour
+            {
+                transition-delay: 0.3s;
+            }
+        }
+        &:nth-child(2)
+        {
+            .jour
+            {
+                transition-delay: 0.4s;
+            }
+        }
+        &:nth-child(3)
+        {
+            .jour
+            {
+                transition-delay: 0.5s;
+            }
+        }
+        &:nth-child(4)
+        {
+            .jour
+            {
+                transition-delay: 0.6s;
+            }
+        }
+        &:nth-child(5)
+        {
+            .jour
+            {
+                transition-delay: 0.7s;
+            }
+        }
+        &:nth-child(6)
+        {
+            .jour
+            {
+                transition-delay: 0.8s;
+            }
+        }
+        &:nth-child(7)
+        {
+            .jour
+            {
+                transition-delay: 0.9s;
+            }
+        }
+    }
+    .jour
+    {
+        max-width: 392px;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .image-container
+    {
+        z-index: 1;
+        overflow: hidden;
+        position: absolute;
+        top: 130px;
+        right: 0;
+        border-radius: 50%;
+        border: 75px solid $color-light01;
+        width: 550px;
+        height: 550px;
+    }
+    .parallax-niche
+    {
+        border-radius: 50%;
+        border: 1px solid black;
+        perspective: 200px;
+        perspective-origin: 50% 50%;
+        transition: perspective-origin 0.5s ease-out;
+        min-height: auto;
+        animation: parallaxZoom 5s 0.6s forwards;
+        .layer
+        {
+            width: 650px;
+            height: 650px;
+            bottom: unset;
+            top: 50%;
+            left: 50%;
+        }
+        .layer-niche1, .horloge-container
+        {
+            transform: translate3d(-50%, -50%, -30px) scale3d(1.3, 1.3, 1);
+        }
+        .layer-niche2
+        {
+            transform: translate3d(-50%, -50%, -60px) scale3d(1.6, 1.6, 1);
+        }
+        .layer-niche3
+        {
+            transform: translate3d(-50%, -50%, -75px) scale3d(1.75, 1.75, 1);
+        }
+        .layer-niche4
+        {
+            transform: translate3d(-50%, -50%, -100px) scale3d(2, 2, 1);
+        }
+        .horloge-container
+        {
+            position: relative;
+            top: 173px;
+            left: 205px;
+            width: 81px;
+            height: 81px;
+            pointer-events: none;
+            .aiguille
+            {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 8px;
+                height: 50px;
+                transform-origin: 4px 38px;
+            }
+            .seconds
+            {
+                animation: clock 60s infinite steps(60);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1075px)
+{
+    .horaires-container
+    {
+        ul
+        {
+            width: 100%;
+        }
+        .jour
+        {
+            max-width: 100%;
+        }
+        .parallax-niche
+        {
+            border: none;
+            position: relative;
+            perspective-origin: 50% 40%;
+            .layer
+            {
+                width: 500px;
+                height: 500px;
+            }
+            .horloge-container
+            {
+                top: 385px;
+                left: 410px;
+                .aiguille
+                {
+                    position: absolute;
+                    height: 40px;
+                    transform-origin: 4px 30px;
+                }
+            }
+        }
+        .image-container
+        {
+            border: 2px solid $color-dark02;
+            position: static;
+            width: 250px;
+            height: 250px;
+            transform: none;
+        }
+    }
+}
