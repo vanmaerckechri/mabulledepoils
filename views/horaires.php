@@ -5,59 +5,59 @@ $meta_description = "Les horaires du salon de toilettage animalier au Fil du Poi
 $og_page = "horaires.php";
 
 ob_start();?>
-    <div id="main" class="main">
-        <section class="section section-light horaires-container">
+    <div id="main" class="main page-horaires">
+        <section class="section section-light">
             <div class="container-large">
                 <div class="content">
                     <h1 id="horaires-title">Horaires</h1>
                     <p id="horaires-intro">Nous vous accueillons sur rendez-vous du mardi au samedi.</p>
-                    <ul>
+                    <ul class="table">
                         <li id="day1">
-                            <p class="jour">
+                            <p class="row row1">
                                 <span>lundi </span>
                                 <span>fermé</span>
                             </p>
                         </li>
                         <li id="day2">
-                            <p class="jour">
+                            <p class="row row2">
                                 <span>mardi </span>
                                 <span>09h - 17h</span>
                             </p>
                         </li>
                         <li id="day3">
-                            <p class="jour">
+                            <p class="row row3">
                                 <span>mercredi </span>
                                 <span>09h - 17h</span>
                             </p>
                         </li>
                         <li id="day4">
-                            <p class="jour">
+                            <p class="row row4">
                                 <span>jeudi </span>
                                 <span>09h - 17h</span>
                             </p>
                         </li>
                         <li id="day5">
-                            <p class="jour">
+                            <p class="row row5">
                                 <span>vendredi </span>
                                 <span>09h - 17h</span>
                             </p>
                         </li>
                         <li id="day6">
-                            <p class="jour">
+                            <p class="row row6">
                                 <span>samedi </span>
                                 <span>09h - 17h</span>
                             </p>
                         </li>
                         <li id="day0">
-                            <p class="jour">
+                            <p class="row row7">
                                 <span>dimanche </span>
                                 <span>fermé</span>
                             </p>
                         </li>
                     </ul>
                 </div>
-                <div class="image-container">
-                    <div id="parallax-niche" class="parallax-container parallax-niche">
+                <div class="image-container border-cut">
+                    <div id="parallax-niche" class="parallax-container parallax-niche cadre">
                         <img src="assets/images/niche04.svg" alt="illustration d'une niche au quatrième plan" class="layer layer-niche4">
                         <img src="assets/images/niche03.svg" alt="illustration d'une niche au troisième plan" class="layer layer-niche3">
                         <img src="assets/images/niche02.svg" alt="illustration d'une niche au deuxième plan" class="layer layer-niche2">
@@ -75,10 +75,10 @@ ob_start();?>
 <?php $content_main = ob_get_clean();
 
 ob_start();?>
-    <script src="/assets/js/Clock.js"></script>
-    <script src="/assets/js/Parallax.js"></script>
-    <script src="/assets/js/AnimeWhenVisible.js"></script>
-    <script src="/assets/js/RequestAnimationFrame.js"></script>
+    <script src="assets/js/Clock.js"></script>
+    <script src="assets/js/Parallax.js"></script>
+    <script src="assets/js/AnimeWhenVisible.js"></script>
+    <script src="assets/js/RequestAnimationFrame.js"></script>
     <script>
         (function()
         {
@@ -98,12 +98,13 @@ ob_start();?>
 
             }, 6000);
 
-            var animeWhenVisibleHoraires_title = new CVM.AnimeWhenVisible(window, document.getElementById("horaires-title"), document.getElementById("horaires-title"), "animeWhenVisible-translateFromLeft", 0.25, true, true, false);
-            var animeWhenVisibleHoraires_intro = new CVM.AnimeWhenVisible(window, document.getElementById("horaires-intro"), document.getElementById("horaires-intro"), "animeWhenVisible-translateFromLeft", 0.25, true, true, false);
-            var dayList = document.querySelectorAll(".jour")
-            for (var i = dayList.length - 1; i >= 0; i--)
+            var animeWhenVisibleHoraires_title = new CVM.AnimeWhenVisible(window, document.getElementById("horaires-title"), document.getElementById("horaires-title"), "animeWhenVisible-translateFromLeft", 0, true, true, false);
+            var animeWhenVisibleHoraires_intro = new CVM.AnimeWhenVisible(window, document.getElementById("horaires-intro"), document.getElementById("horaires-intro"), "animeWhenVisible-translateFromRight", 0, true, true, false);
+            var rowList = document.querySelectorAll(".table .row");
+            var rows = [];
+            for (var i = rowList.length - 1; i >= 0; i--)
             {
-                var animeWhenVisibleDays = new CVM.AnimeWhenVisible(window, document.getElementById("main"), dayList[i], "animeWhenVisible-load", 0, true, true, false);
+                rows[i] = new CVM.AnimeWhenVisible(window, document.getElementById("main"), rowList[i], "animeWhenVisible-load", 0, true, true, false);
             }
         }());
     </script>

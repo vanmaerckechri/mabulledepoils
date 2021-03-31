@@ -1,4 +1,4 @@
-.coordonnees-container
+.page-contact
 {
     .container-large
     {
@@ -63,12 +63,13 @@
     .cadre
     {
         margin-bottom: 64px;
-        border: 1px solid black;
+        border-radius: initial;
         padding: 12px;
+        width: auto;
         background-color: white;
         img, iframe
         {
-            border: 1px solid black;
+            border: 2px solid $color-dark02;
         }
     }
     .facade-container
@@ -85,9 +86,9 @@
     }
 }
 
-@media screen and (max-width: 1075px)
+@media screen and (max-width: 1140px)
 {
-    .coordonnees-container
+    #main.page-contact
     {
         .content
         {
@@ -108,13 +109,11 @@
         }
         .image-container
         {
-            order: 0;
-            margin-bottom: 20px;
-            position: static;
             .silhouette
             {
                 bottom: unset;
                 top: 50%;
+                width: auto;
             }
             .silhouette_chien01
             {
@@ -145,10 +144,6 @@
             padding: 0;
             width: 100%;
             background-color: unset;
-            img
-            {
-                border: 2px solid $color-dark02;
-            }
         }
         .facade-container
         {
@@ -170,7 +165,7 @@
 
 @media screen and (max-width: 900px)
 {
-    .coordonnees-container
+    #main.page-contact
     {
         .image-container
         {
@@ -184,7 +179,7 @@
 
 @media screen and (max-width: 580px)
 {
-    .coordonnees-container
+    #main.page-contact
     {
         .image-container
         {
@@ -198,7 +193,7 @@
 
 @media screen and (max-width: 500px)
 {
-    .coordonnees-container
+    #main.page-contact
     {
         .image-container
         {
@@ -212,7 +207,7 @@
 
 @media screen and (max-width: 305px)
 {
-    .coordonnees-container
+    #main.page-contact
     {
         .image-container
         {

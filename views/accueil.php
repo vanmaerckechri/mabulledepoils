@@ -4,7 +4,7 @@ $content_title = "Accueil | Au Fil du Poil, Salon de toilettage Animalier";
 $meta_description = "Présentation du salon de toilettage animalier au Fil du Poil situé à Wavre.";
 
 ob_start();?>
-    <div id="main" class="main">
+    <div id="main" class="main page-accueil">
         <section class="section section-light salon-container">
             <div id="parallax-mousse" class="parallax-container">
                 <img src="assets/images/mousse03.svg" alt="illustration de mousse au troisième plan" class="layer layer-mousse3">
@@ -21,7 +21,7 @@ ob_start();?>
                     </p>
                 </div>
                 <div id="salon-images" class="image-container">
-                    <img src="assets/images/logo.svg" width="320" height="300" alt="logo du salon de toilettage illustrant un chiot prenant un bain">
+                    <img src="assets/images/logo_02.svg" width="320" height="300" alt="logo du salon de toilettage illustrant un chiot prenant un bain">
                 </div>
             </div>
         </section>
@@ -60,7 +60,7 @@ ob_start();?>
                     </p>
                 </div>
                 <div id="soins-images" class="image-container">
-                    <img src="assets/images/chiensoins.jpg" width="350" height="350" alt="photo d'un chien après qu'il ait reçu des soins">
+                    <img class="cadre" src="assets/images/chiensoins.jpg" width="350" height="350" alt="photo d'un chien après qu'il ait reçu des soins">
                 </div>
             </div>
         </section>
@@ -68,9 +68,9 @@ ob_start();?>
 <?php $content_main = ob_get_clean();
 
 ob_start();?>
-    <script src="/assets/js/AnimeWhenVisible.js"></script>
-    <script src="/assets/js/Parallax.js"></script>
-    <script src="/assets/js/RequestAnimationFrame.js"></script>
+    <script src="assets/js/AnimeWhenVisible.js"></script>
+    <script src="assets/js/Parallax.js"></script>
+    <script src="assets/js/RequestAnimationFrame.js"></script>
     <script>
         (function()
         {
@@ -84,7 +84,7 @@ ob_start();?>
             // Toiletteuse:
             var parallaxToiletteuse_bulles = new CVM.Parallax(document.getElementById("parallax-toiletteuse-bulles"), "mouse", {h_origin: 50, v_origin: 50, h_min: 40, v_min: 40, h_max: 60, v_max: 60, h_inverse: true, v_inverse: true});
             var animeWhenVisibleToiletteuse_bulles = new CVM.AnimeWhenVisible(window, document.getElementById("toiletteuse-container"), document.getElementById("parallax-toiletteuse-bulles"), "animeWhenVisible-translateFromBot", 0.4, true, true, true);
-            var animeWhenVisibleToiletteuse_content = new CVM.AnimeWhenVisible(window, document.getElementById("toiletteuse-content"), document.getElementById("toiletteuse-content"), "animeWhenVisible-translateFromRigth", 0.1, true, true, true);
+            var animeWhenVisibleToiletteuse_content = new CVM.AnimeWhenVisible(window, document.getElementById("toiletteuse-content"), document.getElementById("toiletteuse-content"), "animeWhenVisible-translateFromRight", 0.1, true, true, true);
             var animeWhenVisibleToiletteuse_images = new CVM.AnimeWhenVisible(window, document.getElementById("toiletteuse-images"), document.getElementById("toiletteuse-images"), "animeWhenVisible-unhide", 0.3, true, true, true);
 
             // Soins:

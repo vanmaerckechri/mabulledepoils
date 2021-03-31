@@ -100,32 +100,158 @@ ul {
   .section-dark h2, .section-dark p {
     text-shadow: 2px 0 0 #e3a4c1, 2px 2px 0 #e3a4c1, 0 2px 0 #e3a4c1, -2px 2px 0 #e3a4c1, -2px 0 0 #e3a4c1, -2px -2px 0 #e3a4c1, 0 -2px 0 #e3a4c1, 2px -2px 0 #e3a4c1; }
 
-@media screen and (max-width: 1075px) {
-  .container-large {
+.border-cut {
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 50%;
+  border: 75px solid #eff2f7;
+  background-color: #eff2f7;
+  right: 0;
+  width: 550px;
+  height: 550px; }
+
+.cadre {
+  border-radius: 50%;
+  border: 2px solid #6d809b;
+  width: 100%;
+  height: auto; }
+
+.table {
+  margin-top: 26px;
+  width: 75%; }
+  .table li {
+    padding: 0 24px;
+    position: relative;
+    overflow: hidden; }
+    .table li span {
+      text-align: left; }
+    .table li:nth-child(odd) {
+      background-color: #6d809b; }
+      .table li:nth-child(odd) span {
+        text-shadow: none;
+        color: white; }
+    .table li:nth-child(even).active:after {
+      border-color: transparent transparent transparent #6d809b; }
+    .table li.active:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 0 10px 17.3px;
+      border-color: transparent transparent transparent #eff2f7;
+      -webkit-transform: translate3d(0, -50%, 0);
+              transform: translate3d(0, -50%, 0); }
+    .table li span {
+      text-transform: uppercase;
+      font-weight: 500; }
+    .table li .row {
+      width: 100%;
+      height: 50px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .table li .row1 {
+      -webkit-transition-delay: 0.3s;
+              transition-delay: 0.3s; }
+    .table li .row2 {
+      -webkit-transition-delay: 0.4s;
+              transition-delay: 0.4s; }
+    .table li .row3 {
+      -webkit-transition-delay: 0.5s;
+              transition-delay: 0.5s; }
+    .table li .row4 {
+      -webkit-transition-delay: 0.6s;
+              transition-delay: 0.6s; }
+    .table li .row5 {
+      -webkit-transition-delay: 0.7s;
+              transition-delay: 0.7s; }
+    .table li .row6 {
+      -webkit-transition-delay: 0.8s;
+              transition-delay: 0.8s; }
+    .table li .row7 {
+      -webkit-transition-delay: 0.9s;
+              transition-delay: 0.9s; }
+
+.table ~ p {
+  margin-top: 40px; }
+
+.parallax-container {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 100px;
+          perspective: 100px;
+  overflow: hidden; }
+  .parallax-container .layer {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%; }
+    .parallax-container .layer img {
+      width: 100%; }
+
+.parallax-cover {
+  z-index: 2;
+  position: relative; }
+
+@media screen and (max-width: 1140px) {
+  #main .container-large {
     margin-top: 0;
     padding: 32px 16px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-    .container-large .image-container {
+    #main .container-large .image-container {
+      position: static;
       margin: 0 auto 20px;
       -webkit-box-ordinal-group: 1;
           -ms-flex-order: 0;
-              order: 0; }
-    .container-large .content {
+              order: 0;
+      width: 250px;
+      height: auto;
+      -webkit-transform: none;
+              transform: none; }
+      #main .container-large .image-container img {
+        width: 100%; }
+    #main .container-large .content {
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1; }
-      .container-large .content h1 {
+      #main .container-large .content h1 {
         margin-left: auto;
         margin-right: auto;
         max-width: 600px; }
-      .container-large .content h1, .container-large .content h2, .container-large .content p {
+      #main .container-large .content h1, #main .container-large .content h2, #main .container-large .content p {
         white-space: normal;
         text-align: center; }
-      .container-large .content h1, .container-large .content h2 {
-        font-size: 32px; } }
+      #main .container-large .content h1, #main .container-large .content h2 {
+        font-size: 32px; }
+  #main .border-cut {
+    border: none; }
+  #main .table {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 520px;
+    width: 100%; }
+    #main .table li .row {
+      max-width: 100%; } }
 header {
   z-index: 10;
   position: fixed;
@@ -343,53 +469,27 @@ nav li {
     .mainMenu-container input:checked ~ .mainMenu-icon span:nth-of-type(3) {
       -webkit-transform: translate3d(7px, 27px, 0) rotate3d(0, 0, 1, -45deg);
               transform: translate3d(7px, 27px, 0) rotate3d(0, 0, 1, -45deg); } }
-.parallax-container {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-height: 100vh;
-  height: 100%;
-  width: 100%;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-perspective: 100px;
-          perspective: 100px;
-  overflow: hidden; }
-  .parallax-container .layer {
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%; }
-    .parallax-container .layer img {
-      width: 100%; }
-
-.parallax-cover {
-  z-index: 2;
-  position: relative; }
-
-.salon-container .parallax-container {
+.page-accueil .salon-container .parallax-container {
   -webkit-perspective-origin: 50% 100%;
           perspective-origin: 50% 100%;
   -webkit-transition: -webkit-perspective-origin 0.2s ease-out;
   transition: -webkit-perspective-origin 0.2s ease-out;
   transition: perspective-origin 0.2s ease-out;
   transition: perspective-origin 0.2s ease-out, -webkit-perspective-origin 0.2s ease-out; }
-  .salon-container .parallax-container .layer {
+  .page-accueil .salon-container .parallax-container .layer {
     min-width: 1280px; }
-  .salon-container .parallax-container .layer-mousse2 {
+  .page-accueil .salon-container .parallax-container .layer-mousse2 {
     -webkit-transform: translate3d(0px, 0px, -50px) scale3d(1.5, 1.5, 1);
             transform: translate3d(0px, 0px, -50px) scale3d(1.5, 1.5, 1); }
-  .salon-container .parallax-container .layer-mousse3 {
+  .page-accueil .salon-container .parallax-container .layer-mousse3 {
     -webkit-transform: translate3d(0px, 0px, -100px) scale3d(2, 2, 1);
             transform: translate3d(0px, 0px, -100px) scale3d(2, 2, 1); }
-.salon-container .parallax-cover {
+.page-accueil .salon-container .parallax-cover {
   margin-top: -20vh; }
-
-.toiletteuse-container {
+.page-accueil .toiletteuse-container {
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4); }
-  .toiletteuse-container .bulles-masque {
+  .page-accueil .toiletteuse-container .bulles-masque {
     position: absolute;
     z-index: 2;
     top: -1px;
@@ -397,59 +497,71 @@ nav li {
     width: 100%;
     height: 100px;
     background: url("../images/bulles_masque.png") repeat-x 100px; }
-  .toiletteuse-container .image-container {
+  .page-accueil .toiletteuse-container .image-container {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1; }
-  .toiletteuse-container .img-chienaureole {
+  .page-accueil .toiletteuse-container .img-chienaureole {
     -webkit-transform: translate3d(140px, 0px, 0px);
             transform: translate3d(140px, 0px, 0px); }
-  .toiletteuse-container h2, .toiletteuse-container p {
+  .page-accueil .toiletteuse-container h2, .page-accueil .toiletteuse-container p {
     text-align: right; }
-
-.soins-container .parallax-container {
+.page-accueil .soins-container .parallax-container {
   -webkit-transition: -webkit-perspective-origin 1s ease-out;
   transition: -webkit-perspective-origin 1s ease-out;
   transition: perspective-origin 1s ease-out;
   transition: perspective-origin 1s ease-out, -webkit-perspective-origin 1s ease-out; }
-.soins-container .parallax-cover img {
+.page-accueil .soins-container .parallax-cover img {
   border-radius: 50%;
   border: 2px solid #6d809b; }
-
-.parallax-bulles {
+.page-accueil .soins-container .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+.page-accueil .soins-container .image-container {
+  width: 350px;
+  height: 350px; }
+.page-accueil .parallax-bulles {
   -webkit-perspective-origin: 50% 50%;
           perspective-origin: 50% 50%; }
-  .parallax-bulles .layer {
+  .page-accueil .parallax-bulles .layer {
     bottom: unset;
     top: 50%;
     left: 50%;
     min-width: 1908px;
     max-width: 1908px; }
-  .parallax-bulles .layer-bulles1 {
+  .page-accueil .parallax-bulles .layer-bulles1 {
     -webkit-transform: translate3d(-50%, -50%, -30px) scale3d(1.3, 1.3, 1);
             transform: translate3d(-50%, -50%, -30px) scale3d(1.3, 1.3, 1); }
-  .parallax-bulles .layer-bulles2 {
+  .page-accueil .parallax-bulles .layer-bulles2 {
     -webkit-transform: translate3d(-50%, -50%, -65px) scale3d(1.65, 1.65, 1);
             transform: translate3d(-50%, -50%, -65px) scale3d(1.65, 1.65, 1); }
-  .parallax-bulles .layer-bulles3 {
+  .page-accueil .parallax-bulles .layer-bulles3 {
     -webkit-transform: translate3d(-50%, -50%, -100px) scale3d(2, 2, 1);
             transform: translate3d(-50%, -50%, -100px) scale3d(2, 2, 1); }
 
-@media screen and (max-width: 1075px) {
-  .parallax-cover img {
-    max-width: 200px;
-    width: 100%;
-    height: auto; }
-
-  .salon-container .parallax-cover {
+@media screen and (max-width: 1140px) {
+  #main.page-accueil .salon-container .parallax-cover {
     margin-top: 0; }
-
-  .toiletteuse-container .img-chienaureole {
+  #main.page-accueil .toiletteuse-container .img-chienaureole {
     display: none; }
-  .toiletteuse-container .image-container {
+  #main.page-accueil .toiletteuse-container .image-container {
     -webkit-box-flex: 0;
         -ms-flex: none;
             flex: none; } }
+.page-soins .container-large {
+  position: relative; }
+.page-soins p {
+  max-width: 520px; }
+.page-soins .row {
+  max-width: calc(520px - 24px); }
+.page-soins .border-cut {
+  top: 194px; }
+
+@media screen and (max-width: 1140px) {
+  #main.page-soins p {
+    margin-left: auto;
+    margin-right: auto; } }
 @-webkit-keyframes parallaxZoom {
   0% {
     -webkit-perspective: 200px;
@@ -464,84 +576,17 @@ nav li {
   100% {
     -webkit-perspective: 100px;
             perspective: 100px; } }
-.horaires-container .container-large {
+.page-horaires .container-large {
   position: relative; }
-.horaires-container ul {
-  margin-top: 40px;
-  width: 75%; }
-.horaires-container li {
-  padding: 0 24px;
-  position: relative;
-  overflow: hidden; }
-  .horaires-container li:nth-child(odd) {
-    background-color: #6d809b; }
-    .horaires-container li:nth-child(odd) span {
-      text-shadow: none;
-      color: white; }
-  .horaires-container li:nth-child(even).active:after {
-    border-color: transparent transparent transparent #6d809b; }
-  .horaires-container li.active:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 10px 0 10px 17.3px;
-    border-color: transparent transparent transparent #eff2f7;
-    -webkit-transform: translate3d(0, -50%, 0);
-            transform: translate3d(0, -50%, 0); }
-  .horaires-container li span {
-    text-transform: uppercase;
-    font-weight: 500; }
-  .horaires-container li:nth-child(1) .jour {
-    -webkit-transition-delay: 0.3s;
-            transition-delay: 0.3s; }
-  .horaires-container li:nth-child(2) .jour {
-    -webkit-transition-delay: 0.4s;
-            transition-delay: 0.4s; }
-  .horaires-container li:nth-child(3) .jour {
-    -webkit-transition-delay: 0.5s;
-            transition-delay: 0.5s; }
-  .horaires-container li:nth-child(4) .jour {
-    -webkit-transition-delay: 0.6s;
-            transition-delay: 0.6s; }
-  .horaires-container li:nth-child(5) .jour {
-    -webkit-transition-delay: 0.7s;
-            transition-delay: 0.7s; }
-  .horaires-container li:nth-child(6) .jour {
-    -webkit-transition-delay: 0.8s;
-            transition-delay: 0.8s; }
-  .horaires-container li:nth-child(7) .jour {
-    -webkit-transition-delay: 0.9s;
-            transition-delay: 0.9s; }
-.horaires-container .jour {
-  max-width: 392px;
-  width: 100%;
-  height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-.horaires-container .image-container {
+.page-horaires .image-container {
   z-index: 1;
   overflow: hidden;
   position: absolute;
-  top: 130px;
+  top: 118px;
   right: 0;
-  border-radius: 50%;
-  border: 75px solid #eff2f7;
   width: 550px;
   height: 550px; }
-.horaires-container .parallax-niche {
-  border-radius: 50%;
-  border: 1px solid black;
+.page-horaires .parallax-niche {
   -webkit-perspective: 200px;
           perspective: 200px;
   -webkit-perspective-origin: 50% 50%;
@@ -552,34 +597,33 @@ nav li {
   transition: perspective-origin 0.5s ease-out, -webkit-perspective-origin 0.5s ease-out;
   min-height: auto;
   -webkit-animation: parallaxZoom 5s 0.6s forwards;
-          animation: parallaxZoom 5s 0.6s forwards;
-  background-color: #eff2f7; }
-  .horaires-container .parallax-niche .layer {
+          animation: parallaxZoom 5s 0.6s forwards; }
+  .page-horaires .parallax-niche .layer {
     width: 650px;
     height: 650px;
     bottom: unset;
     top: 50%;
     left: 50%; }
-  .horaires-container .parallax-niche .layer-niche1, .horaires-container .parallax-niche .horloge-container {
+  .page-horaires .parallax-niche .layer-niche1, .page-horaires .parallax-niche .horloge-container {
     -webkit-transform: translate3d(-50%, -50%, -30px) scale3d(1.3, 1.3, 1);
             transform: translate3d(-50%, -50%, -30px) scale3d(1.3, 1.3, 1); }
-  .horaires-container .parallax-niche .layer-niche2 {
+  .page-horaires .parallax-niche .layer-niche2 {
     -webkit-transform: translate3d(-50%, -50%, -60px) scale3d(1.6, 1.6, 1);
             transform: translate3d(-50%, -50%, -60px) scale3d(1.6, 1.6, 1); }
-  .horaires-container .parallax-niche .layer-niche3 {
+  .page-horaires .parallax-niche .layer-niche3 {
     -webkit-transform: translate3d(-50%, -50%, -75px) scale3d(1.75, 1.75, 1);
             transform: translate3d(-50%, -50%, -75px) scale3d(1.75, 1.75, 1); }
-  .horaires-container .parallax-niche .layer-niche4 {
+  .page-horaires .parallax-niche .layer-niche4 {
     -webkit-transform: translate3d(-50%, -50%, -100px) scale3d(2, 2, 1);
             transform: translate3d(-50%, -50%, -100px) scale3d(2, 2, 1); }
-  .horaires-container .parallax-niche .horloge-container {
+  .page-horaires .parallax-niche .horloge-container {
     position: relative;
     top: 173px;
     left: 205px;
     width: 81px;
     height: 81px;
     pointer-events: none; }
-    .horaires-container .parallax-niche .horloge-container .aiguille {
+    .page-horaires .parallax-niche .horloge-container .aiguille {
       position: absolute;
       left: 0;
       top: 0;
@@ -587,48 +631,45 @@ nav li {
       height: 50px;
       -webkit-transform-origin: 4px 38px;
               transform-origin: 4px 38px; }
-    .horaires-container .parallax-niche .horloge-container .seconds {
+    .page-horaires .parallax-niche .horloge-container .seconds {
       -webkit-animation: clock 60s infinite steps(60);
               animation: clock 60s infinite steps(60); }
+.page-horaires p {
+  max-width: 417px; }
+.page-horaires .row {
+  max-width: calc(417px - 24px); }
 
-@media screen and (max-width: 1075px) {
-  .horaires-container ul {
-    width: 100%; }
-  .horaires-container .jour {
+@media screen and (max-width: 1140px) {
+  #main.page-horaires .container-large .image-container {
+    height: 250px; }
+  #main.page-horaires .container-large p {
     max-width: 100%; }
-  .horaires-container .parallax-niche {
-    border: none;
+  #main.page-horaires .container-large .parallax-niche {
     position: relative;
     -webkit-perspective-origin: 50% 40%;
             perspective-origin: 50% 40%; }
-    .horaires-container .parallax-niche .layer {
+    #main.page-horaires .container-large .parallax-niche .layer {
       width: 500px;
       height: 500px; }
-    .horaires-container .parallax-niche .horloge-container {
-      top: 385px;
-      left: 410px; }
-      .horaires-container .parallax-niche .horloge-container .aiguille {
+    #main.page-horaires .container-large .parallax-niche .horloge-container {
+      top: 386px;
+      left: 411px; }
+      #main.page-horaires .container-large .parallax-niche .horloge-container .aiguille {
         position: absolute;
         height: 40px;
+        width: 8px;
         -webkit-transform-origin: 4px 30px;
-                transform-origin: 4px 30px; }
-  .horaires-container .image-container {
-    border: 2px solid #6d809b;
-    position: static;
-    width: 250px;
-    height: 250px;
-    -webkit-transform: none;
-            transform: none; } }
-.coordonnees-container .container-large {
+                transform-origin: 4px 30px; } }
+.page-contact .container-large {
   position: relative;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start; }
-.coordonnees-container ul li {
+.page-contact ul li {
   margin-bottom: 20px; }
-  .coordonnees-container ul li:last-of-type {
+  .page-contact ul li:last-of-type {
     margin-bottom: 0; }
-.coordonnees-container ul .icon-container {
+.page-contact ul .icon-container {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -638,90 +679,86 @@ nav li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-.coordonnees-container ul .text {
+.page-contact ul .text {
   margin: 6px 0 0 18px; }
-.coordonnees-container .image-container {
+.page-contact .image-container {
   z-index: 1;
   position: absolute;
   right: 440px;
   bottom: 0; }
-  .coordonnees-container .image-container .silhouette {
+  .page-contact .image-container .silhouette {
     position: absolute;
     left: 50%;
     opacity: 1;
     -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s; }
-  .coordonnees-container .image-container .silhouette_chat {
+  .page-contact .image-container .silhouette_chat {
     top: 0;
     -webkit-transform: translate3d(-50%, -82%, 0);
             transform: translate3d(-50%, -82%, 0); }
-  .coordonnees-container .image-container .silhouette_chien01 {
+  .page-contact .image-container .silhouette_chien01 {
     bottom: 0;
     -webkit-transform: translate3d(-392%, -71%, 0);
             transform: translate3d(-392%, -71%, 0); }
-  .coordonnees-container .image-container .silhouette_chien02 {
+  .page-contact .image-container .silhouette_chien02 {
     bottom: 0;
     -webkit-transform: translate3d(-380%, -63%, 0);
             transform: translate3d(-380%, -63%, 0); }
-  .coordonnees-container .image-container .silhouette_chien03 {
+  .page-contact .image-container .silhouette_chien03 {
     bottom: 0;
     -webkit-transform: translate3d(-166%, -92%, 0);
             transform: translate3d(-166%, -92%, 0); }
-.coordonnees-container .cadre {
+.page-contact .cadre {
   margin-bottom: 64px;
-  border: 1px solid black;
+  border-radius: initial;
   padding: 12px;
+  width: auto;
   background-color: white; }
-  .coordonnees-container .cadre img, .coordonnees-container .cadre iframe {
-    border: 1px solid black; }
-.coordonnees-container .facade-container {
+  .page-contact .cadre img, .page-contact .cadre iframe {
+    border: 2px solid #6d809b; }
+.page-contact .facade-container {
   border-radius: 50%; }
-  .coordonnees-container .facade-container img {
+  .page-contact .facade-container img {
     border-radius: 50%; }
-.coordonnees-container .gm-container {
+.page-contact .gm-container {
   -webkit-transform: translate3d(0, 47px, 0) rotate3d(0, 0, 1, 5deg);
           transform: translate3d(0, 47px, 0) rotate3d(0, 0, 1, 5deg); }
 
-@media screen and (max-width: 1075px) {
-  .coordonnees-container .content {
+@media screen and (max-width: 1140px) {
+  #main.page-contact .content {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1; }
-  .coordonnees-container ul {
+  #main.page-contact ul {
     margin-bottom: 40px;
     text-align: center; }
-    .coordonnees-container ul .icon-container {
+    #main.page-contact ul .icon-container {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; }
-    .coordonnees-container ul .text {
+    #main.page-contact ul .text {
       margin-left: 0; }
-  .coordonnees-container .image-container {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-    margin-bottom: 20px;
-    position: static; }
-    .coordonnees-container .image-container .silhouette {
-      bottom: unset;
-      top: 50%; }
-    .coordonnees-container .image-container .silhouette_chien01 {
-      -webkit-transform: translate3d(-163%, 12%, 0);
-              transform: translate3d(-163%, 12%, 0); }
-    .coordonnees-container .image-container .silhouette_chien02 {
-      -webkit-transform: translate3d(121%, -9%, 0);
-              transform: translate3d(121%, -9%, 0); }
-    .coordonnees-container .image-container .silhouette_chien03 {
-      -webkit-transform: translate3d(-260%, 35px, 0);
-              transform: translate3d(-260%, 35px, 0); }
-    .coordonnees-container .image-container .silhouette_chat {
-      -webkit-transform: translate3d(120%, 20%, 0);
-              transform: translate3d(120%, 20%, 0); }
-    .coordonnees-container .image-container img {
-      max-width: 250px;
-      height: auto; }
-  .coordonnees-container .cadre {
+  #main.page-contact .image-container .silhouette {
+    bottom: unset;
+    top: 50%;
+    width: auto; }
+  #main.page-contact .image-container .silhouette_chien01 {
+    -webkit-transform: translate3d(-163%, 12%, 0);
+            transform: translate3d(-163%, 12%, 0); }
+  #main.page-contact .image-container .silhouette_chien02 {
+    -webkit-transform: translate3d(121%, -9%, 0);
+            transform: translate3d(121%, -9%, 0); }
+  #main.page-contact .image-container .silhouette_chien03 {
+    -webkit-transform: translate3d(-260%, 35px, 0);
+            transform: translate3d(-260%, 35px, 0); }
+  #main.page-contact .image-container .silhouette_chat {
+    -webkit-transform: translate3d(120%, 20%, 0);
+            transform: translate3d(120%, 20%, 0); }
+  #main.page-contact .image-container img {
+    max-width: 250px;
+    height: auto; }
+  #main.page-contact .cadre {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -729,29 +766,27 @@ nav li {
     padding: 0;
     width: 100%;
     background-color: unset; }
-    .coordonnees-container .cadre img {
-      border: 2px solid #6d809b; }
-  .coordonnees-container .facade-container {
+  #main.page-contact .facade-container {
     border: none; }
-  .coordonnees-container .gm-container {
+  #main.page-contact .gm-container {
     border-radius: 0;
     -webkit-transform: none;
             transform: none; }
-    .coordonnees-container .gm-container iframe {
+    #main.page-contact .gm-container iframe {
       width: 100%;
       border: none;
       border-radius: 0; } }
 @media screen and (max-width: 900px) {
-  .coordonnees-container .image-container .silhouette_chien03 {
+  #main.page-contact .image-container .silhouette_chien03 {
     opacity: 0; } }
 @media screen and (max-width: 580px) {
-  .coordonnees-container .image-container .silhouette_chien02 {
+  #main.page-contact .image-container .silhouette_chien02 {
     opacity: 0; } }
 @media screen and (max-width: 500px) {
-  .coordonnees-container .image-container .silhouette_chien01 {
+  #main.page-contact .image-container .silhouette_chien01 {
     opacity: 0; } }
 @media screen and (max-width: 305px) {
-  .coordonnees-container .image-container .silhouette_chat {
+  #main.page-contact .image-container .silhouette_chat {
     opacity: 0; } }
 .animeWhenVisible-translateFromLeft-init {
   opacity: 1;
@@ -795,7 +830,7 @@ nav li {
   -webkit-transition: none;
   transition: none; }
 
-.animeWhenVisible-translateFromRigth-init {
+.animeWhenVisible-translateFromRight-init {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
@@ -804,7 +839,7 @@ nav li {
   transition: transform 0.4s cubic-bezier(0.33, 0, 1, 1.1), opacity 0.4s cubic-bezier(0.33, 0, 1, 1);
   transition: transform 0.4s cubic-bezier(0.33, 0, 1, 1.1), opacity 0.4s cubic-bezier(0.33, 0, 1, 1), -webkit-transform 0.4s cubic-bezier(0.33, 0, 1, 1.1); }
 
-.animeWhenVisible-translateFromRigth {
+.animeWhenVisible-translateFromRight {
   opacity: 0;
   -webkit-transform: translate3d(100%, 0, 0);
           transform: translate3d(100%, 0, 0);

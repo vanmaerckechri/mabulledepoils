@@ -1,0 +1,31 @@
+.page-soins
+{
+    .container-large
+    {
+        position: relative;
+    }
+    p
+    {
+        max-width: 520px;
+    }
+    .row
+    {
+        max-width: calc(520px - 24px);
+    }
+    .border-cut
+    {
+        top: 194px;
+    }
+}
+
+@media screen and (max-width: 1140px)
+{
+    #main.page-soins
+    {
+        p
+        {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
