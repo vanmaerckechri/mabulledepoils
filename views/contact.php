@@ -12,18 +12,18 @@ ob_start();?>
                     <h1 id="contact-title">Contact</h1>
                     <ul id="contact-content">
                         <li class="icon-container">
-                            <img src="assets/images/icone_adresse.svg" width="38" height="38" alt="icone une petite maison">
+                            <img src="assets/images/icone_adresse.svg" width="38" height="38" alt="icone d'une flèche de localisation">
                             <span class="text">Rue du Poilu, 17 - 1301 Bièrges</span>
                         </li>
                         <li>
                             <a class="icon-container" href="tel:010-223-344">
-                                <img src="assets/images/icone_phone.svg" width="38" height="38" alt="icone une petite maison">
+                                <img src="assets/images/icone_phone.svg" width="38" height="38" alt="icone d'un smartphone">
                                 <span class="text">010/ 22 33 44</span>
                             </a>
                         </li>
                         <li>
                             <a class="icon-container" href="mailto:aufildupoil@one.com">
-                                <img src="assets/images/icone_mail.svg" width="38" height="38" alt="icone une petite maison">
+                                <img src="assets/images/icone_mail.svg" width="38" height="38" alt="icone d'une enveloppe">
                                 <span class="text">aufildupoil@one.com</span>
                             </a>
                         </li>

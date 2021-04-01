@@ -11,6 +11,9 @@ header
     align-items: center;
     box-shadow: 0px 1px 2px 1px $color-boxShadow;
     background-color: $color-light02;
+    transform-origin: top;
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
     .container
     {
         position: relative;
@@ -32,6 +35,10 @@ header
             font-weight: 300;
         }
     }
+}
+.header-hide
+{
+    opacity: 0;
 }
 nav
 {
@@ -107,6 +114,17 @@ nav
             {
                 margin-left: 10px;
                 font-size: 12px;
+            }
+        }
+    }
+    .header-hide
+    {
+        pointer-events: none;
+        .mainMenu-container
+        {
+            input
+            {
+                pointer-events: none;
             }
         }
     }

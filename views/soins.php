@@ -74,14 +74,14 @@ ob_start();?>
         {
             "use strict";
 
-            var animeWhenVisibleSoins_title = new CVM.AnimeWhenVisible(window, document.getElementById("soins-title"), document.getElementById("soins-title"), "animeWhenVisible-translateFromLeft", 0, true, true, false);
-            var animeWhenVisibleSoins_intro1 = new CVM.AnimeWhenVisible(window, document.getElementById("soins-intro1"), document.getElementById("soins-intro1"), "animeWhenVisible-translateFromRight", 0, true, true, false);
-            var animeWhenVisibleSoins_intro2 = new CVM.AnimeWhenVisible(window, document.getElementById("soins-intro2"), document.getElementById("soins-intro2"), "animeWhenVisible-translateFromRight", 0, true, true, false);
+            var animeWhenVisibleSoins_title = new CVM.AnimeWhenVisible(window, document.getElementById("main"), document.getElementById("soins-title"), "animeWhenVisible-translateFromLeft", 0.2, true, true, false);
+            var animeWhenVisibleSoins_intro1 = new CVM.AnimeWhenVisible(window, document.getElementById("main"), document.getElementById("soins-intro1"), "animeWhenVisible-translateFromRight", 0.2, true, true, false);
+            var animeWhenVisibleSoins_intro2 = new CVM.AnimeWhenVisible(window, document.getElementById("main"), document.getElementById("soins-intro2"), "animeWhenVisible-translateFromRight", 0.2, true, true, false);
             var rowList = document.querySelectorAll(".table .row");
             var rows = [];
             for (var i = rowList.length - 1; i >= 0; i--)
             {
-                rows[i] = new CVM.AnimeWhenVisible(window, document.getElementById("main"), rowList[i], "animeWhenVisible-load", 0, true, true, false);
+                rows[i] = new CVM.AnimeWhenVisible(window, document.getElementById("main"), rowList[i], "animeWhenVisible-loadRowTable", 0, true, true, false);
             }
         }());
     </script>

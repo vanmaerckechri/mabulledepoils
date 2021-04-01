@@ -98,13 +98,13 @@ ob_start();?>
 
             }, 6000);
 
-            var animeWhenVisibleHoraires_title = new CVM.AnimeWhenVisible(window, document.getElementById("horaires-title"), document.getElementById("horaires-title"), "animeWhenVisible-translateFromLeft", 0, true, true, false);
-            var animeWhenVisibleHoraires_intro = new CVM.AnimeWhenVisible(window, document.getElementById("horaires-intro"), document.getElementById("horaires-intro"), "animeWhenVisible-translateFromRight", 0, true, true, false);
+            var animeWhenVisibleHoraires_title = new CVM.AnimeWhenVisible(window, document.getElementById("main"), document.getElementById("horaires-title"), "animeWhenVisible-translateFromLeft", 0, true, true, false);
+            var animeWhenVisibleHoraires_intro = new CVM.AnimeWhenVisible(window, document.getElementById("main"), document.getElementById("horaires-intro"), "animeWhenVisible-translateFromRight", 0, true, true, false);
             var rowList = document.querySelectorAll(".table .row");
             var rows = [];
             for (var i = rowList.length - 1; i >= 0; i--)
             {
-                rows[i] = new CVM.AnimeWhenVisible(window, document.getElementById("main"), rowList[i], "animeWhenVisible-load", 0, true, true, false);
+                rows[i] = new CVM.AnimeWhenVisible(window, document.getElementById("main"), rowList[i], "animeWhenVisible-loadRowTable", 0, true, true, false);
             }
         }());
     </script>

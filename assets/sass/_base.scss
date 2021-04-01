@@ -95,7 +95,7 @@
 }
 .table
 {
-	margin-top: 26px;
+	margin-top: 10px;
 	width: 75%;
 	li
 	{
@@ -105,6 +105,11 @@
 		span
 		{
 			text-align: left;
+			line-height: 22px;
+			&:last-of-type
+			{
+				margin-left: 10px;
+			}
 		}
 		&:nth-child(odd)
 		{
@@ -186,7 +191,7 @@
 }
 .table ~ p
 {
-	margin-top: 40px;
+	margin-top: 20px;
 }
 .parallax-container
 {
@@ -206,10 +211,6 @@
         bottom: -1px;
         left: 0;
         width: 100%;
-        img
-        {
-            width: 100%;
-        }
     }
 }
 .parallax-cover
@@ -232,11 +233,12 @@
 				margin: 0 auto 20px;
 				order: 0;
 				width: 250px;
-				height: auto;
+				height: 250px;
 				transform: none;
 				img
 				{
-					width: 100%;
+					width: 250px;
+					height: 250px;
 				}
 			}
 			.content

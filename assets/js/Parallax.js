@@ -52,9 +52,8 @@
 
 	CVM.Parallax.prototype.updateWithScroll = function(containerInfos)
 	{
-
-		var h_percent = this.axesValue.h_fixed ? this.axesValue.h_fixed :  Math.round(this.axesValue.h_origin - (this.axesValue.h_max * this.axesValue.h_inverse * (containerInfos.left / containerInfos.width)));
-		var v_percent = this.axesValue.v_fixed ? this.axesValue.v_fixed : Math.round(this.axesValue.v_origin - (this.axesValue.v_max * this.axesValue.v_inverse * (containerInfos.top / containerInfos.height)));
+		var h_percent = this.axesValue.h_fixed ? this.axesValue.h_fixed : Math.round(this.axesValue.h_origin + ((this.axesValue.h_max - this.axesValue.h_min) * (1 / containerInfos.width) * containerInfos.left) * -1);
+		var v_percent = this.axesValue.v_fixed ? this.axesValue.v_fixed : Math.round(this.axesValue.v_origin + ((this.axesValue.v_max - this.axesValue.v_min) * (1 / containerInfos.height) * containerInfos.top) * -1);
 
 		this.updateValues(h_percent, v_percent);
 	};

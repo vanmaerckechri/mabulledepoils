@@ -56,13 +56,13 @@
 	transition: none;
 }
 // horaires
-.animeWhenVisible-load-init
+.animeWhenVisible-loadRowTable-init
 {
 	transform: translate3d(0, 0, 0);
 	transition: transform 0.3s cubic-bezier(0.86, 0.6, 0.08, 1.2);
 
 }
-.animeWhenVisible-load
+.animeWhenVisible-loadRowTable
 {
 	transform: translate3d(0, 100%, 0);
 	transition: none;

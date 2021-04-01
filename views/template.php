@@ -18,7 +18,7 @@
         <meta property="og:image" content="https://www.cvmdev.be/aufildupoil/meta_social.png">
         <meta property="og:image:alt" content="logo du salon de toilettage illustrant un chiot prenant un bain">
         <!--Favison and Color-->
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <meta name="theme-color" content="#ed427e">
         <!--Stylesheet-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -76,6 +76,15 @@
         <?=$content_main ?? ''?>
         <footer></footer>
         <script src="assets/js/Namespaces.js"></script>
+        <script src="assets/js/ToggleNavVisibility.js"></script>
+        <script>
+            (function()
+            {
+                "use strict";
+
+                var toggleNavVisibility = new CVM.ToggleNavVisibility(document.getElementsByTagName("header")[0]);
+            }());
+        </script>
         <?=$content_jsClasses ?? ''?>
     </body>
 </html>
