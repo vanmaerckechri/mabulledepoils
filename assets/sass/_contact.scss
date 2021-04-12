@@ -90,6 +90,7 @@
         position: absolute;
         bottom: 82px;
         right: 82px;
+        border: 1px solid $color-dark02;
         transform: rotate3d(0, 0, 1, 5deg);
         & > iframe
         {
@@ -163,7 +164,6 @@
             order: 2;
             width: 100%;
             position: static;
-            border: 1px solid $color-dark02;
             box-shadow: none;
             transform: none;
             iframe

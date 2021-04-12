@@ -29,10 +29,6 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.relative
-{
-	position: relative;
-}
 .image
 {
 	width: 350px;
@@ -92,8 +88,8 @@
 }
 .cadre
 {
-	box-shadow: 0 0 0 1px $color-dark02, 0 0 0 13px white, 0 0 0 14px $color-dark02;
-	background-color: #eff2f7;
+	box-shadow: 0 0 0 13px white, 0 0 0 14px $color-dark02;
+	background-color:$color-light01;
 }
 .border-cut
 {
@@ -107,7 +103,7 @@
 		margin: 78px;
 		width: 400px;
         height: 400px;
-		box-shadow: 0 0 0 1px $color-dark02, 0 0 0 13px white, 0 0 0 14px $color-dark02, 0 0 0 78px #eff2f7;
+		box-shadow: 0 0 0 13px white, 0 0 0 14px $color-dark02, 0 0 0 78px $color-light01;
 	}
 }
 .table
@@ -266,7 +262,7 @@
 			.cadre
 			{
 				margin: 14px;
-				box-shadow: 0 0 0 1px $color-dark02, 0 0 0 13px white, 0 0 0 14px $color-dark02;
+				box-shadow: 0 0 0 13px white, 0 0 0 14px $color-dark02;
 			}
 		}
 		.content

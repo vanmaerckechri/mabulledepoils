@@ -72,9 +72,6 @@ ul {
       -ms-flex-align: center;
           align-items: center; }
 
-.relative {
-  position: relative; }
-
 .image {
   width: 350px;
   height: 350px;
@@ -114,8 +111,8 @@ ul {
   border-radius: 50%; }
 
 .cadre {
-  -webkit-box-shadow: 0 0 0 1px #6d809b, 0 0 0 13px white, 0 0 0 14px #6d809b;
-          box-shadow: 0 0 0 1px #6d809b, 0 0 0 13px white, 0 0 0 14px #6d809b;
+  -webkit-box-shadow: 0 0 0 13px white, 0 0 0 14px #6d809b;
+          box-shadow: 0 0 0 13px white, 0 0 0 14px #6d809b;
   background-color: #eff2f7; }
 
 .border-cut {
@@ -128,8 +125,8 @@ ul {
     margin: 78px;
     width: 400px;
     height: 400px;
-    -webkit-box-shadow: 0 0 0 1px #6d809b, 0 0 0 13px white, 0 0 0 14px #6d809b, 0 0 0 78px #eff2f7;
-            box-shadow: 0 0 0 1px #6d809b, 0 0 0 13px white, 0 0 0 14px #6d809b, 0 0 0 78px #eff2f7; }
+    -webkit-box-shadow: 0 0 0 13px white, 0 0 0 14px #6d809b, 0 0 0 78px #eff2f7;
+            box-shadow: 0 0 0 13px white, 0 0 0 14px #6d809b, 0 0 0 78px #eff2f7; }
 
 .table {
   margin-top: 10px;
@@ -248,8 +245,8 @@ ul {
     margin: 14px; }
   #main .border-cut .cadre {
     margin: 14px;
-    -webkit-box-shadow: 0 0 0 1px #6d809b, 0 0 0 13px white, 0 0 0 14px #6d809b;
-            box-shadow: 0 0 0 1px #6d809b, 0 0 0 13px white, 0 0 0 14px #6d809b; }
+    -webkit-box-shadow: 0 0 0 13px white, 0 0 0 14px #6d809b;
+            box-shadow: 0 0 0 13px white, 0 0 0 14px #6d809b; }
   #main .content {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -572,8 +569,9 @@ nav li {
       width: 250px !important;
       height: 140px !important;
       background-image: url("../images/toque.svg"); }
+    .page-accueil .toiletteuse-container .image-container .toiletteuse-compo, .page-accueil .toiletteuse-container .image-container .bulldog-compo {
+      position: relative; }
     .page-accueil .toiletteuse-container .image-container .bulldog-compo {
-      position: relative;
       left: 160px;
       top: 40px; }
     .page-accueil .toiletteuse-container .image-container .image-bulldog {
@@ -829,6 +827,7 @@ nav li {
   position: absolute;
   bottom: 82px;
   right: 82px;
+  border: 1px solid #6d809b;
   -webkit-transform: rotate3d(0, 0, 1, 5deg);
           transform: rotate3d(0, 0, 1, 5deg); }
   .page-contact .map-container > iframe {
@@ -893,7 +892,6 @@ nav li {
             order: 2;
     width: 100%;
     position: static;
-    border: 1px solid #6d809b;
     -webkit-box-shadow: none;
             box-shadow: none;
     -webkit-transform: none;

@@ -34,11 +34,11 @@ ob_start();?>
             <div class="bulles-masque"></div>
             <div class="parallax-cover container-large">
                 <div id="toiletteuse-images" class="image-container">
-                    <div class="relative">
+                    <div class="toiletteuse-compo">
                         <div class="image circle cadre image-toiletteuse"></div>
                         <div class="image image-toque"></div>
                     </div>
-                    <div class="relative bulldog-compo">
+                    <div class="bulldog-compo">
                         <div class="image circle cadre image-bulldog"></div>
                         <div class="image image-aureole"></div>
                     </div>
