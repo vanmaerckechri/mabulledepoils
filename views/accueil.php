@@ -7,9 +7,9 @@ ob_start();?>
     <div id="main" class="main page-accueil">
         <section class="section section-light salon-container">
             <div id="parallax-mousse" class="parallax-container">
-                <img src="assets/images/mousse03.svg" width="1920" height="480" alt="illustration de mousse au troisième plan" class="layer layer-mousse3">
-                <img src="assets/images/mousse02.svg" width="1920" height="480" alt="illustration de mousse au deuxième plan" class="layer layer-mousse2">
-                <img src="assets/images/mousse01.svg" width="1920" height="480" alt="illustration de mousse au premier plan" class="layer">
+                <div class="layer layer3"></div>
+                <div class="layer layer2"></div>
+                <div class="layer layer1"></div>
             </div>
             <div class="parallax-cover container-large">
                 <div id="salon-content" class="content">
@@ -21,21 +21,27 @@ ob_start();?>
                     </p>
                 </div>
                 <div id="salon-images" class="image-container">
-                    <img src="assets/images/logo_02.svg" width="350" height="350" alt="logo du salon de toilettage illustrant un chiot prenant un bain">
+                    <div class="image"></div>
                 </div>
             </div>
         </section>
         <section id="toiletteuse-container" class="section section-dark toiletteuse-container">
             <div id="parallax-toiletteuse-bulles" class="parallax-container parallax-bulles">
-                <img src="assets/images/bulles01_03.svg" alt="illustration de bulles au troisième plan" class="layer layer-bulles3">
-                <img src="assets/images/bulles01_02.svg" alt="illustration de bulles au deuxième plan" class="layer layer-bulles2">
-                <img src="assets/images/bulles01_01.svg" alt="illustration de bulles au premier plan" class="layer layer-bulles1">
+                <div class="layer layer3"></div>
+                <div class="layer layer2"></div>
+                <div class="layer layer1"></div>
             </div>
             <div class="bulles-masque"></div>
             <div class="parallax-cover container-large">
                 <div id="toiletteuse-images" class="image-container">
-                    <img src="assets/images/toiletteuse.svg" width="300" height="333" alt="dessin de la toiletteuse">
-                    <img src="assets/images/chien_aureole.svg" width="320" height="255" alt="photo d'un chien auréolé" class="img-chienaureole">
+                    <div class="relative">
+                        <div class="image circle cadre image-toiletteuse"></div>
+                        <div class="image image-toque"></div>
+                    </div>
+                    <div class="relative bulldog-compo">
+                        <div class="image circle cadre image-bulldog"></div>
+                        <div class="image image-aureole"></div>
+                    </div>
                 </div>
                 <div id="toiletteuse-content" class="content">
                     <h2>Géraldine Degueldre,</h2>
@@ -47,9 +53,9 @@ ob_start();?>
         </section>
         <section class="section section-light soins-container">
             <div id="parallax-soins-bulles" class="parallax-container parallax-bulles">
-                <img src="assets/images/bulles02_03.svg" alt="illustration de bulles au troisième plan" class="layer layer-bulles3">
-                <img src="assets/images/bulles02_02.svg" alt="illustration de bulles au deuxième plan" class="layer layer-bulles2">
-                <img src="assets/images/bulles02_01.svg" alt="illustration de bulles au premier plan" class="layer layer-bulles1">
+                <div class="layer layer3"></div>
+                <div class="layer layer2"></div>
+                <div class="layer layer1"></div>
             </div>
             <div class="parallax-cover container-large">
                 <div id="soins-content" class="content">
@@ -60,7 +66,7 @@ ob_start();?>
                     </p>
                 </div>
                 <div id="soins-images" class="image-container">
-                    <img class="cadre" src="assets/images/chiensoins.jpg" width="350" height="350" alt="photo d'un chien après qu'il ait reçu des soins">
+                    <div class="image circle cadre"></div>
                 </div>
             </div>
         </section>
@@ -99,13 +105,6 @@ ob_start();?>
             var parallaxList;
             if (isMobile() === true)
             {
-                var bullesList = ["parallax-toiletteuse-bulles", "parallax-soins-bulles"];
-                for (var i = bullesList.length - 1; i >= 0; i--)
-                {
-                    var elem = document.getElementById(bullesList[i]);
-                    elem.parentNode.removeChild(elem);
-                }
-
                 parallaxList = [parallaxMousse];
             }
             else

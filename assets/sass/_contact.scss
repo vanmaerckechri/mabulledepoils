@@ -4,6 +4,7 @@
     {
         position: relative;
         align-items: flex-start;
+        flex-wrap: wrap;
     }
     ul
     {
@@ -20,6 +21,24 @@
             display: inline-flex;
             justify-content: flex-start;
             align-items: center;
+            .image
+            {
+                width: 38px!important;
+                height: 38px!important;
+            }
+            .image-adresse
+            {
+                background-image: url("../images/icone_adresse.svg");
+
+            }
+            .image-phone
+            {
+                background-image: url("../images/icone_phone.svg");
+            }
+            .image-mail
+            {
+                background-image: url("../images/icone_mail.svg");
+            }
         }
         .text
         {
@@ -28,61 +47,54 @@
     }
     .image-container
     {
-        z-index: 1;
-        position: absolute;
-        right: 440px;
-        bottom: 0;
-        .silhouette
+        margin-top: -150px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        width: 100%;
+        .image-facade
         {
+            margin-right: 300px;
+            z-index: 1;
+            position: relative;
+            width: 275px;
+            background-image: url("../images/photo_facade.jpg");
+            transform: translate3d(-87px, 0, 0);
+        }
+        .image-chiens
+        {
+            z-index: 2;
+            position: relative;
+            max-width: 600px;
+            max-height: 190px;
+            flex: 1;
+            transform: translate3d(0, 50px, 0);
+            background-image: url("../images/silhouette-chiens.svg");
+            background-size: 100% auto;
+            background-position-y: center;
+        }
+        .image-chat
+        {
+            z-index: 1;
             position: absolute;
-            left: 50%;
-            opacity: 1;
-            transition: opacity 0.5s;
-        }
-        .silhouette_chat
-        {
-            top: 0;
-            transform: translate3d(-50%, -82%, 0);
-        }
-        .silhouette_chien01
-        {
-            bottom: 0;
-            transform: translate3d(-392%, -71%, 0);
-        }
-        .silhouette_chien02
-        {
-            bottom: 0;
-            transform: translate3d(-380%, -63%, 0);
-        }
-        .silhouette_chien03
-        {
-            bottom: 0;
-            transform: translate3d(-166%, -92%, 0);
+            top: 85px;
+            right: 565px;
+            width: 51px;
+            height: 80px;
+            background-image: url("../images/silhouette_chat.svg");
         }
     }
-    .cadre
+    .map-container
     {
-        margin-bottom: 64px;
-        border-radius: 0;
-        padding: 12px;
-        width: auto;
-        background-color: white;
-        img, iframe
+        z-index: 0;
+        position: absolute;
+        bottom: 82px;
+        right: 82px;
+        transform: rotate3d(0, 0, 1, 5deg);
+        & > iframe
         {
-            border: 2px solid $color-dark02;
+            vertical-align: middle;
         }
-    }
-    .facade-container
-    {
-        border-radius: 50%;
-        img
-        {
-            border-radius: 50%;        
-        }
-    }
-    .gm-container
-    {
-        transform: translate3d(0, 47px, 0) rotate3d(0, 0, 1, 5deg);
     }
 }
 
@@ -90,6 +102,10 @@
 {
     #main.page-contact
     {
+        .container-large
+        {
+            flex-wrap: nowrap;
+        }
         .content
         {
             order: 1;
@@ -106,114 +122,56 @@
             {
                 margin-left: 0;
             }
+            li
+            {
+                line-height: 0;
+            }
         }
         .image-container
         {
-            .silhouette
-            {
-                bottom: unset;
-                top: 50%;
-                width: auto;
-            }
-            .silhouette_chien01
-            {
-                transform: translate3d(-163%, 12%, 0);
-            }
-            .silhouette_chien02
-            {
-                transform: translate3d(121%, -9%, 0);
-            }
-            .silhouette_chien03
-            {
-                transform: translate3d(-260%, 35px, 0);
-            }
-            .silhouette_chat
-            {
-                transform: translate3d(120%, 20%, 0);
-            }
-            img
-            {
-                max-width: 250px;
-                height: auto;
-            }
-        }
-        .cadre
-        {
-            order: 2;
-            margin: 0 auto;
-            padding: 0;
+            max-width: 530px;
             width: 100%;
-            background-color: unset;
+            flex-direction: column;
+            align-items: center;
+            .image-facade
+            {
+                transform: none;
+            }
+            .image-chiens
+            {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                flex: none;
+                width: 420px;
+                max-width: 98vw;
+                height: 130px;
+                transform: translate3d(-50%, 0, 0);
+            }
+            .image-chat
+            {
+                top: 650px;
+                right: 50%;
+                width: 64px;
+                height: 100px;
+                transform: translate3d(170px, 0, 0);
+            }
         }
-        .facade-container
+        .map-container
         {
-            border: none;
-        }
-        .gm-container
-        {
-            border-radius: 0;
+            margin: 0 auto 20px;
+            order: 2;
+            width: 100%;
+            position: static;
+            border: 1px solid $color-dark02;
+            box-shadow: none;
             transform: none;
             iframe
             {
                 width: 100%;
+                height: 500px;
                 border: none;
                 border-radius: 0;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 900px)
-{
-    #main.page-contact
-    {
-        .image-container
-        {
-            .silhouette_chien03
-            {
-                opacity: 0;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 580px)
-{
-    #main.page-contact
-    {
-        .image-container
-        {
-            .silhouette_chien02
-            {
-                opacity: 0;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 500px)
-{
-    #main.page-contact
-    {
-        .image-container
-        {
-            .silhouette_chien01
-            {
-                opacity: 0;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 305px)
-{
-    #main.page-contact
-    {
-        .image-container
-        {
-            .silhouette_chat
-            {
-                opacity: 0;
             }
         }
     }

@@ -28,6 +28,13 @@ header
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        .logo-image
+        {
+            width: 56px;
+            height: 56px;
+            background-image: url("../images/logo.svg");
+            background-size: 100% 100%;
+        }
         .logo-text
         {
             margin-left: 14px;
@@ -59,7 +66,7 @@ nav
             color: $color-main01;
             font-size: 14px;
             font-weight: 300;
-            img
+            .image
             {
                 transition: transform 0.2s ease-out;
             }
@@ -70,7 +77,7 @@ nav
         }
         &:hover
         {
-            img
+            .image
             {
                 transform: scale3d(0.8, 0.8, 1);
             }
@@ -93,6 +100,28 @@ nav
 		pointer-events: none;
 		z-index: -1;
 	}
+    .image
+    {
+        margin: 0 auto;
+        width: 32px;
+        height: 32px;
+    }
+    .image-accueil
+    {
+        background-image: url("../images/btn-accueil.svg");
+    }
+    .image-soins
+    {
+        background-image: url("../images/btn-soins.svg");
+    }
+    .image-horaires
+    {
+        background-image: url("../images/btn-horaires.svg");
+    }
+    .image-contact
+    {
+        background-image: url("../images/btn-contact.svg");
+    }
 }
 @media screen and (max-width: 845px)
 {

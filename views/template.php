@@ -30,7 +30,7 @@
         <header>
             <div class="container">
                 <div class="logo-container">
-                    <img src="assets/images/logo_02.svg" width="56" height="56" alt="logo du salon de toilettage illustrant un chiot prenant un bain">
+                    <div class="logo-image"></div>
                     <div class="logo-text">Salon de Toilettage Animalier,<br>
                         Au Fil du Poil
                     </div>
@@ -46,25 +46,25 @@
                         <ul>
                             <li class="btn">
                                 <a href=".">
-                                    <img src="assets/images/btn-home.svg" width="32" height="32" alt="icone représentant une petite niche">
+                                    <div class="image image-accueil"></div>
                                     <div class="btn-text">accueil</div>
                                 </a>
                             </li>
                             <li class="btn">
                                 <a href="soins">
-                                    <img src="assets/images/btn-soins.svg" width="32" height="32" alt="icone représentant une paire de ciseaux">
+                                    <div class="image image-soins"></div>
                                     <div class="btn-text">soins</div>
                                 </a>
                             </li>
                             <li class="btn">
                                 <a href="horaires">
-                                    <img src="assets/images/btn-horaires.svg" width="32" height="32" alt="icone représentant une horloge">
+                                    <div class="image image-horaires"></div>
                                     <div class="btn-text">horaires</div>
                                 </a>
                             </li>
                             <li class="btn">
                                 <a href="contact">
-                                    <img src="assets/images/btn-contact.svg" width="32" height="32" alt="icone représentant un smartphone">
+                                    <div class="image image-contact"></div>
                                     <div class="btn-text">contact</div>
                                 </a>
                             </li>

@@ -29,6 +29,18 @@
 	justify-content: space-between;
 	align-items: center;
 }
+.relative
+{
+	position: relative;
+}
+.image
+{
+	width: 350px;
+	height: 350px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	pointer-events: none;
+}
 .content
 {
 	width: 100%;
@@ -74,24 +86,29 @@
 		text-shadow: 2px 0 0 $color-main02, 2px 2px 0 $color-main02, 0 2px 0 $color-main02, -2px 2px 0 $color-main02, -2px 0 0 $color-main02, -2px -2px 0 $color-main02, 0 -2px 0 $color-main02, 2px -2px 0 $color-main02;
 	}
 }
+.circle
+{
+	border-radius: 50%;
+}
+.cadre
+{
+	box-shadow: 0 0 0 1px $color-dark02, 0 0 0 13px white, 0 0 0 14px $color-dark02;
+	background-color: #eff2f7;
+}
 .border-cut
 {
 	z-index: 1;
 	overflow: hidden;
 	position: absolute;
 	border-radius: 50%;
-	border: 75px solid $color-light01;
-	background-color: $color-light01;
 	right: 0;
-	width: 550px;
-	height: 550px;
-}
-.cadre
-{
-	border-radius: 50%;
-	border: 2px solid $color-dark02;
-	width: 100%;
-	height: auto;
+	.cadre
+	{
+		margin: 78px;
+		width: 400px;
+        height: 400px;
+		box-shadow: 0 0 0 1px $color-dark02, 0 0 0 13px white, 0 0 0 14px $color-dark02, 0 0 0 78px #eff2f7;
+	}
 }
 .table
 {
@@ -227,43 +244,49 @@
 			margin-top: 0;
 			padding: 32px 16px;
 			flex-direction: column;
-			.image-container
-			{
-				position: static;
-				margin: 0 auto 20px;
-				order: 0;
-				width: 250px;
-				height: 250px;
-				transform: none;
-				img
-				{
-					width: 250px;
-					height: 250px;
-				}
-			}
-			.content
-			{
-				order: 1;
-				h1
-				{
-					margin-left: auto;
-					margin-right: auto;
-					max-width: 600px;
-				}
-				h1, h2, p
-				{
-					white-space: normal;
-					text-align: center;
-				}
-				h1, h2
-				{
-					font-size: 32px;
-				}
-			}
+		}
+		.image-container
+		{
+			position: static;
+			margin: 12px auto 40px;
+			order: 0;
+			transform: none;
+		}
+		.image
+		{
+			width: 250px;
+			height: 250px;
+		}
+		.cadre
+		{
+			margin: 14px;
 		}
 		.border-cut
 		{
-			border: none;
+			.cadre
+			{
+				margin: 14px;
+				box-shadow: 0 0 0 1px $color-dark02, 0 0 0 13px white, 0 0 0 14px $color-dark02;
+			}
+		}
+		.content
+		{
+			order: 1;
+			h1
+			{
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 600px;
+			}
+			h1, h2, p
+			{
+				white-space: normal;
+				text-align: center;
+			}
+			h1, h2
+			{
+				font-size: 32px;
+			}
 		}
 		.table
 		{

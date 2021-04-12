@@ -18,7 +18,11 @@
 
     CVM.ToggleNavVisibility.prototype.toggleVisibility = function()
 	{	
-        if (this.lastScrollValue > window.scrollY || this.lastScrollValue === null)
+		if (this.lastScrollValue == document.documentElement.scrollTop)
+		{
+			return;
+		}
+        if (this.lastScrollValue > document.documentElement.scrollTop || this.lastScrollValue === null)
         {
             this.container.classList.remove("header-hide");
         }
@@ -26,6 +30,6 @@
         {
             this.container.classList.add("header-hide");
         }
-        this.lastScrollValue = window.scrollY;
+        this.lastScrollValue = document.documentElement.scrollTop;
 	};
 }());

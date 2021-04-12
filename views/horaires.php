@@ -21,31 +21,31 @@ ob_start();?>
                         <li id="day2">
                             <p class="row row2">
                                 <span>mardi </span>
-                                <span>09h - 17h</span>
+                                <span>10h - 19h</span>
                             </p>
                         </li>
                         <li id="day3">
                             <p class="row row3">
                                 <span>mercredi </span>
-                                <span>09h - 17h</span>
+                                <span>10h - 19h</span>
                             </p>
                         </li>
                         <li id="day4">
                             <p class="row row4">
                                 <span>jeudi </span>
-                                <span>09h - 17h</span>
+                                <span>10h - 19h</span>
                             </p>
                         </li>
                         <li id="day5">
                             <p class="row row5">
                                 <span>vendredi </span>
-                                <span>09h - 17h</span>
+                                <span>10h - 19h</span>
                             </p>
                         </li>
                         <li id="day6">
                             <p class="row row6">
                                 <span>samedi </span>
-                                <span>09h - 17h</span>
+                                <span>10h - 19h</span>
                             </p>
                         </li>
                         <li id="day0">
@@ -57,15 +57,14 @@ ob_start();?>
                     </ul>
                 </div>
                 <div class="image-container border-cut">
-                    <div id="parallax-niche" class="parallax-container parallax-niche cadre">
-                        <img src="assets/images/niche04.svg" alt="illustration d'une niche au quatrième plan" class="layer layer-niche4">
-                        <img src="assets/images/niche03.svg" alt="illustration d'une niche au troisième plan" class="layer layer-niche3">
-                        <img src="assets/images/niche02.svg" alt="illustration d'une niche au deuxième plan" class="layer layer-niche2">
-                        <img src="assets/images/niche01.svg" alt="illustration d'une niche au premier plan" class="layer layer-niche1">
-                        <div class="layer layer-niche0 horloge-container">
-                            <img id="hours" src="assets/images/hourHand.svg" alt="illustration de l'aiguille des heures" class="aiguille">
-                            <img id="minutes" src="assets/images/minuteHand.svg" alt="illustration de l'aiguille des minutes" class="aiguille">
-                            <img id="seconds" src="assets/images/secondHand.svg" alt="illustration de l'aiguille des secondes" class="aiguille seconds">
+                    <div id="parallax-niche" class="parallax-container image circle cadre">
+                        <div class="layer layer4"></div>
+                        <div class="layer layer3"></div>
+                        <div class="layer layer2"></div>
+                        <div class="layer layer1">
+                            <img id="hours" src="assets/images/hourHand.svg" alt="" class="aiguille">
+                            <img id="minutes" src="assets/images/minuteHand.svg" alt="" class="aiguille">
+                            <img id="seconds" src="assets/images/secondHand.svg" alt="" class="aiguille seconds">
                         </div>
                     </div>
                 </div>

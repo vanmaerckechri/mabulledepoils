@@ -72,6 +72,16 @@ ul {
       -ms-flex-align: center;
           align-items: center; }
 
+.relative {
+  position: relative; }
+
+.image {
+  width: 350px;
+  height: 350px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  pointer-events: none; }
+
 .content {
   width: 100%; }
   .content h1, .content h2 {
@@ -100,22 +110,26 @@ ul {
   .section-dark h2, .section-dark p {
     text-shadow: 2px 0 0 #e3a4c1, 2px 2px 0 #e3a4c1, 0 2px 0 #e3a4c1, -2px 2px 0 #e3a4c1, -2px 0 0 #e3a4c1, -2px -2px 0 #e3a4c1, 0 -2px 0 #e3a4c1, 2px -2px 0 #e3a4c1; }
 
+.circle {
+  border-radius: 50%; }
+
+.cadre {
+  -webkit-box-shadow: 0 0 0 1px #6d809b, 0 0 0 13px white, 0 0 0 14px #6d809b;
+          box-shadow: 0 0 0 1px #6d809b, 0 0 0 13px white, 0 0 0 14px #6d809b;
+  background-color: #eff2f7; }
+
 .border-cut {
   z-index: 1;
   overflow: hidden;
   position: absolute;
   border-radius: 50%;
-  border: 75px solid #eff2f7;
-  background-color: #eff2f7;
-  right: 0;
-  width: 550px;
-  height: 550px; }
-
-.cadre {
-  border-radius: 50%;
-  border: 2px solid #6d809b;
-  width: 100%;
-  height: auto; }
+  right: 0; }
+  .border-cut .cadre {
+    margin: 78px;
+    width: 400px;
+    height: 400px;
+    -webkit-box-shadow: 0 0 0 1px #6d809b, 0 0 0 13px white, 0 0 0 14px #6d809b, 0 0 0 78px #eff2f7;
+            box-shadow: 0 0 0 1px #6d809b, 0 0 0 13px white, 0 0 0 14px #6d809b, 0 0 0 78px #eff2f7; }
 
 .table {
   margin-top: 10px;
@@ -219,34 +233,36 @@ ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-    #main .container-large .image-container {
-      position: static;
-      margin: 0 auto 20px;
-      -webkit-box-ordinal-group: 1;
-          -ms-flex-order: 0;
-              order: 0;
-      width: 250px;
-      height: 250px;
-      -webkit-transform: none;
-              transform: none; }
-      #main .container-large .image-container img {
-        width: 250px;
-        height: 250px; }
-    #main .container-large .content {
-      -webkit-box-ordinal-group: 2;
-          -ms-flex-order: 1;
-              order: 1; }
-      #main .container-large .content h1 {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 600px; }
-      #main .container-large .content h1, #main .container-large .content h2, #main .container-large .content p {
-        white-space: normal;
-        text-align: center; }
-      #main .container-large .content h1, #main .container-large .content h2 {
-        font-size: 32px; }
-  #main .border-cut {
-    border: none; }
+  #main .image-container {
+    position: static;
+    margin: 12px auto 40px;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    -webkit-transform: none;
+            transform: none; }
+  #main .image {
+    width: 250px;
+    height: 250px; }
+  #main .cadre {
+    margin: 14px; }
+  #main .border-cut .cadre {
+    margin: 14px;
+    -webkit-box-shadow: 0 0 0 1px #6d809b, 0 0 0 13px white, 0 0 0 14px #6d809b;
+            box-shadow: 0 0 0 1px #6d809b, 0 0 0 13px white, 0 0 0 14px #6d809b; }
+  #main .content {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+    #main .content h1 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 600px; }
+    #main .content h1, #main .content h2, #main .content p {
+      white-space: normal;
+      text-align: center; }
+    #main .content h1, #main .content h2 {
+      font-size: 32px; }
   #main .table {
     margin-left: auto;
     margin-right: auto;
@@ -301,6 +317,11 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    header .logo-container .logo-image {
+      width: 56px;
+      height: 56px;
+      background-image: url("../images/logo.svg");
+      background-size: 100% 100%; }
     header .logo-container .logo-text {
       margin-left: 14px;
       font-size: 14px;
@@ -326,14 +347,14 @@ nav li {
     color: #ed417e;
     font-size: 14px;
     font-weight: 300; }
-    nav li a img {
+    nav li a .image {
       -webkit-transition: -webkit-transform 0.2s ease-out;
       transition: -webkit-transform 0.2s ease-out;
       transition: transform 0.2s ease-out;
       transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out; }
   nav li .btn-text {
     margin-top: 2px; }
-  nav li:hover img {
+  nav li:hover .image {
     -webkit-transform: scale3d(0.8, 0.8, 1);
             transform: scale3d(0.8, 0.8, 1); }
 
@@ -356,6 +377,18 @@ nav li {
     opacity: 0;
     pointer-events: none;
     z-index: -1; }
+  .mainMenu-container .image {
+    margin: 0 auto;
+    width: 32px;
+    height: 32px; }
+  .mainMenu-container .image-accueil {
+    background-image: url("../images/btn-accueil.svg"); }
+  .mainMenu-container .image-soins {
+    background-image: url("../images/btn-soins.svg"); }
+  .mainMenu-container .image-horaires {
+    background-image: url("../images/btn-horaires.svg"); }
+  .mainMenu-container .image-contact {
+    background-image: url("../images/btn-contact.svg"); }
 
 @media screen and (max-width: 845px) {
   header .container {
@@ -492,17 +525,21 @@ nav li {
   transition: perspective-origin 0.2s ease-out;
   transition: perspective-origin 0.2s ease-out, -webkit-perspective-origin 0.2s ease-out; }
   .page-accueil .salon-container .parallax-container .layer {
-    min-width: 1920px;
-    min-height: 440px;
-    height: auto; }
-  .page-accueil .salon-container .parallax-container .layer-mousse2 {
+    height: 440px; }
+  .page-accueil .salon-container .parallax-container .layer1 {
+    background-image: url("../images/mousse01.svg"); }
+  .page-accueil .salon-container .parallax-container .layer2 {
+    background-image: url("../images/mousse02.svg");
     -webkit-transform: translate3d(0px, 0px, -50px) scale3d(1.5, 1.5, 1);
             transform: translate3d(0px, 0px, -50px) scale3d(1.5, 1.5, 1); }
-  .page-accueil .salon-container .parallax-container .layer-mousse3 {
+  .page-accueil .salon-container .parallax-container .layer3 {
+    background-image: url("../images/mousse03.svg");
     -webkit-transform: translate3d(0px, 0px, -100px) scale3d(2, 2, 1);
             transform: translate3d(0px, 0px, -100px) scale3d(2, 2, 1); }
 .page-accueil .salon-container .parallax-cover {
   margin-top: -20vh; }
+.page-accueil .salon-container .image-container .image {
+  background-image: url("../images/logo.svg"); }
 .page-accueil .toiletteuse-container {
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4); }
@@ -514,13 +551,42 @@ nav li {
     width: 100%;
     height: 100px;
     background: url("../images/bulles_masque.png") repeat-x 100px; }
+  .page-accueil .toiletteuse-container .parallax-container .layer1 {
+    background-image: url("../images/bulles01_01.svg"); }
+  .page-accueil .toiletteuse-container .parallax-container .layer2 {
+    background-image: url("../images/bulles01_02.svg"); }
+  .page-accueil .toiletteuse-container .parallax-container .layer3 {
+    background-image: url("../images/bulles01_03.svg"); }
   .page-accueil .toiletteuse-container .image-container {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1; }
-  .page-accueil .toiletteuse-container .img-chienaureole {
-    -webkit-transform: translate3d(140px, 0px, 0px);
-            transform: translate3d(140px, 0px, 0px); }
+    .page-accueil .toiletteuse-container .image-container .image-toiletteuse {
+      width: 250px;
+      height: 250px;
+      background-image: url("../images/toiletteuse.jpg"); }
+    .page-accueil .toiletteuse-container .image-container .image-toque {
+      position: absolute;
+      top: -57px;
+      left: 21px;
+      width: 250px !important;
+      height: 140px !important;
+      background-image: url("../images/toque.svg"); }
+    .page-accueil .toiletteuse-container .image-container .bulldog-compo {
+      position: relative;
+      left: 160px;
+      top: 40px; }
+    .page-accueil .toiletteuse-container .image-container .image-bulldog {
+      width: 250px;
+      height: 250px;
+      background-image: url("../images/bulldog.jpg"); }
+    .page-accueil .toiletteuse-container .image-container .image-aureole {
+      position: absolute;
+      top: 5px;
+      left: -51px;
+      width: 340px;
+      height: 160px;
+      background-image: url("../images/aureole.svg"); }
   .page-accueil .toiletteuse-container h2, .page-accueil .toiletteuse-container p {
     text-align: right; }
 .page-accueil .soins-container .parallax-container {
@@ -528,29 +594,27 @@ nav li {
   transition: -webkit-perspective-origin 1s ease-out;
   transition: perspective-origin 1s ease-out;
   transition: perspective-origin 1s ease-out, -webkit-perspective-origin 1s ease-out; }
-.page-accueil .soins-container .parallax-cover img {
-  border-radius: 50%;
-  border: 2px solid #6d809b; }
-.page-accueil .soins-container .content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
-.page-accueil .soins-container .image-container {
-  width: 350px;
-  height: 350px; }
+  .page-accueil .soins-container .parallax-container .layer1 {
+    background-image: url("../images/bulles02_01.svg"); }
+  .page-accueil .soins-container .parallax-container .layer2 {
+    background-image: url("../images/bulles02_02.svg"); }
+  .page-accueil .soins-container .parallax-container .layer3 {
+    background-image: url("../images/bulles02_03.svg"); }
+.page-accueil .soins-container .image-container .image {
+  background-image: url("../images/komondor_mobile.jpg"); }
 .page-accueil .parallax-bulles .layer {
-  bottom: unset;
+  width: 1908px;
+  height: 930px;
   top: 50%;
   left: 50%;
-  min-width: 1908px;
-  max-width: 1908px; }
-.page-accueil .parallax-bulles .layer-bulles1 {
+  background-position: top, left; }
+.page-accueil .parallax-bulles .layer1 {
   -webkit-transform: translate3d(-50%, -50%, -30px) scale3d(1.3, 1.3, 1);
           transform: translate3d(-50%, -50%, -30px) scale3d(1.3, 1.3, 1); }
-.page-accueil .parallax-bulles .layer-bulles2 {
+.page-accueil .parallax-bulles .layer2 {
   -webkit-transform: translate3d(-50%, -50%, -65px) scale3d(1.65, 1.65, 1);
           transform: translate3d(-50%, -50%, -65px) scale3d(1.65, 1.65, 1); }
-.page-accueil .parallax-bulles .layer-bulles3 {
+.page-accueil .parallax-bulles .layer3 {
   -webkit-transform: translate3d(-50%, -50%, -100px) scale3d(2, 2, 1);
           transform: translate3d(-50%, -50%, -100px) scale3d(2, 2, 1); }
 
@@ -559,12 +623,28 @@ nav li {
     padding-top: 32px; }
     #main.page-accueil .salon-container .parallax-cover {
       margin-top: 0; }
-  #main.page-accueil .toiletteuse-container .img-chienaureole {
+    #main.page-accueil .salon-container .image-container .image {
+      width: 350px;
+      height: 350px; }
+  #main.page-accueil .toiletteuse-container .image-toque {
+    top: -58px;
+    left: 35px; }
+  #main.page-accueil .toiletteuse-container .bulldog-compo {
     display: none; }
+    #main.page-accueil .toiletteuse-container .bulldog-compo .image {
+      background-image: none; } }
+@media screen and (max-width: 750px) {
+  #main.page-accueil .parallax-bulles .layer {
+    background-image: none; }
+  #main.page-accueil .salon-container .image-container .image {
+    width: 250px;
+    height: 250px; }
   #main.page-accueil .toiletteuse-container .image-container {
     -webkit-box-flex: 0;
         -ms-flex: none;
-            flex: none; } }
+            flex: none; }
+  #main.page-accueil .soins-container .image {
+    background-image: url("../images/komondor_mobile.jpg"); } }
 .page-soins .container-large {
   position: relative; }
 .page-soins p {
@@ -572,7 +652,11 @@ nav li {
 .page-soins .row {
   max-width: calc(520px - 24px); }
 .page-soins .border-cut {
-  top: 160px; }
+  top: 155px; }
+.page-soins .image-container {
+  position: absolute; }
+.page-soins .image {
+  background-image: url("../images/soins-chien.jpg"); }
 
 @media screen and (max-width: 1140px) {
   #main.page-soins p {
@@ -596,7 +680,8 @@ nav li {
   position: relative; }
 .page-horaires .border-cut {
   top: 100px; }
-.page-horaires .parallax-niche {
+.page-horaires .parallax-container {
+  position: static;
   -webkit-perspective: 200px;
           perspective: 200px;
   -webkit-perspective-origin: 50% 50%;
@@ -608,73 +693,71 @@ nav li {
   min-height: auto;
   -webkit-animation: parallaxZoom 5s 0.6s forwards;
           animation: parallaxZoom 5s 0.6s forwards; }
-  .page-horaires .parallax-niche .layer {
+  .page-horaires .parallax-container .layer {
     width: 650px;
     height: 650px;
     bottom: unset;
     top: 50%;
-    left: 50%; }
-  .page-horaires .parallax-niche .layer-niche1, .page-horaires .parallax-niche .horloge-container {
+    left: 50%;
+    pointer-events: none;
+    background-size: 100% 100%; }
+  .page-horaires .parallax-container .layer1 {
+    background-image: url("../images/niche01.svg");
+    background-position: center center;
     -webkit-transform: translate3d(-50%, -50%, -30px) scale3d(1.3, 1.3, 1);
             transform: translate3d(-50%, -50%, -30px) scale3d(1.3, 1.3, 1); }
-  .page-horaires .parallax-niche .layer-niche2 {
-    -webkit-transform: translate3d(-50%, -50%, -60px) scale3d(1.6, 1.6, 1);
-            transform: translate3d(-50%, -50%, -60px) scale3d(1.6, 1.6, 1); }
-  .page-horaires .parallax-niche .layer-niche3 {
-    -webkit-transform: translate3d(-50%, -50%, -75px) scale3d(1.75, 1.75, 1);
-            transform: translate3d(-50%, -50%, -75px) scale3d(1.75, 1.75, 1); }
-  .page-horaires .parallax-niche .layer-niche4 {
-    -webkit-transform: translate3d(-50%, -50%, -100px) scale3d(2, 2, 1);
-            transform: translate3d(-50%, -50%, -100px) scale3d(2, 2, 1); }
-  .page-horaires .parallax-niche .horloge-container {
-    position: relative;
-    top: 173px;
-    left: 205px;
-    width: 81px;
-    height: 81px;
-    pointer-events: none; }
-    .page-horaires .parallax-niche .horloge-container .aiguille {
+    .page-horaires .parallax-container .layer1 .aiguille {
       position: absolute;
-      left: 0;
-      top: 0;
+      left: 289px;
+      top: 265px;
       width: 8px;
       height: 50px;
       -webkit-transform-origin: 4px 38px;
               transform-origin: 4px 38px; }
-    .page-horaires .parallax-niche .horloge-container .seconds {
+    .page-horaires .parallax-container .layer1 .seconds {
       -webkit-animation: clock 60s infinite steps(60);
               animation: clock 60s infinite steps(60); }
+  .page-horaires .parallax-container .layer2 {
+    background-image: url("../images/niche02.svg");
+    -webkit-transform: translate3d(-50%, -50%, -60px) scale3d(1.6, 1.6, 1);
+            transform: translate3d(-50%, -50%, -60px) scale3d(1.6, 1.6, 1); }
+  .page-horaires .parallax-container .layer3 {
+    background-image: url("../images/niche03.svg");
+    -webkit-transform: translate3d(-50%, -50%, -75px) scale3d(1.75, 1.75, 1);
+            transform: translate3d(-50%, -50%, -75px) scale3d(1.75, 1.75, 1); }
+  .page-horaires .parallax-container .layer4 {
+    background-image: url("../images/niche04.svg");
+    -webkit-transform: translate3d(-50%, -50%, -100px) scale3d(2, 2, 1);
+            transform: translate3d(-50%, -50%, -100px) scale3d(2, 2, 1); }
 .page-horaires p {
   max-width: 417px; }
 .page-horaires .row {
   max-width: calc(417px - 24px); }
 
 @media screen and (max-width: 1140px) {
-  #main.page-horaires .container-large .image-container {
-    height: 250px; }
   #main.page-horaires .container-large p {
     max-width: 100%; }
-  #main.page-horaires .container-large .parallax-niche {
+  #main.page-horaires .container-large .parallax-container {
     position: relative;
     -webkit-perspective-origin: 50% 40%;
             perspective-origin: 50% 40%; }
-    #main.page-horaires .container-large .parallax-niche .layer {
+    #main.page-horaires .container-large .parallax-container .layer {
       width: 500px;
       height: 500px; }
-    #main.page-horaires .container-large .parallax-niche .horloge-container {
-      top: 386px;
-      left: 411px; }
-      #main.page-horaires .container-large .parallax-niche .horloge-container .aiguille {
-        position: absolute;
-        height: 40px;
-        width: 8px;
-        -webkit-transform-origin: 4px 30px;
-                transform-origin: 4px 30px; } }
+    #main.page-horaires .container-large .parallax-container .layer1 .aiguille {
+      top: 203px;
+      left: 221px;
+      width: 8px;
+      height: 40px;
+      -webkit-transform-origin: 4px 30px;
+              transform-origin: 4px 30px; } }
 .page-contact .container-large {
   position: relative;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start; }
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 .page-contact ul li {
   margin-bottom: 20px; }
   .page-contact ul li:last-of-type {
@@ -689,52 +772,72 @@ nav li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .page-contact ul .icon-container .image {
+    width: 38px !important;
+    height: 38px !important; }
+  .page-contact ul .icon-container .image-adresse {
+    background-image: url("../images/icone_adresse.svg"); }
+  .page-contact ul .icon-container .image-phone {
+    background-image: url("../images/icone_phone.svg"); }
+  .page-contact ul .icon-container .image-mail {
+    background-image: url("../images/icone_mail.svg"); }
 .page-contact ul .text {
   margin: 6px 0 0 18px; }
 .page-contact .image-container {
-  z-index: 1;
-  position: absolute;
-  right: 440px;
-  bottom: 0; }
-  .page-contact .image-container .silhouette {
+  margin-top: -150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  width: 100%; }
+  .page-contact .image-container .image-facade {
+    margin-right: 300px;
+    z-index: 1;
+    position: relative;
+    width: 275px;
+    background-image: url("../images/photo_facade.jpg");
+    -webkit-transform: translate3d(-87px, 0, 0);
+            transform: translate3d(-87px, 0, 0); }
+  .page-contact .image-container .image-chiens {
+    z-index: 2;
+    position: relative;
+    max-width: 600px;
+    max-height: 190px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-transform: translate3d(0, 50px, 0);
+            transform: translate3d(0, 50px, 0);
+    background-image: url("../images/silhouette-chiens.svg");
+    background-size: 100% auto;
+    background-position-y: center; }
+  .page-contact .image-container .image-chat {
+    z-index: 1;
     position: absolute;
-    left: 50%;
-    opacity: 1;
-    -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s; }
-  .page-contact .image-container .silhouette_chat {
-    top: 0;
-    -webkit-transform: translate3d(-50%, -82%, 0);
-            transform: translate3d(-50%, -82%, 0); }
-  .page-contact .image-container .silhouette_chien01 {
-    bottom: 0;
-    -webkit-transform: translate3d(-392%, -71%, 0);
-            transform: translate3d(-392%, -71%, 0); }
-  .page-contact .image-container .silhouette_chien02 {
-    bottom: 0;
-    -webkit-transform: translate3d(-380%, -63%, 0);
-            transform: translate3d(-380%, -63%, 0); }
-  .page-contact .image-container .silhouette_chien03 {
-    bottom: 0;
-    -webkit-transform: translate3d(-166%, -92%, 0);
-            transform: translate3d(-166%, -92%, 0); }
-.page-contact .cadre {
-  margin-bottom: 64px;
-  border-radius: 0;
-  padding: 12px;
-  width: auto;
-  background-color: white; }
-  .page-contact .cadre img, .page-contact .cadre iframe {
-    border: 2px solid #6d809b; }
-.page-contact .facade-container {
-  border-radius: 50%; }
-  .page-contact .facade-container img {
-    border-radius: 50%; }
-.page-contact .gm-container {
-  -webkit-transform: translate3d(0, 47px, 0) rotate3d(0, 0, 1, 5deg);
-          transform: translate3d(0, 47px, 0) rotate3d(0, 0, 1, 5deg); }
+    top: 85px;
+    right: 565px;
+    width: 51px;
+    height: 80px;
+    background-image: url("../images/silhouette_chat.svg"); }
+.page-contact .map-container {
+  z-index: 0;
+  position: absolute;
+  bottom: 82px;
+  right: 82px;
+  -webkit-transform: rotate3d(0, 0, 1, 5deg);
+          transform: rotate3d(0, 0, 1, 5deg); }
+  .page-contact .map-container > iframe {
+    vertical-align: middle; }
 
 @media screen and (max-width: 1140px) {
+  #main.page-contact .container-large {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
   #main.page-contact .content {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -749,55 +852,57 @@ nav li {
               flex-direction: column; }
     #main.page-contact ul .text {
       margin-left: 0; }
-  #main.page-contact .image-container .silhouette {
-    bottom: unset;
-    top: 50%;
-    width: auto; }
-  #main.page-contact .image-container .silhouette_chien01 {
-    -webkit-transform: translate3d(-163%, 12%, 0);
-            transform: translate3d(-163%, 12%, 0); }
-  #main.page-contact .image-container .silhouette_chien02 {
-    -webkit-transform: translate3d(121%, -9%, 0);
-            transform: translate3d(121%, -9%, 0); }
-  #main.page-contact .image-container .silhouette_chien03 {
-    -webkit-transform: translate3d(-260%, 35px, 0);
-            transform: translate3d(-260%, 35px, 0); }
-  #main.page-contact .image-container .silhouette_chat {
-    -webkit-transform: translate3d(120%, 20%, 0);
-            transform: translate3d(120%, 20%, 0); }
-  #main.page-contact .image-container img {
-    max-width: 250px;
-    height: auto; }
-  #main.page-contact .cadre {
+    #main.page-contact ul li {
+      line-height: 0; }
+  #main.page-contact .image-container {
+    max-width: 530px;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    #main.page-contact .image-container .image-facade {
+      -webkit-transform: none;
+              transform: none; }
+    #main.page-contact .image-container .image-chiens {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      -webkit-box-flex: 0;
+          -ms-flex: none;
+              flex: none;
+      width: 420px;
+      max-width: 98vw;
+      height: 130px;
+      -webkit-transform: translate3d(-50%, 0, 0);
+              transform: translate3d(-50%, 0, 0); }
+    #main.page-contact .image-container .image-chat {
+      top: 650px;
+      right: 50%;
+      width: 64px;
+      height: 100px;
+      -webkit-transform: translate3d(170px, 0, 0);
+              transform: translate3d(170px, 0, 0); }
+  #main.page-contact .map-container {
+    margin: 0 auto 20px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    margin: 0 auto;
-    padding: 0;
     width: 100%;
-    background-color: unset; }
-  #main.page-contact .facade-container {
-    border: none; }
-  #main.page-contact .gm-container {
-    border-radius: 0;
+    position: static;
+    border: 1px solid #6d809b;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     -webkit-transform: none;
             transform: none; }
-    #main.page-contact .gm-container iframe {
+    #main.page-contact .map-container iframe {
       width: 100%;
+      height: 500px;
       border: none;
       border-radius: 0; } }
-@media screen and (max-width: 900px) {
-  #main.page-contact .image-container .silhouette_chien03 {
-    opacity: 0; } }
-@media screen and (max-width: 580px) {
-  #main.page-contact .image-container .silhouette_chien02 {
-    opacity: 0; } }
-@media screen and (max-width: 500px) {
-  #main.page-contact .image-container .silhouette_chien01 {
-    opacity: 0; } }
-@media screen and (max-width: 305px) {
-  #main.page-contact .image-container .silhouette_chat {
-    opacity: 0; } }
 .animeWhenVisible-translateFromLeft-init {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
@@ -827,10 +932,10 @@ nav li {
 .animeWhenVisible-translateFromBot-init {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  -webkit-transition: -webkit-transform 2s ease-out, -webkit-perspective-origin 2s ease-out;
-  transition: -webkit-transform 2s ease-out, -webkit-perspective-origin 2s ease-out;
-  transition: transform 2s ease-out, perspective-origin 2s ease-out;
-  transition: transform 2s ease-out, perspective-origin 2s ease-out, -webkit-transform 2s ease-out, -webkit-perspective-origin 2s ease-out; }
+  -webkit-transition: -webkit-transform 2s ease-out, -webkit-perspective-origin 0.5s ease-out;
+  transition: -webkit-transform 2s ease-out, -webkit-perspective-origin 0.5s ease-out;
+  transition: transform 2s ease-out, perspective-origin 0.5s ease-out;
+  transition: transform 2s ease-out, perspective-origin 0.5s ease-out, -webkit-transform 2s ease-out, -webkit-perspective-origin 0.5s ease-out; }
 
 .animeWhenVisible-translateFromBot {
   -webkit-perspective-origin: 50% 200% !important;

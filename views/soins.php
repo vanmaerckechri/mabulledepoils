@@ -60,7 +60,7 @@ ob_start();?>
                     </ul>
                 </div>
                 <div class="image-container border-cut">
-                    <img class="cadre" src="assets/images/soins-chien.jpg"  width="400" height="400" alt="photo d'un chien après avoir reçu les soins">
+                    <div class="image circle cadre"></div>
                 </div>
             </div>
         </section>

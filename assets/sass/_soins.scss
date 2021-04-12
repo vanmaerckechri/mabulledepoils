@@ -14,7 +14,15 @@
     }
     .border-cut
     {
-        top: 160px;
+        top: 155px;
+    }
+    .image-container
+    {
+        position: absolute;
+    }
+    .image
+    {
+        background-image: url("../images/soins-chien.jpg");
     }
 }
 

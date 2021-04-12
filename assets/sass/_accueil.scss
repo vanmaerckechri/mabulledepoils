@@ -8,22 +8,33 @@
             transition: perspective-origin 0.2s ease-out;
             .layer
             {
-                min-width: 1920px;
-                min-height: 440px;
-                height: auto;
+                height: 440px;
             }
-            .layer-mousse2
+            .layer1
             {
+                background-image: url("../images/mousse01.svg");
+            } 
+            .layer2
+            {
+                background-image: url("../images/mousse02.svg");
                 transform: translate3d(0px, 0px, -50px) scale3d(1.5, 1.5, 1);
             }
-            .layer-mousse3
+            .layer3
             {
+                background-image: url("../images/mousse03.svg");
                 transform: translate3d(0px, 0px, -100px) scale3d(2, 2, 1);
             }
         }
         .parallax-cover
         {
             margin-top: -20vh;
+        }
+        .image-container
+        {
+            .image
+            {
+                background-image: url("../images/logo.svg");
+            }
         }
     }
     .toiletteuse-container
@@ -40,13 +51,60 @@
             height: 100px;
             background: url("../images/bulles_masque.png") repeat-x 100px;
         }
+        .parallax-container
+        {
+            .layer1
+            {
+                background-image: url("../images/bulles01_01.svg");
+            }
+            .layer2
+            {
+                background-image: url("../images/bulles01_02.svg");
+            }
+            .layer3
+            {
+                background-image: url("../images/bulles01_03.svg");
+            }
+        }
         .image-container
         {
             flex: 1;
-        }
-        .img-chienaureole
-        {
-            transform: translate3d(140px, 0px, 0px);
+            .image-toiletteuse
+            {
+                width: 250px;
+                height: 250px;
+                background-image: url("../images/toiletteuse.jpg");
+            }
+            .image-toque
+            {
+                position: absolute;
+                top: -57px;
+                left: 21px;
+                width: 250px!important;
+                height: 140px!important;
+                background-image: url("../images/toque.svg");
+            }
+            .bulldog-compo
+            {
+                position: relative;
+                left: 160px;
+                top: 40px;
+            }
+            .image-bulldog
+            {
+                width: 250px;
+                height: 250px;
+                background-image: url("../images/bulldog.jpg");
+            }
+            .image-aureole
+            {
+                position: absolute;
+                top: 5px;
+                left: -51px;
+                width: 340px;
+                height: 160px;
+                background-image: url("../images/aureole.svg");
+            }
         }
         h2, p
         {
@@ -58,44 +116,46 @@
         .parallax-container
         {
             transition: perspective-origin 1s ease-out;
-        }
-        .parallax-cover
-        {
-            img
+            .layer1
             {
-                border-radius: 50%;
-                border: 2px solid $color-dark02;
+                background-image: url("../images/bulles02_01.svg");
             }
-        }
-        .content
-        {
-            flex: 1;
+            .layer2
+            {
+                background-image: url("../images/bulles02_02.svg");
+            }
+            .layer3
+            {
+                background-image: url("../images/bulles02_03.svg");
+            }
         }
         .image-container
         {
-            width: 350px;
-            height: 350px;
+            .image
+            {
+                background-image: url("../images/komondor_mobile.jpg");
+            }
         }
     }
     .parallax-bulles
     {
         .layer
         {
-            bottom: unset;
+            width: 1908px;
+            height: 930px;
             top: 50%;
             left: 50%;
-            min-width: 1908px;
-            max-width: 1908px;
+            background-position: top, left;
         }
-        .layer-bulles1
+        .layer1
         {
             transform: translate3d(-50%, -50%, -30px) scale3d(1.3, 1.3, 1);
         }
-        .layer-bulles2
+        .layer2
         {
             transform: translate3d(-50%, -50%, -65px) scale3d(1.65, 1.65, 1);
         }
-        .layer-bulles3
+        .layer3
         {
             transform: translate3d(-50%, -50%, -100px) scale3d(2, 2, 1);
         }
@@ -113,16 +173,69 @@
             {
                 margin-top: 0;
             }
+            .image-container
+            {
+                .image
+                {
+                    width: 350px;
+                    height: 350px;
+                }
+            }
         }
         .toiletteuse-container
         {
-            .img-chienaureole
+            .image-toque
+            {
+                top: -58px;
+                left: 35px;
+            }
+            .bulldog-compo
             {
                 display: none;
+                .image
+                {
+                    background-image: none;
+                }
             }
+        }
+    }
+}
+
+
+@media screen and (max-width: 750px)
+{
+    #main.page-accueil
+    {
+        .parallax-bulles
+        {
+            .layer
+            {
+                background-image: none;
+            }
+        }
+        .salon-container
+        {
+            .image-container
+            {
+                .image
+                {
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+        }
+        .toiletteuse-container
+        {
             .image-container
             {
                 flex: none;
+            }
+        }
+        .soins-container
+        {
+            .image
+            {
+                background-image: url("../images/komondor_mobile.jpg");
             }
         }
     }
