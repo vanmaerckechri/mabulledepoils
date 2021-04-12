@@ -18,18 +18,21 @@
 
     CVM.ToggleNavVisibility.prototype.toggleVisibility = function()
 	{	
-		if (this.lastScrollValue == document.documentElement.scrollTop)
+		if (this.lastScrollValue == document.documentElement.scrollTop || document.documentElement.scrollTop < 0)
 		{
 			return;
 		}
-        if (this.lastScrollValue > document.documentElement.scrollTop || this.lastScrollValue === null)
-        {
-            this.container.classList.remove("header-hide");
-        }
-        else
-        {
-            this.container.classList.add("header-hide");
-        }
-        this.lastScrollValue = document.documentElement.scrollTop;
+
+		// scroll up
+		if (this.lastScrollValue > document.documentElement.scrollTop || this.lastScrollValue === null)
+		{
+			this.container.classList.remove("header-hide");
+		}
+		// scoll down
+		else
+		{
+			this.container.classList.add("header-hide");
+		}
+		this.lastScrollValue = document.documentElement.scrollTop;
 	};
 }());
