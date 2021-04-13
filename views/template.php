@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head prefix="og: https://ogp.me/ns#">
-        <!--<base href="https://www.cvmdev.be/aufildupoil/">-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,15 +8,16 @@
         <!--Facebook and Twitter-->
         <meta property="og:locale" content="fr_FR">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="<?=$og_page ?? ''?>">
+        <meta property="og:url" content="https://www.cvmdev.be/productions/aufildupoil/<?=$og_page ?? ''?>">
         <meta property="og:site_name" content="Au Fil du Poil">
         <meta property="og:title" content="<?=$content_title ?? ''?>">
         <meta property="og:description" content="<?=$meta_description ?? ''?>">
-        <meta property="og:image:width" content="512">
-        <meta property="og:image:width" content="512">
-        <meta property="og:image" content="https://www.cvmdev.be/aufildupoil/meta_social.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image" content="https://www.cvmdev.be/productions/aufildupoil/meta_social.png">
         <meta property="og:image:alt" content="logo du salon de toilettage illustrant un chiot prenant un bain">
         <!--Favison and Color-->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <meta name="theme-color" content="#ed427e">
         <!--Stylesheet-->
