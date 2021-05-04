@@ -1,7 +1,7 @@
 <?php
 
-$content_title = "Contact | Au Fil du Poil, Salon de toilettage Animalier";
-$meta_description = "Les coordonnées pour contacter le salon de toilettage animalier au Fil du Poil situé à Wavre.";
+$content_title = "Contact | Ma Bulle de Poils, Salon de toilettage Animalier";
+$meta_description = "Les coordonnées pour contacter le salon de toilettage animalier Ma Bulle de Poils situé à Wavre.";
 $og_page = "contact.php";
 
 ob_start();?>

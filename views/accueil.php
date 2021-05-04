@@ -1,7 +1,7 @@
 <?php
 
-$content_title = "Accueil | Au Fil du Poil, Salon de toilettage Animalier";
-$meta_description = "Présentation du salon de toilettage animalier au Fil du Poil situé à Wavre.";
+$content_title = "Accueil | Ma Bulle de Poils, Salon de toilettage Animalier";
+$meta_description = "Présentation du salon de toilettage animalier Ma Bulle de Poils situé à Wavre.";
 
 ob_start();?>
     <div id="main" class="main page-accueil">
@@ -14,7 +14,7 @@ ob_start();?>
             <div class="parallax-cover container-large">
                 <div id="salon-content" class="content">
                     <h1>Salon de Toilettage Animalier,<br>
-                        au Fil du Poil
+                        Ma Bulle de Poils
                     </h1>
                     <p>Que vous soyez un chien, un chat ou toute autre petite boule de poils,<br>
                         venez vous faire cajoler dans votre salon de toilettage inclusif situé à Wavre.

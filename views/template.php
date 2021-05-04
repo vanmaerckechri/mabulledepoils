@@ -8,13 +8,13 @@
         <!--Facebook and Twitter-->
         <meta property="og:locale" content="fr_FR">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://www.cvmdev.be/productions/aufildupoil/<?=$og_page ?? ''?>">
+        <meta property="og:url" content="https://www.cvmdev.be/realisations/mabulledepoils/<?=$og_page ?? ''?>">
         <meta property="og:site_name" content="Au Fil du Poil">
         <meta property="og:title" content="<?=$content_title ?? ''?>">
         <meta property="og:description" content="<?=$meta_description ?? ''?>">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
-        <meta property="og:image" content="https://www.cvmdev.be/productions/aufildupoil/meta_social.png">
+        <meta property="og:image" content="https://www.cvmdev.be/realisations/mabulledepoils/meta_social.png">
         <meta property="og:image:alt" content="logo du salon de toilettage illustrant un chiot prenant un bain">
         <!--Favison and Color-->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -32,7 +32,7 @@
                 <div class="logo-container">
                     <div class="logo-image"></div>
                     <div class="logo-text">Salon de Toilettage Animalier,<br>
-                        Au Fil du Poil
+                        Ma Bulle de Poils
                     </div>
                 </div>
                 <nav>

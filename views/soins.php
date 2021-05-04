@@ -1,7 +1,7 @@
 <?php
 
-$content_title = "Soins | Au Fil du Poil, Salon de toilettage Animalier";
-$meta_description = "Les soins et les tarifs du salon de toilettage animalier au Fil du Poil situé à Wavre.";
+$content_title = "Soins | Ma Bulle de Poils, Salon de toilettage Animalier";
+$meta_description = "Les soins et les tarifs du salon de toilettage animalier Ma Bulle de Poils situé à Wavre.";
 $og_page = "soins.php";
 
 ob_start();?>

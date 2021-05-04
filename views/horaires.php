@@ -1,7 +1,7 @@
 <?php
 
-$content_title = "Horaires | Au Fil du Poil, Salon de toilettage Animalier";
-$meta_description = "Les horaires du salon de toilettage animalier au Fil du Poil situé à Wavre.";
+$content_title = "Horaires | Ma Bulle de Poils, Salon de toilettage Animalier";
+$meta_description = "Les horaires du salon de toilettage animalier Ma Bulle de Poils situé à Wavre.";
 $og_page = "horaires.php";
 
 ob_start();?>

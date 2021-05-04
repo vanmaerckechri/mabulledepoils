@@ -1,6 +1,6 @@
 <?php
 
-$content_title = "Ressource non Trouvée | Au Fil du Poil, Salon de toilettage Animalier";
+$content_title = "Ressource non Trouvée | Ma Bulle de Poils, Salon de toilettage Animalier";
 
 ob_start();?>
     <div id="main" class="main">
