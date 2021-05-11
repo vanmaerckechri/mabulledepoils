@@ -23,24 +23,12 @@ header
         justify-content: space-between;
         align-items: center;
     }
-    .logo-container
+    .logo-image
     {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        .logo-image
-        {
-            width: 56px;
-            height: 56px;
-            background-image: url("../images/logo.svg");
-            background-size: 100% 100%;
-        }
-        .logo-text
-        {
-            margin-left: 14px;
-            font-size: 14px;
-            font-weight: 300;
-        }
+        width: 210px;
+        height: 64px;
+        background-image: url("../images/logo_horizontal.svg");
+        background-size: 100% 100%;
     }
 }
 .header-hide

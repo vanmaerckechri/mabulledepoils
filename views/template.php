@@ -29,12 +29,7 @@
     <body>
         <header>
             <div class="container">
-                <div class="logo-container">
-                    <div class="logo-image"></div>
-                    <div class="logo-text">Salon de Toilettage Animalier,<br>
-                        Ma Bulle de Poils
-                    </div>
-                </div>
+                <div class="logo-image"></div>
                 <nav>
                     <div class="mainMenu-container">
                         <input type="checkbox" aria-label="déplier le menu">
