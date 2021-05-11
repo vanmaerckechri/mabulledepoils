@@ -1,7 +1,7 @@
 <?php
 
 $content_title = "Accueil | Ma Bulle de Poils, Salon de toilettage Animalier";
-$meta_description = "Présentation du salon de toilettage animalier Ma Bulle de Poils situé à Wavre.";
+$meta_description = "Présentation de Géraldine Degueldre et du salon de toilettage Ma Bulle de Poils.";
 
 ob_start();?>
     <div id="main" class="main page-accueil">
@@ -13,8 +13,8 @@ ob_start();?>
             </div>
             <div class="parallax-cover container-large">
                 <div id="salon-content" class="content">
-                    <h1>Salon de Toilettage Animalier,<br>
-                        Ma Bulle de Poils
+                    <h1>Ma Bulle de Poils,<br>
+                        Salon de Toilettage
                     </h1>
                     <p>Que vous soyez un chien, un chat ou toute autre petite boule de poils,<br>
                         venez vous faire cajoler dans votre salon de toilettage inclusif situé à Wavre.

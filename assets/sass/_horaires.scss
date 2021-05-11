@@ -73,13 +73,9 @@
             transform: translate3d(-50%, -50%, -100px) scale3d(2, 2, 1);
         }
     }
-    p
-    {
-        max-width: 417px;
-    }
     .row
     {
-        max-width: calc(417px - 24px);
+        max-width: calc(513px - 24px);
     }
 }
 
@@ -91,7 +87,8 @@
 		{
             p
             {
-                max-width: 100%;
+                margin: 0 auto;
+                max-width: 369px;
             }
             .parallax-container
             {
@@ -113,6 +110,21 @@
                         transform-origin: 4px 30px;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px)
+{
+    #main.page-horaires
+    {
+        .container-large
+		{
+            p
+            {
+                margin: 0 auto;
+                max-width: 295px;
             }
         }
     }

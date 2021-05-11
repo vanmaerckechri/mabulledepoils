@@ -71,7 +71,7 @@
         <?=$content_main ?? ''?>
         <footer>
             <div class="container">
-                <span>© 2021 - Ma Bulle de Poils.</span>
+                <span>© 2021 - Ma Bulle de Poil.</span>
                 <span class="col-right">
                     <a class="phone" href="tel:+32479084278">0479/ 08 42 78</a>
                     <a class="link-facebook" href="#" target="_blank" rel="noopener">

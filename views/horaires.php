@@ -1,7 +1,7 @@
 <?php
 
 $content_title = "Horaires | Ma Bulle de Poils, Salon de toilettage Animalier";
-$meta_description = "Les horaires du salon de toilettage animalier Ma Bulle de Poils situé à Wavre.";
+$meta_description = "Les heures d'ouverture du salon de toilettage Ma Bulle de Poils.";
 $og_page = "horaires.php";
 
 ob_start();?>
@@ -10,7 +10,7 @@ ob_start();?>
             <div class="container-large">
                 <div class="content">
                     <h1 id="horaires-title">Horaires</h1>
-                    <p id="horaires-intro">Nous vous accueillons sur rendez-vous du mardi au samedi.</p>
+                    <p id="horaires-intro">Nous vous accueillons sur rendez-vous de 10h à 19h, du mardi au samedi.</p>
                     <ul class="table">
                         <li id="day1">
                             <p class="row row1">
