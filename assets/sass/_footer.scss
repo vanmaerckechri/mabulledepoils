@@ -1,0 +1,46 @@
+footer
+{
+    background-color: $color-dark01;
+    .container
+    {
+        padding: 8px 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 70%;
+        color: $color-light01;
+    }
+    .col-right
+    {
+        display: flex;
+        align-items: center;
+    }
+    .phone
+    {
+        color: $color-light01;
+    }
+    .link-facebook
+    {
+        margin-left: 28px;
+    }
+    .image-facebook
+    {
+        width: 28px;
+        height: 28px;
+        background-image: url(../images/logo_facebook.png);
+    }
+}
+@media screen and (max-width: 550px)
+{
+    footer
+    {
+        .container
+        {
+            padding: 8px 16px;
+        }
+        .link-facebook
+        {
+            margin-left: 14px;
+        }
+    }  
+}

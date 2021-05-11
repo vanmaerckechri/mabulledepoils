@@ -7,11 +7,13 @@ html, body, header, nav, footer, section, div, span, h1, h2, p, a, img, ul, li, 
 }
 html
 {
+	height: 100%;
 	font-size: 100%;
 	font-family: $fontFamily-main;
 }
 body
 {
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	background-color: $color-light01;
@@ -24,4 +26,8 @@ img
 ul
 {
 	list-style: none;
+}
+h1, h2, h3
+{
+	font-family: $fontFamily-title;
 }

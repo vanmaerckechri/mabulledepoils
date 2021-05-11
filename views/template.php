@@ -22,7 +22,7 @@
         <meta name="theme-color" content="#ed427e">
         <!--Stylesheet-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" media="all"> 
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Ubuntu:wght@300&display=swap" rel="stylesheet" media="all"> 
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all">
         <title><?=$content_title ?? ''?></title>
     </head>
@@ -74,7 +74,17 @@
             </div>
         </header>
         <?=$content_main ?? ''?>
-        <footer></footer>
+        <footer>
+            <div class="container">
+                <span>© 2021 - Ma Bulle de Poils.</span>
+                <span class="col-right">
+                    <a class="phone" href="tel:+32479084278">0479/ 08 42 78</a>
+                    <a class="link-facebook" href="#" target="_blank" rel="noopener">
+                        <div class="image image-facebook"></div>
+                    </a>
+                </span>
+            </div>
+        </footer>
         <script src="assets/js/Namespaces.js"></script>
         <script src="assets/js/ToggleNavVisibility.js"></script>
         <script>

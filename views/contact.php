@@ -16,7 +16,7 @@ ob_start();?>
                             <span class="text">Rue du Poilu, 17 - 1301 Bièrges</span>
                         </li>
                         <li>
-                            <a class="icon-container" href="tel:010-223-344">
+                            <a class="icon-container" href="tel:+32479084278">
                                 <div class="image image-phone"></div>
                                 <span class="text">0479/ 08 42 78</span>
                             </a>
