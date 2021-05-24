@@ -1,4 +1,4 @@
-html, body, header, nav, footer, section, div, span, h1, h2, p, a, img, ul, li, iframe { margin: 0; padding: 0; border: 0; box-sizing: border-box; }
+html, body, header, nav, footer, section, div, span, h1, h2, p, a, img, ul, li, iframe, input { margin: 0; padding: 0; border: 0; box-sizing: border-box; }
 
 html { height: 100%; font-size: 100%; font-family: "Oxygen", sans-serif; }
 
@@ -12,6 +12,33 @@ h1, h2, h3 { font-family: "Ubuntu", sans-serif; }
 
 strong { font-weight: bold !important; }
 
+input[type=range] { width: 100%; margin: 16px 0 8px; background-color: transparent; -webkit-appearance: none; }
+
+input[type=range]:focus { outline: none; }
+
+input[type=range]::-webkit-slider-runnable-track { background: #fffbff; border: 0.2px solid #010101; border-radius: 1.3px; width: 100%; height: 8.4px; cursor: pointer; }
+
+input[type=range]::-webkit-slider-thumb { margin-top: -14px; width: 18px; height: 36px; background: #e3a4c1; border: 1px solid #000000; border-radius: 50px; cursor: pointer; -webkit-appearance: none; }
+
+input[type=range]:focus::-webkit-slider-runnable-track { background: #eff2f7; }
+
+input[type=range]::-moz-range-track { background: #eff2f7; border: 0.2px solid #010101; border-radius: 1.3px; width: 100%; height: 8.4px; cursor: pointer; }
+
+input[type=range]::-moz-range-thumb { width: 18px; height: 36px; background: #e3a4c1; border: 1px solid #000000; border-radius: 50px; cursor: pointer; }
+
+input[type=range]::-ms-track { background: transparent; border-color: transparent; border-width: 14.8px 0; color: transparent; width: 100%; height: 8.4px; cursor: pointer; }
+
+input[type=range]::-ms-fill-lower { background: #eff2f7; border: 0.2px solid #010101; border-radius: 2.6px; }
+
+input[type=range]::-ms-fill-upper { background: #eff2f7; border: 0.2px solid #010101; border-radius: 2.6px; }
+
+input[type=range]::-ms-thumb { width: 18px; height: 36px; background: #e3a4c1; border: 1px solid #000000; border-radius: 50px; cursor: pointer; margin-top: 0px; }
+
+input[type=range]:focus::-ms-fill-lower { background: #eff2f7; }
+
+input[type=range]:focus::-ms-fill-upper { background: #eff2f7; }
+
+@supports (-ms-ime-align: auto) { input[type=range] { margin: 0; } }
 .main { flex: 1 0 auto; display: flex; flex-direction: column; overflow-x: hidden; }
 
 .section { position: relative; height: 100%; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; }
@@ -175,7 +202,9 @@ footer .col-right a { display: block; text-align: right; color: #eff2f7; }
 .page-accueil .soins-container .parallax-container .layer1 { background-image: url("../images/bulles02_01.svg"); }
 .page-accueil .soins-container .parallax-container .layer2 { background-image: url("../images/bulles02_02.svg"); }
 .page-accueil .soins-container .parallax-container .layer3 { background-image: url("../images/bulles02_03.svg"); }
-.page-accueil .soins-container .image-container .image { background-image: url("../images/komondor_mobile.jpg"); }
+.page-accueil .soins-container .image-container .image-ugly { overflow: hidden; background-image: url("../images/komondor_ugly.jpg"); }
+.page-accueil .soins-container .image-container .image-pretty { border-right: 2px solid #eff2f7; background-image: url("../images/komondor.jpg"); background-size: 350px 350px; }
+.page-accueil .soins-container .slidecontainer .legend { display: flex; justify-content: space-between; font-size: 14px; text-transform: uppercase; color: rgba(0, 0, 0, 0.5); }
 .page-accueil .parallax-bulles .layer { width: 1908px; height: 930px; top: 50%; left: 50%; background-position: top, left; }
 .page-accueil .parallax-bulles .layer1 { transform: translate3d(-50%, -50%, -30px) scale3d(1.3, 1.3, 1); }
 .page-accueil .parallax-bulles .layer2 { transform: translate3d(-50%, -50%, -65px) scale3d(1.65, 1.65, 1); }
@@ -186,11 +215,11 @@ footer .col-right a { display: block; text-align: right; color: #eff2f7; }
   #main.page-accueil .salon-container .image-container .image { width: 350px; height: 350px; }
   #main.page-accueil .toiletteuse-container .image-toque { top: -58px; left: 35px; }
   #main.page-accueil .toiletteuse-container .bulldog-compo { display: none; }
-  #main.page-accueil .toiletteuse-container .bulldog-compo .image { background-image: none; } }
+  #main.page-accueil .toiletteuse-container .bulldog-compo .image { background-image: none; }
+  #main.page-accueil .soins-container .image-pretty { background-image: url("../images/komondor_mobile.jpg"); background-size: 250px 250px; } }
 @media screen and (max-width: 750px) { #main.page-accueil .parallax-bulles .layer { background-image: none; }
   #main.page-accueil .salon-container .image-container .image { width: 250px; height: 250px; }
-  #main.page-accueil .toiletteuse-container .image-container { flex: none; }
-  #main.page-accueil .soins-container .image { background-image: url("../images/komondor_mobile.jpg"); } }
+  #main.page-accueil .toiletteuse-container .image-container { flex: none; } }
 .page-soins .container-large { position: relative; }
 .page-soins p { max-width: 520px; }
 .page-soins .row { max-width: calc(520px - 24px); }

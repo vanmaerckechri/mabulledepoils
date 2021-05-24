@@ -62,7 +62,16 @@ ob_start();?>
                     </p>
                 </div>
                 <div id="soins-images" class="image-container">
-                    <div class="image circle cadre"></div>
+                    <div class="image image-ugly circle cadre">
+                        <div id="image-pretty" class="image image-pretty"></div>
+                    </div>
+                    <div class="slidecontainer">
+                        <input type="range" min="0" max="100" value="50" class="slide-compare" id="slide-compare">
+                        <div class="legend">
+                            <span>avant</span>
+                            <span>après</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -72,6 +81,7 @@ ob_start();?>
 ob_start();?>
     <script src="assets/js/AnimeWhenVisible.js"></script>
     <script src="assets/js/Parallax.js"></script>
+    <script src="assets/js/SlideToAction.js"></script>
     <script src="assets/js/RequestAnimationFrame.js"></script>
     <script>
         (function()
@@ -97,6 +107,7 @@ ob_start();?>
             var animeWhenVisibleSoins_content = new CVM.AnimeWhenVisible(window, document.getElementById("soins-content"), document.getElementById("soins-content"), "animeWhenVisible-translateFromLeft", 0.25, true, true, true);
             var animeWhenVisibleSoins_images = new CVM.AnimeWhenVisible(window, document.getElementById("soins-images"), document.getElementById("soins-images"), "animeWhenVisible-unhide", 0.25, true, true, true);
             var parallaxSoins_bulles;
+            var compareBeforeAfter = new CVM.SlideToAction(document.getElementById("image-pretty"), document.getElementById("slide-compare"), 50, "width");
             
             var parallaxList;
             if (isMobile() === true)

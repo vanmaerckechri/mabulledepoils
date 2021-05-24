@@ -155,9 +155,27 @@
         }
         .image-container
         {
-            .image
+            .image-ugly
             {
-                background-image: url("../images/komondor_mobile.jpg");
+                overflow: hidden;
+                background-image: url("../images/komondor_ugly.jpg");
+            }
+            .image-pretty
+            {
+                border-right: 2px solid $color-light01;
+                background-image: url("../images/komondor.jpg");
+                background-size: 350px 350px;
+            }
+        }
+        .slidecontainer
+        {
+            .legend
+            {
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+                text-transform: uppercase;
+                color: rgba(0, 0, 0, 0.5);
             }
         }
     }
@@ -222,6 +240,14 @@
                 }
             }
         }
+        .soins-container
+        {
+            .image-pretty
+            {
+                background-image: url("../images/komondor_mobile.jpg");
+                background-size: 250px 250px;
+            }
+        }
     }
 }
 
@@ -253,13 +279,6 @@
             .image-container
             {
                 flex: none;
-            }
-        }
-        .soins-container
-        {
-            .image
-            {
-                background-image: url("../images/komondor_mobile.jpg");
             }
         }
     }
