@@ -1,7 +1,7 @@
 <?php
 
-$content_title = "Soins | Ma Bulle de Poils, Salon de toilettage Animalier";
-$meta_description = "Les soins proposés ainsi que les tarifs du salon de toilettage Ma Bulle de Poils.";
+$content_title = "Soins | Ma Bulle de Poils, Salon de Toilettage Canin";
+$meta_description = "Les soins proposés ainsi que les tarifs du salon de toilettage canin Ma Bulle de Poils.";
 $og_page = "soins.php";
 
 ob_start();?>

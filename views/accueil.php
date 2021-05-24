@@ -1,7 +1,7 @@
 <?php
 
-$content_title = "Accueil | Ma Bulle de Poils, Salon de toilettage Animalier";
-$meta_description = "Présentation de Géraldine Degueldre et du salon de toilettage Ma Bulle de Poils.";
+$content_title = "Accueil | Ma Bulle de Poils, Salon de Toilettage Canin";
+$meta_description = "Présentation de Géraldine Degueldre et du salon de toilettage canin Ma Bulle de Poils.";
 
 ob_start();?>
     <div id="main" class="main page-accueil">
@@ -17,7 +17,7 @@ ob_start();?>
                         Salon de Toilettage
                     </h1>
                     <p>Que vous soyez un chien, un chat ou toute autre petite boule de poils,<br>
-                        venez vous faire cajoler dans votre salon de toilettage inclusif situé à Wavre.
+                        venez vous faire cajoler dans votre <strong>salon de toilettage inclusif situé à Wavre</strong>.
                     </p>
                 </div>
                 <div id="salon-images" class="image-container">
@@ -45,9 +45,7 @@ ob_start();?>
                 </div>
                 <div id="toiletteuse-content" class="content">
                     <h2>Géraldine Degueldre,</h2>
-                    <p>toiletteuse animalier et comportementaliste canin diplomée<br>
-                        accueille tous vos compagnons quel que soit leur caractère.
-                    </p>
+                    <p><strong>toiletteuse</strong> et comportementaliste canin <strong>diplomée</strong> accueille tous vos compagnons quel que soit leur caractère.</p>
                 </div>
             </div>
         </section>
@@ -60,9 +58,7 @@ ob_start();?>
             <div class="parallax-cover container-large">
                 <div id="soins-content" class="content">
                     <h2>Des Soins Adaptés</h2>
-                    <p>Entretien des dents et des griffres, shampoing, coupe, tonte, brossage, ...<br>
-                        tous les soins sont pratiqués avec douceur et une attention particulière<br>
-                        est accordée aux besoins de l’animal.
+                    <p><strong>Entretien</strong> des dents et des griffres, shampoing, coupe, tonte, brossage, ... tous les <strong>soins</strong> sont pratiqués avec <strong>douceur</strong> et une attention particulière est accordée aux besoins de l’animal.
                     </p>
                 </div>
                 <div id="soins-images" class="image-container">

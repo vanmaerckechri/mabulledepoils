@@ -71,12 +71,13 @@
         <?=$content_main ?? ''?>
         <footer>
             <div class="container">
-                <span>© 2021 - Ma Bulle de Poil.</span>
+                <span class="col-left">
+                    <p> © 2021 - Ma Bulle de Poil.</p>
+                    <p>Rue du Poilu, 17 - 1301 Bièrges</p>
+                </span>
                 <span class="col-right">
-                    <a class="phone" href="tel:+32479084278">0479/ 08 42 78</a>
-                    <a class="link-facebook" href="#" target="_blank" rel="noopener">
-                        <div class="image image-facebook"></div>
-                    </a>
+                    <a href="tel:+32479084278">0479/ 08 42 78</a>
+                    <a href="mailto:aufildupoil@one.com">geraldine.degueldre@live.be</a>
                 </span>
             </div>
         </footer>

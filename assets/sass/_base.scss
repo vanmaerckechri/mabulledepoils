@@ -47,16 +47,15 @@
 		font-weight: normal;
 		font-size: 48px;
 	}
-	h1, h2, p
+	h1, h2, p, span
 	{
 		font-weight: 300;
 	}
 	a, p, span
 	{
-		color: black;
 		font-size: 16px;
 		line-height: 30px;
-		font-weight: 300;
+		color: black;
 	}
 }
 .section-light

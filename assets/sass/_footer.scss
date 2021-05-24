@@ -3,23 +3,37 @@ footer
     background-color: $color-dark01;
     .container
     {
-        padding: 8px 64px;
+        padding: 16px 64px;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         font-family: $fontFamily-title;
         font-size: 80%;
         color: $color-light01;
     }
+    .col-left, .col-right
+    {
+        width: 50%;
+    }
+    .col-left, .col-right
+    {
+        line-height: 21px;
+    }
+    .col-left
+    {
+        text-align: left;
+    }
     .col-right
     {
-        display: flex;
-        align-items: center;
+        a
+        {
+            display: block;
+            text-align: right;
+            color: $color-light01;
+        }
     }
-    .phone
-    {
-        color: $color-light01;
-    }
+    /*
     .link-facebook
     {
         margin-left: 28px;
@@ -30,6 +44,7 @@ footer
         height: 28px;
         background-image: url(../images/logo_facebook.png);
     }
+    */
 }
 @media screen and (max-width: 550px)
 {
@@ -39,9 +54,30 @@ footer
         {
             padding: 8px 16px;
         }
+        .col-left, .col-right
+        {
+            width: 100%;
+            line-height: 24px;
+        }
+        .col-left
+        {
+            p
+            {
+                text-align: center;
+            }
+        }
+        .col-right
+        {
+            a
+            {
+                text-align: center;
+            }
+        }
+        /*
         .link-facebook
         {
             margin-left: 14px;
         }
+        */
     }  
 }

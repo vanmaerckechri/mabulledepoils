@@ -45,6 +45,15 @@
     {
         position: relative;
         border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        .content
+        {
+            width: auto;
+            p
+            {
+                margin-left: auto;
+                max-width: 430px;
+            }
+        }
         .bulles-masque
         {
             position: absolute;
@@ -120,6 +129,14 @@
     }
     .soins-container
     {
+        .content
+        {
+            width: auto;
+            p
+            {
+                max-width: 530px;
+            }
+        }
         .parallax-container
         {
             transition: perspective-origin 1s ease-out;

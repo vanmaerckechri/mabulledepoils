@@ -1,7 +1,7 @@
 <?php
 
-$content_title = "Horaires | Ma Bulle de Poils, Salon de toilettage Animalier";
-$meta_description = "Les heures d'ouverture du salon de toilettage Ma Bulle de Poils.";
+$content_title = "Horaires | Ma Bulle de Poils, Salon de Toilettage Canin";
+$meta_description = "Les heures d'ouverture du salon de toilettage canin Ma Bulle de Poils.";
 $og_page = "horaires.php";
 
 ob_start();?>
