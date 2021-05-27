@@ -2,12 +2,12 @@
 {
 	"use strict";
 
-	CVM.AnimeWhenVisible = function(scrollContainer, container, elem, cssClassname, ratioToLaunch, scrollUp, scrollDown, isResetAnimation)
+	CVM.AnimeWhenVisible = function(scrollContainer, container, elem, action, ratioToLaunch, scrollUp, scrollDown, isResetAnimation)
 	{
         this.scrollContainer = scrollContainer;
         this.container = container;
         this.elem = elem;
-        this.cssClassname = cssClassname;
+        this.action = action;
         this.ratioToLaunch = ratioToLaunch;
         this.scrollUp = scrollUp;
         this.scrollDown = scrollDown;
@@ -19,8 +19,8 @@
 
 	CVM.AnimeWhenVisible.prototype.init = function()
 	{	
-        this.elem.classList.add(this.cssClassname + "-init");
-        this.elem.classList.add(this.cssClassname);
+        this.callAction("add");
+
         this.event = {elem: this.scrollContainer, listener: 'scroll', method: this.launchAnimation.bind(this)};
         this.event.elem.addEventListener(this.event.listener, this.event.method);
 
@@ -39,7 +39,7 @@
         // Reset animation if element is offscreen.
 		if (this.isResetAnimation && (containerInfos.top + containerInfos.height < 10 || containerInfos.top > screenHeight - 10))
 		{
-            this.elem.classList.add(this.cssClassname);
+            this.callAction("add", true);
             return;
 		}
 
@@ -48,7 +48,25 @@
 
         if (checkScrollUp && checkScrollDown)
         {
-            this.elem.classList.remove(this.cssClassname);
+            this.callAction("remove", false);
+        }
+    };
+
+    CVM.AnimeWhenVisible.prototype.callAction = function(addOrRemove, isEnable)
+	{	
+        // action avec un callback.
+        if (typeof this.action != "string")
+        {
+            this.action(isEnable);
+        }
+        // action avec une classe css.
+        else
+        {
+            if (!this.elem.classList.contains(this.action + "-init"))
+            {
+                this.elem.classList.add(this.action + "-init");
+            }
+            this.elem.classList[addOrRemove](this.action);
         }
     };
 }());

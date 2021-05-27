@@ -177,6 +177,10 @@
                 text-transform: uppercase;
                 color: rgba(0, 0, 0, 0.5);
             }
+            .disable
+            {
+                pointer-events: none;
+            }
         }
     }
     .parallax-bulles

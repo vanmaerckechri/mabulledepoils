@@ -107,8 +107,10 @@ ob_start();?>
             var animeWhenVisibleSoins_content = new CVM.AnimeWhenVisible(window, document.getElementById("soins-content"), document.getElementById("soins-content"), "animeWhenVisible-translateFromLeft", 0.25, true, true, true);
             var animeWhenVisibleSoins_images = new CVM.AnimeWhenVisible(window, document.getElementById("soins-images"), document.getElementById("soins-images"), "animeWhenVisible-unhide", 0.25, true, true, true);
             var parallaxSoins_bulles;
-            var compareBeforeAfter = new CVM.SlideToAction(document.getElementById("image-pretty"), document.getElementById("slide-compare"), 50, "width");
-            
+
+            var compareBeforeAfter = new CVM.SlideToAction(document.getElementById("image-pretty"), document.getElementById("slide-compare"), 50, 50, "width");
+            var animeWhenVisibleSoins_compareBeforeAfter = new CVM.AnimeWhenVisible(window, document.getElementById("soins-images"), document.getElementById("soins-images"), compareBeforeAfter.startDemo.bind(compareBeforeAfter), 0.25, true, true, true);
+
             var parallaxList;
             if (isMobile() === true)
             {
