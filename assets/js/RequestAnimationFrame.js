@@ -5,7 +5,7 @@
 	CVM.RequestAnimationFrame = function(callback, maxFps)
 	{
         this.callback = callback;
-        this.maxFps = maxFps;
+        this.maxFps = typeof maxFps == "undefined" ? null : maxFps;
         this.lastTimestamp = null;
 
 		this.init();
@@ -20,7 +20,7 @@
     CVM.RequestAnimationFrame.prototype.mainLoop = function(timestamp)
 	{	
         var progress = timestamp - this.lastTimestamp;
-        if (progress >= 1000 / this.maxFps)
+        if (this.maxFps === null || progress >= 1000 / this.maxFps)
         {
             this.callback();
             this.lastTimestamp = timestamp;

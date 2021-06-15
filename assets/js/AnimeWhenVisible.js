@@ -22,7 +22,7 @@
         this.callAction("add");
 
         this.event = {elem: this.scrollContainer, listener: 'scroll', method: this.launchAnimation.bind(this)};
-        this.event.elem.addEventListener(this.event.listener, this.event.method);
+        //this.event.elem.addEventListener(this.event.listener, this.event.method);
 
         setTimeout(function() {
             this.event.elem.addEventListener(this.event.listener, this.event.method);

@@ -133,7 +133,7 @@ ob_start();?>
                 {
                     parallaxList[i].refreshDom();
                 }
-            }, 10);
+            }, 30);
         }());
     </script>
 <?php $content_jsClasses = ob_get_clean();?>
