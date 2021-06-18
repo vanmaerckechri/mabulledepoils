@@ -13,7 +13,7 @@ ob_start();?>
             </div>
             <div class="parallax-cover container-large">
                 <div id="salon-content" class="content">
-                    <h1>Ma Bulle de Poils,<br>
+                    <h1 class="title-big">Ma Bulle de Poils,<br>
                         Salon de Toilettage
                     </h1>
                     <p>Que vous soyez un chien, un chat ou toute autre petite boule de poils,<br>
@@ -44,7 +44,7 @@ ob_start();?>
                     </div>
                 </div>
                 <div id="toiletteuse-content" class="content">
-                    <h2>Géraldine Degueldre,</h2>
+                    <h2 class="title-big">Géraldine Degueldre,</h2>
                     <p><strong>toiletteuse</strong> et comportementaliste canin <strong>diplomée</strong> accueille tous vos compagnons quel que soit leur caractère.</p>
                 </div>
             </div>
@@ -57,7 +57,7 @@ ob_start();?>
             </div>
             <div class="parallax-cover container-large">
                 <div id="soins-content" class="content">
-                    <h2>Des Soins Adaptés</h2>
+                    <h2 class="title-big">Des Soins Adaptés</h2>
                     <p><strong>Entretien</strong> des dents et des griffres, shampoing, coupe, tonte, brossage, ... tous les <strong>soins</strong> sont pratiqués avec <strong>douceur</strong> et une attention particulière est accordée aux besoins de l’animal.
                     </p>
                 </div>

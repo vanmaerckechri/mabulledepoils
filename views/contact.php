@@ -9,7 +9,7 @@ ob_start();?>
         <section class="section section-light">
             <div class="container-large">
                 <div class="content">
-                    <h1 id="contact-title">Contact</h1>
+                    <h1 id="contact-title" class="title-big">Contact</h1>
                     <ul id="contact-content">
                         <li class="icon-container">
                             <div class="image image-adresse"></div>

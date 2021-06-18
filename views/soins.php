@@ -6,62 +6,215 @@ $og_page = "soins.php";
 
 ob_start();?>
     <div id="main" class="main page-soins">
-        <section class="section section-light">
+        <section class="section video-container">
+            <video src="assets/videos/sechage.mp4" autoplay muted loop type="video/mp4"></video>
+            <div class="filter"></div>
+            <div class="section-transition"></div>
             <div class="container-large">
-                <div class="content">
-                    <h1 id="soins-title">Soins</h1>
-                    <p id="soins-intro1">Les soins de base comprennent le bain, le séchage, le nettoyage des yeux et des oreilles ainsi que la tonte.</p>
+                <h1 id="main-title" class="title-big">Soins & Tarifs</h1>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container-large">
+                <div>
+                    <h2 class="subTitle">Chiens de Très Petite Taille <span class="details">(Chihuahua, Yorkshire Toy, ...)</span></h2>
                     <ul class="table">
-                        <li>
-                            <p class="row row1">
-                                <span>petit (&lsaquo;15kg) </span>
-                                <span>40€</span>
-                            </p>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain <span class="details">(poils courts) </span></span>
+                                <span>20€ - 25€</span>
+                            </span>
                         </li>
-                        <li>
-                            <p class="row row2">
-                                <span>moyen (15-25kg) </span>
-                                <span>60€</span>
-                            </p>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Démêlage <span class="details">(poils longs) </span></span>
+                                <span>25€ - 30€</span>
+                            </span>
                         </li>
-                        <li>
-                            <p class="row row3">
-                                <span>grand (25-40kg) </span>
-                                <span>75€</span>
-                            </p>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Tonte </span>
+                                <span>30€ - 35€</span>
+                            </span>
                         </li>
-                        <li>
-                            <p class="row row4">
-                                <span>géant (40-60kg) </span>
-                                <span>90€</span>
-                            </p>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Coupe <span class="details">(tondeuse - ciseaux) </span></span>
+                                <span>35€ - 40€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Trimming </span>
+                                <span>40€ - 45€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Trimming sans bain</span>
+                                <span>35€ - 40€</span>
+                            </span>
                         </li>
                     </ul>
-                    <p id="soins-intro2">Les prix suivants s’appliquent à tout type de gabarit.</p>
+                </div>
+                <div>
+                    <h2 class="subTitle">Chiens de Petite Taille <span class="details">(Shih-Tzu, Bichon, Yorkshire, ...)</span></h2>
                     <ul class="table">
-                        <li>
-                            <p class="row row5">
-                                <span>brossage débourage </span>
-                                <span>40€/heure</span>
-                            </p>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain <span class="details">(poils courts) </span></span>
+                                <span>25€ - 30€</span>
+                            </span>
                         </li>
-                        <li>
-                            <p class="row row6">
-                                <span>trimming ou coupe aux ciseaux </span>
-                                <span>50€/heure</span>
-                            </p>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Démêlage <span class="details">(poils longs) </span></span>
+                                <span>35€ - 40€</span>
+                            </span>
                         </li>
-                        <li>
-                            <p class="row row7">
-                                <span>coupe des ongles/griffes </span>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Tonte </span>
+                                <span>40€ - 45€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Coupe <span class="details">(tondeuse - ciseaux) </span></span>
+                                <span>45€ - 50€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Trimming </span>
+                                <span>50€ - 55€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Trimming sans bain</span>
+                                <span>45€ - 50€</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="subTitle">Chiens de Taille Moyenne <span class="details">(Caniche, Terrier Tibétain, Cocker, ...)</span></h2>
+                    <ul class="table">
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain <span class="details">(poils courts) </span></span>
+                                <span>35€ - 40€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Démêlage <span class="details">(poils longs) </span></span>
+                                <span>40€ - 60€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Tonte </span>
+                                <span>50€ - 60€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Coupe <span class="details">(tondeuse - ciseaux) </span></span>
+                                <span>55€ - 60€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Trimming </span>
+                                <span>60€ - 70€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Trimming sans bain</span>
+                                <span>50€ - 60€</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="subTitle">Chiens de Grande Taille <span class="details">(Berger, Golden, Beauceron, Bernois, ...)</span></h2>
+                    <ul class="table">
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain <span class="details">(poils courts) </span></span>
+                                <span>45€ - 55€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Débourrage <span class="details">(poils longs) </span></span>
+                                <span>50€ - 70€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Tonte </span>
+                                <span>55€ - 60€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Coupe <span class="details">(tondeuse - ciseaux) </span></span>
+                                <span>60€ - 70€</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="subTitle">Chiens de Très Grande Taille <span class="details">(Bobtail, Terre Neuve, Dogues, ...)</span></h2>
+                    <ul class="table">
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain <span class="details">(poils courts) </span></span>
+                                <span>55€ - 70€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Débourrage <span class="details">(poils longs) </span></span>
+                                <span>à partir de 75€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Bain + Tonte </span>
+                                <span>85€ - 95€</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="subTitle">Services Supplémentaires <span class="details">(hors toilettage) </span></h2>
+                    <ul class="table">
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Coupe des Ongles </span>
                                 <span>5€</span>
-                            </p>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Soins Yeux et Oreilles <span class="details">(nettoyer - dégager) </span></span>
+                                <span>5€</span>
+                            </span>
+                        </li>
+                        <li class="row">
+                            <span class="row-content">
+                                <span>Hygiène </span>
+                                <span>5€</span>
+                            </span>
                         </li>
                     </ul>
                 </div>
-                <div class="image-container border-cut">
-                    <div class="image circle cadre"></div>
-                </div>
+                <p>Au delà de 2h30 de travail, 30€/heure supplémentaire.<br>Possibilité de prise et remise à domicile dans un rayon de 10km du salon pour 5€.<br>Pas de Bancontact.</p>
             </div>
         </section>
     </div>
@@ -74,14 +227,22 @@ ob_start();?>
         {
             "use strict";
 
-            var animeWhenVisibleSoins_title = new CVM.AnimeWhenVisible(window, document.getElementById("main"), document.getElementById("soins-title"), "animeWhenVisible-translateFromLeft", 0.2, true, true, false);
-            var animeWhenVisibleSoins_intro1 = new CVM.AnimeWhenVisible(window, document.getElementById("main"), document.getElementById("soins-intro1"), "animeWhenVisible-translateFromRight", 0.2, true, true, false);
-            var animeWhenVisibleSoins_intro2 = new CVM.AnimeWhenVisible(window, document.getElementById("main"), document.getElementById("soins-intro2"), "animeWhenVisible-translateFromRight", 0.2, true, true, false);
-            var rowList = document.querySelectorAll(".table .row");
-            var rows = [];
-            for (var i = rowList.length - 1; i >= 0; i--)
+            var animeWhenVisibleSoins_title = new CVM.AnimeWhenVisible(window, document.getElementById("main-title"), document.getElementById("main-title"), "animeWhenVisible-translateFromLeft", 0.2, true, true, false);
+            var subTitlesList = document.querySelectorAll(".subTitle");
+            var direction = "Left";
+            for (var i = subTitlesList.length - 1; i >= 0; i--)
+            {          
+                new CVM.AnimeWhenVisible(window, subTitlesList[i], subTitlesList[i], "animeWhenVisible-translateFrom" + direction, 0.1, true, true, false);
+                direction = direction == "Left" ? "Right" : "Left";
+            }
+            var tablesList = document.querySelectorAll(".table");
+            for (var i = tablesList.length - 1; i >= 0; i--)
             {
-                rows[i] = new CVM.AnimeWhenVisible(window, document.getElementById("main"), rowList[i], "animeWhenVisible-loadRowTable", 0, true, true, false);
+                var rowsList = tablesList[i].querySelectorAll(".row-content");
+                for (var j = rowsList.length - 1; j >= 0; j--)
+                {
+                    new CVM.AnimeWhenVisible(window, tablesList[i], rowsList[j], "animeWhenVisible-loadRowTable", 0, true, true, false);
+                }
             }
         }());
     </script>

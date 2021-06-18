@@ -4,12 +4,18 @@
 	display: flex;
 	flex-direction: column;
 	overflow-x: hidden;
+	a, p, span
+	{
+		font-size: 16px;
+		line-height: 30px;
+		color: black;
+	}
 }
 .section
 {
 	position: relative;
-	height: 100%;
 	width: 100%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -18,6 +24,31 @@
 	&:first-of-type
 	{
 		padding-top: $header-height;
+	}
+}
+
+.section-light
+{
+	background-color: $color-light01;
+	.title-big
+	{
+		color: $color-dark02;
+	}
+	.title-big, p, span
+	{
+		text-shadow: 2px 0 0 $color-light01, 2px 2px 0 $color-light01, 0 2px 0 $color-light01, -2px 2px 0 $color-light01, -2px 0 0 $color-light01, -2px -2px 0 $color-light01, 0 -2px 0 $color-light01, 2px -2px 0 $color-light01;
+	}
+}
+.section-dark
+{
+    background-color: $color-main02;
+	.title-big
+    {
+        color: $color-light02;
+    }
+	.title-big, p, span
+	{
+		text-shadow: 2px 0 0 $color-main02, 2px 2px 0 $color-main02, 0 2px 0 $color-main02, -2px 2px 0 $color-main02, -2px 0 0 $color-main02, -2px -2px 0 $color-main02, 0 -2px 0 $color-main02, 2px -2px 0 $color-main02;
 	}
 }
 .container-large
@@ -30,6 +61,12 @@
 	justify-content: space-between;
 	align-items: center;
 }
+.title-big
+{
+	margin-bottom: 40px;
+	font-weight: normal;
+	font-size: 48px;
+}
 .image
 {
 	width: 350px;
@@ -37,50 +74,6 @@
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	pointer-events: none;
-}
-.content
-{
-	width: 100%;
-	h1, h2
-	{
-		margin-bottom: 40px;
-		font-weight: normal;
-		font-size: 48px;
-	}
-	h1, h2, p, span
-	{
-		font-weight: 300;
-	}
-	a, p, span
-	{
-		font-size: 16px;
-		line-height: 30px;
-		color: black;
-	}
-}
-.section-light
-{
-	background-color: $color-light01;
-	h1,h2
-	{
-		color: $color-dark02;
-	}
-	h1,h2, p
-	{
-		text-shadow: 2px 0 0 $color-light01, 2px 2px 0 $color-light01, 0 2px 0 $color-light01, -2px 2px 0 $color-light01, -2px 0 0 $color-light01, -2px -2px 0 $color-light01, 0 -2px 0 $color-light01, 2px -2px 0 $color-light01;
-	}
-}
-.section-dark
-{
-    background-color: $color-main02;
-	h2
-    {
-        color: $color-light02;
-    }
-	h2, p
-	{
-		text-shadow: 2px 0 0 $color-main02, 2px 2px 0 $color-main02, 0 2px 0 $color-main02, -2px 2px 0 $color-main02, -2px 0 0 $color-main02, -2px -2px 0 $color-main02, 0 -2px 0 $color-main02, 2px -2px 0 $color-main02;
-	}
 }
 .circle
 {
@@ -91,46 +84,85 @@
 	box-shadow: 0 0 0 13px white, 0 0 0 14px $color-dark02;
 	background-color:$color-light01;
 }
-.border-cut
-{
-	z-index: 1;
-	overflow: hidden;
-	position: absolute;
-	border-radius: 50%;
-	right: 0;
-	.cadre
-	{
-		margin: 78px;
-		width: 400px;
-        height: 400px;
-		box-shadow: 0 0 0 13px white, 0 0 0 14px $color-dark02, 0 0 0 78px $color-light01;
-	}
-}
 .table
 {
 	margin-top: 10px;
-	width: 75%;
-	li
+	width: 100%;
+	.row
 	{
-		padding: 0 24px;
 		position: relative;
 		overflow: hidden;
-		span
+		width: 100%;
+		.row-content
 		{
-			text-align: left;
-			line-height: 22px;
-			&:last-of-type
+			padding: 8px 24px;
+			position: relative;
+			display: inline-block;
+			overflow: hidden;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			&:first-of-type
 			{
-				margin-left: 10px;
+				flex: 1;
+			}
+		}
+		&:nth-child(1)
+		{
+			.row-content
+			{
+				transition-delay: 0.3s;
+			}
+		}
+		&:nth-child(2)
+		{
+			.row-content
+			{
+				transition-delay: 0.4s;
+			}
+		}
+		&:nth-child(3)
+		{
+			.row-content
+			{
+				transition-delay: 0.5s;
+			}
+		}
+		&:nth-child(4)
+		{
+			.row-content
+			{
+				transition-delay: 0.6s;
+			}
+		}
+		&:nth-child(5)
+		{
+			.row-content
+			{
+				transition-delay: 0.7s;
+			}
+		}
+		&:nth-child(6)
+		{
+			.row-content
+			{
+				transition-delay: 0.8s;
+			}
+		}
+		&:nth-child(7)
+		{
+			.row-content
+			{
+				transition-delay: 0.9s;
 			}
 		}
 		&:nth-child(odd)
 		{
-			background-color: $color-dark02;
+			background-image: url(../images/li_filtre.png);
 			span
 			{
 				text-shadow: none;
-				color: white;
 			}
 		}
 		&:nth-child(even)
@@ -159,52 +191,7 @@
 				transform: translate3d(0, -50%, 0);
 			}
 		}
-		span
-		{
-			text-transform: uppercase;
-			font-weight: 500;
-		}
-		.row
-		{
-			width: 100%;
-			height: 50px;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-		.row1
-		{
-			transition-delay: 0.3s;
-		}
-		.row2
-		{
-			transition-delay: 0.4s;
-		}
-		.row3
-		{
-			transition-delay: 0.5s;
-		}
-		.row4
-		{
-			transition-delay: 0.6s;
-		}
-		.row5
-		{
-			transition-delay: 0.7s;
-		}
-		.row6
-		{
-			transition-delay: 0.8s;
-		}
-		.row7
-		{
-			transition-delay: 0.9s;
-		}
 	}
-}
-.table ~ p
-{
-	margin-top: 20px;
 }
 .parallax-container
 {
@@ -268,18 +255,18 @@
 		.content
 		{
 			order: 1;
-			h1
+			.title-big
 			{
 				margin-left: auto;
 				margin-right: auto;
 				max-width: 600px;
 			}
-			h1, h2, p
+			.title-big, p
 			{
 				white-space: normal;
 				text-align: center;
 			}
-			h1, h2
+			.title-big
 			{
 				font-size: 32px;
 			}

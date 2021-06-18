@@ -18,7 +18,19 @@
     }
     .border-cut
     {
+        z-index: 1;
+        border-radius: 50%;
+        position: absolute;
         top: 100px;
+        right: 0;
+        overflow: hidden;
+        .cadre
+        {
+            margin: 78px;
+            width: 400px;
+            height: 400px;
+            box-shadow: 0 0 0 13px white, 0 0 0 14px $color-dark02, 0 0 0 78px $color-light01;
+        }
     }
     .parallax-container
     {
@@ -73,9 +85,9 @@
             transform: translate3d(-50%, -50%, -100px) scale3d(2, 2, 1);
         }
     }
-    .row
+    .row-content
     {
-        max-width: calc(513px - 24px);
+        max-width: calc(540px - 24px);
     }
 }
 

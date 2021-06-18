@@ -72,7 +72,7 @@
         <footer>
             <div class="container">
                 <span class="col-left">
-                    <p> © 2021 - Ma Bulle de Poils.</p>
+                    <p> © Ma Bulle de Poils - 2021.</p>
                     <p>Rue du Poilu, 17 - 1301 Bièrges</p>
                 </span>
                 <span class="col-right">

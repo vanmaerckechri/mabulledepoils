@@ -152,7 +152,7 @@ nav
 		{
             position: absolute;
             left: 0;
-            top: calc(#{$header-height} - 4px);
+            top: calc(#{$header-height} - 8px);
             flex-direction: column;
 			max-height: 0;
 			width: 100vw;

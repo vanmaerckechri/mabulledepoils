@@ -9,50 +9,50 @@ ob_start();?>
         <section class="section section-light">
             <div class="container-large">
                 <div class="content">
-                    <h1 id="horaires-title">Horaires</h1>
+                    <h1 id="horaires-title" class="title-big">Horaires</h1>
                     <p id="horaires-intro">Nous vous accueillons sur rendez-vous de 10h à 19h, du mardi au samedi.</p>
                     <ul class="table">
-                        <li id="day1">
-                            <p class="row row1">
+                        <li id="day1" class="row">
+                            <span class="row-content">
                                 <span>lundi </span>
                                 <span>fermé</span>
-                            </p>
+                            </span>
                         </li>
-                        <li id="day2">
-                            <p class="row row2">
+                        <li id="day2" class="row">
+                            <span class="row-content">
                                 <span>mardi </span>
                                 <span>10h - 19h</span>
-                            </p>
+                            </span>
                         </li>
-                        <li id="day3">
-                            <p class="row row3">
+                        <li id="day3" class="row">
+                            <span class="row-content">
                                 <span>mercredi </span>
                                 <span>10h - 19h</span>
-                            </p>
+                            </span>
                         </li>
-                        <li id="day4">
-                            <p class="row row4">
+                        <li id="day4" class="row">
+                            <span class="row-content">
                                 <span>jeudi </span>
                                 <span>10h - 19h</span>
-                            </p>
+                            </span>
                         </li>
-                        <li id="day5">
-                            <p class="row row5">
+                        <li id="day5" class="row">
+                            <span class="row-content">
                                 <span>vendredi </span>
                                 <span>10h - 19h</span>
-                            </p>
+                            </span>
                         </li>
-                        <li id="day6">
-                            <p class="row row6">
+                        <li id="day6" class="row">
+                            <span class="row-content">
                                 <span>samedi </span>
                                 <span>10h - 19h</span>
-                            </p>
+                            </span>
                         </li>
-                        <li id="day0">
-                            <p class="row row7">
+                        <li id="day0" class="row">
+                            <span class="row-content">
                                 <span>dimanche </span>
                                 <span>fermé</span>
-                            </p>
+                            </span>
                         </li>
                     </ul>
                 </div>
@@ -99,11 +99,14 @@ ob_start();?>
 
             var animeWhenVisibleHoraires_title = new CVM.AnimeWhenVisible(window, document.getElementById("main"), document.getElementById("horaires-title"), "animeWhenVisible-translateFromLeft", 0, true, true, false);
             var animeWhenVisibleHoraires_intro = new CVM.AnimeWhenVisible(window, document.getElementById("main"), document.getElementById("horaires-intro"), "animeWhenVisible-translateFromRight", 0, true, true, false);
-            var rowList = document.querySelectorAll(".table .row");
-            var rows = [];
-            for (var i = rowList.length - 1; i >= 0; i--)
+            var tablesList = document.querySelectorAll(".table");
+            for (var i = tablesList.length - 1; i >= 0; i--)
             {
-                rows[i] = new CVM.AnimeWhenVisible(window, document.getElementById("main"), rowList[i], "animeWhenVisible-loadRowTable", 0, true, true, false);
+                var rowsList = tablesList[i].querySelectorAll(".row-content");
+                for (var j = rowsList.length - 1; j >= 0; j--)
+                {
+                    new CVM.AnimeWhenVisible(window, document.getElementById("main"), rowsList[j], "animeWhenVisible-loadRowTable", 0, true, true, false);
+                }
             }
         }());
     </script>
