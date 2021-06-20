@@ -22,7 +22,6 @@
         this.callAction("add");
 
         this.event = {elem: this.scrollContainer, listener: 'scroll', method: this.launchAnimation.bind(this)};
-        //this.event.elem.addEventListener(this.event.listener, this.event.method);
 
         setTimeout(function() {
             this.event.elem.addEventListener(this.event.listener, this.event.method);
@@ -43,6 +42,7 @@
             return;
 		}
 
+        // Activer l'animation si l'élément est visible à l'écran.
         var checkScrollUp = this.scrollUp ? containerInfos.top < screenHeight - partOfHeight : true; 
         var checkScrollDown = this.scrollDown ? containerInfos.top + containerInfos.height > partOfHeight : true;
 

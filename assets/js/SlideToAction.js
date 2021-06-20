@@ -48,7 +48,7 @@
 			this.stopDemo();
 			return;
 		}
-		// si la démo est occupée d'être jouée ou si elle vient d'être jouée, ne pas la relancer.
+		// ne pas continuer si la démo est occupée d'être jouée ou si elle désactivée.
 		if (this.demoInterval !== null || this.isDemoEnable === false)
 		{
 			return;

@@ -6,15 +6,15 @@ $og_page = "soins.php";
 
 ob_start();?>
     <div id="main" class="main page-soins">
-        <section class="section video-container">
-            <video src="assets/videos/sechage.mp4" autoplay muted loop type="video/mp4"></video>
+        <section class="section introduction-container">
+            <video src="assets/videos/sechage.mp4" autoplay muted loop type="video/mp4" class="video"></video>
             <div class="filter"></div>
             <div class="section-transition"></div>
             <div class="container-large">
                 <h1 id="main-title" class="title-big">Soins & Tarifs</h1>
             </div>
         </section>
-        <section class="section">
+        <section class="section section-light">
             <div class="container-large">
                 <div>
                     <h2 class="subTitle">Chiens de Très Petite Taille <span class="details">(Chihuahua, Yorkshire Toy, ...)</span></h2>

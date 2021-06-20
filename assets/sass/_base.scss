@@ -61,14 +61,68 @@
 	justify-content: space-between;
 	align-items: center;
 }
+.introduction-container
+{
+	position: relative;
+	min-height: 100vh;
+	height: auto;
+	.video, .image
+	{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		max-height: 100%;
+		height: 100%;
+	}
+	.video
+	{
+		object-fit: cover;
+	}
+	.image
+	{
+		background-size: cover;
+		background-position: center;
+	}
+	.filter
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url("../images/li_filtre.png");
+		opacity: 0.3;
+	}
+	.section-transition
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 105vw;
+		height: 100%;
+		background-image: url("../images/soins_cache.png");
+		background-repeat: repeat-x;
+		background-position: left bottom;
+		background-size: 1920px 240px
+	}
+	.title-big
+	{
+		text-align: center;
+		color: white;
+		text-shadow: 1px 0 0 $color-dark02, 1px 1px 0 $color-dark02, 0 1px 0 $color-dark02, -1px 1px 0 $color-dark02, -1px 0 0 $color-dark02, -1px -1px 0 $color-dark02, 0 -1px 0 $color-dark02, 1px -1px 0 $color-dark02;
+	}
+}
 .title-big
 {
 	margin-bottom: 40px;
 	font-weight: normal;
 	font-size: 48px;
+	width: 100%;
 }
 .image
 {
+	display: block;
 	width: 350px;
 	height: 350px;
 	background-size: 100% 100%;
@@ -106,6 +160,10 @@
 			&:first-of-type
 			{
 				flex: 1;
+			}
+			span:last-of-type
+			{
+				white-space: nowrap;
 			}
 		}
 		&:nth-child(1)
@@ -165,32 +223,6 @@
 				text-shadow: none;
 			}
 		}
-		&:nth-child(even)
-		{
-			&.active
-			{
-				&:after
-				{
-					border-color: transparent transparent transparent $color-dark02;
-				}
-			}
-		}
-		&.active
-		{
-			&:after
-			{
-				content: '';
-				position: absolute;
-				top: 50%;
-				left: 0;
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 10px 0 10px 17.3px;
-				border-color: transparent transparent transparent $color-light01;
-				transform: translate3d(0, -50%, 0);
-			}
-		}
 	}
 }
 .parallax-container
@@ -225,7 +257,7 @@
 		.container-large
 		{
 			margin-top: 0;
-			padding: 32px 16px;
+			padding: 64px 16px;
 			flex-direction: column;
 		}
 		.image-container
@@ -235,22 +267,10 @@
 			order: 0;
 			transform: none;
 		}
-		.image
+		.image.circle
 		{
 			width: 250px;
 			height: 250px;
-		}
-		.cadre
-		{
-			margin: 14px;
-		}
-		.border-cut
-		{
-			.cadre
-			{
-				margin: 14px;
-				box-shadow: 0 0 0 13px white, 0 0 0 14px $color-dark02;
-			}
 		}
 		.content
 		{
@@ -273,10 +293,6 @@
 		}
 		.table
 		{
-			margin-left: auto;
-			margin-right: auto;
-			max-width: 520px;
-			width: 100%;
 			li
 			{
 				.row

@@ -17,18 +17,10 @@
 	CVM.Clock.prototype.init = function()
 	{
 		this.update("seconds");
-		this.update("minutes");
-
-		var style = document.createElement('style');
-		style.setAttribute('type', 'text/css');
-
-		var maxDegForSeconds = 360 + this.calculateSecondsInDeg();
-		style.innerHTML += "@-webkit-keyframes clock {100% {-webkit-transform: rotate3d(0, 0, 1, " + maxDegForSeconds + "deg);}} @-moz-keyframes clock {100% {-webkit-transform: rotate3d(0, 0, 1, " + maxDegForSeconds + "deg);}}";
-		document.getElementsByTagName('head')[0].appendChild(style);
 
 		setInterval(function()
 		{
-			this.update("minutes");
+			this.update("seconds");
 		}.bind(this), 1000);
 	};
 
@@ -37,46 +29,36 @@
 		var date = new Date;
 		var newTimeValue = date["get" + type.charAt(0).toUpperCase() + type.slice(1)]();
 
-		if (type != "hours" && newTimeValue === this[type])
+		// ne pas aller plus loin si l'aiguille actuelle a une valeur identique à la valeur réelle.
+		if (newTimeValue === this[type])
 		{
 			return;
 		}
 
 		this[type] = newTimeValue;
-
-		var deg;
-		if (type == "seconds")
-		{
-			deg = this.calculateSecondsInDeg();
-		}
-		else if (type == "minutes")
-		{
-			deg = this.calculateMinutesInDeg();
-			this.update("hours");
-		}
-		else
-		{
-			deg = this.calculateHoursInDeg();
-			this.updateDay();
-		}
+		var deg = this.calculateDeg(type);
 
 		this[type + "Hand"].style.webkitTransform = "rotate3d(0, 0, 1, " + deg + "deg)";
 		this[type + "Hand"].style.transform = "rotate3d(0, 0, 1, " + deg + "deg)";
 	};
 
-	CVM.Clock.prototype.calculateSecondsInDeg = function()
+	CVM.Clock.prototype.calculateDeg = function(type)
 	{
-		return  this.seconds * 6;
-	};
-
-	CVM.Clock.prototype.calculateMinutesInDeg = function()
-	{
-		return  this.minutes * 6;
-	};
-
-	CVM.Clock.prototype.calculateHoursInDeg = function()
-	{
-		return  (this.hours * 30) + (this.minutes / 2);
+		if (type == "seconds")
+		{
+			this.update("minutes");
+			return  this.seconds * 6;
+		}
+		else if (type == "minutes")
+		{
+			this.update("hours");
+			return  this.minutes * 6;
+		}
+		else
+		{
+			this.updateDay();
+			return  (this.hours * 30) + (this.minutes / 2);
+		}
 	};
 
 	CVM.Clock.prototype.updateDay = function()

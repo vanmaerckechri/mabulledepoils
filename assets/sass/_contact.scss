@@ -3,14 +3,22 @@
     .container-large
     {
         position: relative;
-        align-items: flex-start;
-        flex-wrap: wrap;
+        flex-direction: row!important;
+        max-width: 1028px;
+        &:last-of-type
+        {
+            padding-bottom: 128px!important;
+        }
+    }
+    .image-facade
+    {
+        background-image: url("../images/photo_facade.jpg");
     }
     ul
     {
         li
         {
-            margin-bottom: 20px;
+            margin-bottom: 60px;
             &:last-of-type
             {
                 margin-bottom: 0;
@@ -23,6 +31,7 @@
             align-items: center;
             .image
             {
+                margin-right: 12px;
                 width: 38px!important;
                 height: 38px!important;
             }
@@ -40,139 +49,138 @@
                 background-image: url("../images/icone_mail.svg");
             }
         }
-        .text
-        {
-            margin: 6px 0 0 18px;
-        }
     }
-    .image-container
+    .video
     {
-        margin-top: -150px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: baseline;
-        width: 100%;
-        .image-facade
-        {
-            margin-right: 300px;
-            z-index: 1;
-            position: relative;
-            width: 275px;
-            background-image: url("../images/photo_facade.jpg");
-            transform: translate3d(-87px, 0, 0);
-        }
-        .image-chiens
-        {
-            z-index: 2;
-            position: relative;
-            max-width: 600px;
-            max-height: 190px;
-            flex: 1;
-            transform: translate3d(0, 50px, 0);
-            background-image: url("../images/silhouette-chiens.svg");
-            background-size: 100% auto;
-            background-position-y: center;
-        }
-        .image-chat
-        {
-            z-index: 1;
-            position: absolute;
-            top: 85px;
-            right: 565px;
-            width: 51px;
-            height: 80px;
-            background-image: url("../images/silhouette_chat.svg");
-        }
+        margin-right: 14px;
+        border-radius: 50%;
+        display: block;
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
     }
     .map-container
     {
-        z-index: 0;
-        position: absolute;
-        bottom: 82px;
-        right: 82px;
-        border: 1px solid $color-dark02;
-        transform: rotate3d(0, 0, 1, 5deg);
+        margin: 0 auto;
+        width: 100%;
+        height: 500px;
+        .cadre
+        {
+            border: 1px solid black;
+            height: 100%;
+        }
         & > iframe
         {
             vertical-align: middle;
         }
+        .image
+        {
+            position: absolute;
+            left: 50%;
+            width: 100%;
+        }
+        .image-chat
+        {
+            top: -23px;
+            max-width: 51px;
+            height: 80px;
+            background-image: url("../images/silhouette_chat.svg");
+            transform: translate3d(-50%, 0, 0);
+        }
+        .image-chiens
+        {
+            bottom: 20px;
+            max-width: 600px;
+            height: 180px;
+            background-image: url("../images/silhouette-chiens.svg");
+            transform: translate3d(-50%, 0, 0);
+        }
     }
 }
-
-@media screen and (max-width: 1140px)
+@media screen and (max-width: 750px)
 {
     #main.page-contact
     {
         .container-large
         {
-            flex-wrap: nowrap;
-        }
-        .content
-        {
-            order: 1;
+            flex-direction: column!important;
         }
         ul
         {
-            margin-bottom: 40px;
-            text-align: center;
-            .icon-container
-            {
-                flex-direction: column;
-            }
-            .text
-            {
-                margin-left: 0;
-            }
             li
             {
-                line-height: 0;
+                margin-bottom: 40px;
+                &:last-of-type
+                {
+                    margin-bottom: 80px;
+                }
+            }
+            .icon-container
+            {
+                display: block;
+                text-align: center;
+                .image
+                {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
         }
-        .image-container
+    }
+}
+
+@media screen and (max-width: 550px)
+{
+    #main.page-contact
+    {
+        .video
         {
-            max-width: 530px;
-            width: 100%;
-            flex-direction: column;
-            align-items: center;
-            .image-facade
+            width: 300px;
+            height: 300px;
+        }
+        .container-large
+        {
+            &:last-of-type
             {
-                transform: none;
-            }
-            .image-chiens
-            {
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                flex: none;
-                width: 420px;
-                max-width: 98vw;
-                height: 130px;
-                transform: translate3d(-50%, 0, 0);
-            }
-            .image-chat
-            {
-                top: 650px;
-                right: 50%;
-                width: 64px;
-                height: 100px;
-                transform: translate3d(170px, 0, 0);
+                padding-left: 0;
+                padding-right: 0;
+                max-width: 100vw;
             }
         }
         .map-container
         {
-            margin: 0 auto 20px;
-            order: 2;
-            width: 100%;
-            position: static;
-            box-shadow: none;
-            transform: none;
-            iframe
+            .cadre
             {
-                width: 100%;
-                height: 500px;
                 border: none;
-                border-radius: 0;
+                border-top: 1px solid $color-dark02;
+                border-bottom: 1px solid $color-dark02;
+                box-shadow: none;
             }
+        }
+        .image-chat
+        {
+            top: -9px;
+        }
+        .image-chiens
+        {
+            height: 175px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px)
+{
+    #main.page-contact
+    {
+        .video
+        {
+            width: 250px;
+            height: 250px;
+        }
+        .image-chiens
+        {
+            bottom: 40px;
+            height: 127px;
         }
     }
 }

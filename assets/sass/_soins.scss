@@ -1,49 +1,5 @@
 .page-soins
 {
-    .video-container
-    {
-        position: relative;
-        min-height: 100vh;
-        height: auto;
-        video
-        {
-            position: absolute;
-            top: 0;
-            left: 0;
-            object-fit: cover;
-            width: 100%;
-            max-height: 100%;
-            height: 100%;
-        }
-        .filter
-        {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("../images/li_filtre.png");
-            opacity: 0.3;
-        }
-        .section-transition
-        {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 105vw;
-            height: 100%;
-            background-image: url("../images/soins_cache.png");
-            background-repeat: repeat-x;
-            background-position: left bottom;
-            background-size: 1920px 240px
-        }
-        .title-big
-        {
-            text-align: center;
-            color: white;
-            text-shadow: 1px 0 0 $color-dark02, 1px 1px 0 $color-dark02, 0 1px 0 $color-dark02, -1px 1px 0 $color-dark02, -1px 0 0 $color-dark02, -1px -1px 0 $color-dark02, 0 -1px 0 $color-dark02, 1px -1px 0 $color-dark02;
-        }
-    }
     .container-large
     {
         position: relative;
