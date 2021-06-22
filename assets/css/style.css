@@ -170,7 +170,7 @@ footer .col-right a { display: block; text-align: right; color: #eff2f7; }
   footer .col-right a { text-align: center; } }
 .page-accueil .section { min-height: 100vh; }
 .page-accueil .salon-container .parallax-container { -webkit-perspective-origin: 50% 75%; perspective-origin: 50% 75%; -webkit-transition: -webkit-perspective-origin 0.2s ease-out; transition: -webkit-perspective-origin 0.2s ease-out; transition: perspective-origin 0.2s ease-out; transition: perspective-origin 0.2s ease-out, -webkit-perspective-origin 0.2s ease-out; }
-.page-accueil .salon-container .parallax-container .layer { height: 440px; }
+.page-accueil .salon-container .parallax-container .layer { height: 480px; }
 .page-accueil .salon-container .parallax-container .layer1 { background-image: url("../images/mousse01.svg"); }
 .page-accueil .salon-container .parallax-container .layer2 { background-image: url("../images/mousse02.svg"); -webkit-transform: translate3d(0px, 0px, -50px) scale3d(1.5, 1.5, 1); transform: translate3d(0px, 0px, -50px) scale3d(1.5, 1.5, 1); }
 .page-accueil .salon-container .parallax-container .layer3 { background-image: url("../images/mousse03.svg"); -webkit-transform: translate3d(0px, 0px, -100px) scale3d(2, 2, 1); transform: translate3d(0px, 0px, -100px) scale3d(2, 2, 1); }
@@ -180,9 +180,13 @@ footer .col-right a { display: block; text-align: right; color: #eff2f7; }
 .page-accueil .toiletteuse-container .content { width: auto; }
 .page-accueil .toiletteuse-container .content p { margin-left: auto; max-width: 430px; }
 .page-accueil .toiletteuse-container .bulles-masque { position: absolute; z-index: 2; top: -1px; left: 0; width: 100%; height: 100px; background: url("../images/bulles_masque.png") repeat-x 100px; }
+.page-accueil .toiletteuse-container .parallax-container { -webkit-transition: -webkit-perspective-origin 0.5s ease-out; transition: -webkit-perspective-origin 0.5s ease-out; transition: perspective-origin 0.5s ease-out; transition: perspective-origin 0.5s ease-out, -webkit-perspective-origin 0.5s ease-out; }
 .page-accueil .toiletteuse-container .parallax-container .layer1 { background-image: url("../images/bulles01_01.svg"); }
 .page-accueil .toiletteuse-container .parallax-container .layer2 { background-image: url("../images/bulles01_02.svg"); }
 .page-accueil .toiletteuse-container .parallax-container .layer3 { background-image: url("../images/bulles01_03.svg"); }
+.page-accueil .toiletteuse-container .parallax-container .layer1.animeWhenVisible-translateFromBot { -webkit-transform: translate3d(-50%, 100%, -30px) scale3d(1.3, 1.3, 1); transform: translate3d(-50%, 100%, -30px) scale3d(1.3, 1.3, 1); }
+.page-accueil .toiletteuse-container .parallax-container .layer2.animeWhenVisible-translateFromBot { -webkit-transform: translate3d(-50%, 100%, -65px) scale3d(1.65, 1.65, 1); transform: translate3d(-50%, 100%, -65px) scale3d(1.65, 1.65, 1); }
+.page-accueil .toiletteuse-container .parallax-container .layer3.animeWhenVisible-translateFromBot { -webkit-transform: translate3d(-50%, 100%, -100px) scale3d(2, 2, 1); transform: translate3d(-50%, 100%, -100px) scale3d(2, 2, 1); }
 .page-accueil .toiletteuse-container .image-container { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 .page-accueil .toiletteuse-container .image-container .image-toiletteuse { width: 250px; height: 250px; background-image: url("../images/toiletteuse.jpg"); }
 .page-accueil .toiletteuse-container .image-container .image-toque { position: absolute; top: -57px; left: 21px; width: 250px !important; height: 140px !important; background-image: url("../images/toque.svg"); }
@@ -294,9 +298,9 @@ footer .col-right a { display: block; text-align: right; color: #eff2f7; }
 
 .animeWhenVisible-loadRowTable { -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); -webkit-transition: none; transition: none; }
 
-.animeWhenVisible-translateFromBot-init { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: -webkit-transform 2s ease-out, -webkit-perspective-origin 0.5s ease-out; transition: -webkit-transform 2s ease-out, -webkit-perspective-origin 0.5s ease-out; transition: transform 2s ease-out, perspective-origin 0.5s ease-out; transition: transform 2s ease-out, perspective-origin 0.5s ease-out, -webkit-transform 2s ease-out, -webkit-perspective-origin 0.5s ease-out; }
+.animeWhenVisible-translateFromBot-init { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: -webkit-transform 2s ease-out; transition: -webkit-transform 2s ease-out; transition: transform 2s ease-out; transition: transform 2s ease-out, -webkit-transform 2s ease-out; }
 
-.animeWhenVisible-translateFromBot { -webkit-perspective-origin: 50% 200% !important; perspective-origin: 50% 200% !important; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); -webkit-transition: none; transition: none; }
+.animeWhenVisible-translateFromBot { -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); -webkit-transition: none; transition: none; }
 
 .animeWhenVisible-translateFromRight-init { opacity: 1; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: opacity 0.4s cubic-bezier(0.33, 0, 1, 1), -webkit-transform 0.4s cubic-bezier(0.33, 0, 1, 1.1); transition: opacity 0.4s cubic-bezier(0.33, 0, 1, 1), -webkit-transform 0.4s cubic-bezier(0.33, 0, 1, 1.1); transition: transform 0.4s cubic-bezier(0.33, 0, 1, 1.1), opacity 0.4s cubic-bezier(0.33, 0, 1, 1); transition: transform 0.4s cubic-bezier(0.33, 0, 1, 1.1), opacity 0.4s cubic-bezier(0.33, 0, 1, 1), -webkit-transform 0.4s cubic-bezier(0.33, 0, 1, 1.1); }
 

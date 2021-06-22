@@ -111,6 +111,7 @@ ob_start();?>
             var compareBeforeAfter = new CVM.SlideToAction(document.getElementById("image-pretty"), document.getElementById("slide-compare"), 50, 50, "width");
             var animeWhenVisibleSoins_compareBeforeAfter = new CVM.AnimeWhenVisible(window, document.getElementById("soins-images"), document.getElementById("soins-images"), compareBeforeAfter.startDemo.bind(compareBeforeAfter), 0.25, true, true, true);
 
+            // Activer uniquement le parallax d'accueil sur mobile (la mousse).
             var parallaxList;
             if (isMobile() === true)
             {
@@ -118,15 +119,21 @@ ob_start();?>
             }
             else
             {
-                animeWhenVisibleToiletteuse_bulles = new CVM.AnimeWhenVisible(window, document.getElementById("toiletteuse-container"), document.getElementById("parallax-toiletteuse-bulles"), "animeWhenVisible-translateFromBot", 0.4, true, true, true);
-
+                // Toiletteuse
+                var toiletteuseBullesLayersList = document.querySelectorAll("#parallax-toiletteuse-bulles .layer");
+                for (var i = toiletteuseBullesLayersList.length - 1; i >= 0; i--)
+                {
+                    new CVM.AnimeWhenVisible(window, document.getElementById("toiletteuse-container"), toiletteuseBullesLayersList[i], "animeWhenVisible-translateFromBot", 0.4, true, true, true);
+                }
                 parallaxToiletteuse_bulles = new CVM.Parallax(document.getElementById("parallax-toiletteuse-bulles"), "mouse", {h_origin: 50, v_origin: 50, h_min: 40, v_min: 40, h_max: 60, v_max: 60, h_inverse: true, v_inverse: true});
+                
+                // Soins
                 parallaxSoins_bulles = new CVM.Parallax(document.getElementById("parallax-soins-bulles"), "scroll", {h_origin: 50, h_fixed: 50, v_origin: 50, v_min: -100, v_max: 50});
 
                 parallaxList = [parallaxMousse, parallaxToiletteuse_bulles, parallaxSoins_bulles];
             }
 
-            // Limit dom refresh per sec:
+            // Limiter les fps des différents parallax:
             var refreshDom = new CVM.RequestAnimationFrame(function()
             {
                 for (var i = parallaxList.length - 1; i >= 0; i--)
