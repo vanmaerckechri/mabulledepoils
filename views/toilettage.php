@@ -1,24 +1,28 @@
 <?php
 
-$content_title = "Soins | Ma Bulle de Poils, Salon de Toilettage Canin";
-$meta_description = "Les soins proposés ainsi que les tarifs du salon de toilettage canin Ma Bulle de Poils.";
+$content_title = "Toilettage de Qualité pour Chien à Tarifs Abordables";
+$meta_description = "Votre chien a besoin d'un toilettage de qualité, offrez des soins sur mesure à des tarifs accessibles dans votre salon de toilettage pour chien situé à Wavre.";
 $og_page = "soins.php";
 
 ob_start();?>
     <div id="main" class="main page-soins">
         <section class="section introduction-container">
-            <video src="assets/videos/sechage.mp4" autoplay muted loop type="video/mp4" class="video"></video>
+            <video src="/assets/videos/sechage.mp4" autoplay muted loop type="video/mp4" class="video"></video>
             <div class="filter"></div>
             <div class="section-transition"></div>
             <div class="container-large">
-                <h1 id="main-title" class="title-big">Soins & Tarifs</h1>
+                <h1 id="main-title" class="title-big">Toilettage de Qualité pour Chien à Tarifs Abordables</h1>
             </div>
         </section>
         <section class="section section-light">
             <div class="container-large">
                 <div>
+                    <div class="text-container">
+                        <p>Tous les propriétaires de chien devraient avoir la possibilité d'offrir un toilettage de qualité à leur compagnon, c'est pourquoi "Ma Bulle de Poils" propose des soins professionnels à des prix accessibles.</p>
+                        <p>Voici les divers soins que proposent le salon de toilettage pour chien de Wavre, ils sont classés en fonction de la taille de votre chien.</p>
+                    </div>
                     <h2 class="subTitle">Chiens de Très Petite Taille <span class="details">(Chihuahua, Yorkshire Toy, ...)</span></h2>
-                    <ul class="table">
+                    <ul class="table table-animation">
                         <li class="row">
                             <span class="row-content">
                                 <span>Bain <span class="details">(poils courts) </span></span>
@@ -59,7 +63,7 @@ ob_start();?>
                 </div>
                 <div>
                     <h2 class="subTitle">Chiens de Petite Taille <span class="details">(Shih-Tzu, Bichon, Yorkshire, ...)</span></h2>
-                    <ul class="table">
+                    <ul class="table table-animation">
                         <li class="row">
                             <span class="row-content">
                                 <span>Bain <span class="details">(poils courts) </span></span>
@@ -100,7 +104,7 @@ ob_start();?>
                 </div>
                 <div>
                     <h2 class="subTitle">Chiens de Taille Moyenne <span class="details">(Caniche, Terrier Tibétain, Cocker, ...)</span></h2>
-                    <ul class="table">
+                    <ul class="table table-animation">
                         <li class="row">
                             <span class="row-content">
                                 <span>Bain <span class="details">(poils courts) </span></span>
@@ -141,7 +145,7 @@ ob_start();?>
                 </div>
                 <div>
                     <h2 class="subTitle">Chiens de Grande Taille <span class="details">(Berger, Golden, Beauceron, Bernois, ...)</span></h2>
-                    <ul class="table">
+                    <ul class="table table-animation">
                         <li class="row">
                             <span class="row-content">
                                 <span>Bain <span class="details">(poils courts) </span></span>
@@ -170,7 +174,7 @@ ob_start();?>
                 </div>
                 <div>
                     <h2 class="subTitle">Chiens de Très Grande Taille <span class="details">(Bobtail, Terre Neuve, Dogues, ...)</span></h2>
-                    <ul class="table">
+                    <ul class="table table-animation">
                         <li class="row">
                             <span class="row-content">
                                 <span>Bain <span class="details">(poils courts) </span></span>
@@ -193,7 +197,7 @@ ob_start();?>
                 </div>
                 <div>
                     <h2 class="subTitle">Services Supplémentaires <span class="details">(hors toilettage) </span></h2>
-                    <ul class="table">
+                    <ul class="table table-animation">
                         <li class="row">
                             <span class="row-content">
                                 <span>Coupe des Ongles </span>
@@ -214,14 +218,14 @@ ob_start();?>
                         </li>
                     </ul>
                 </div>
-                <p>Au delà de 2h30 de travail, 30€/heure supplémentaire.<br>Possibilité de prise et remise à domicile dans un rayon de 10km du salon pour 5€.<br>Pas de Bancontact.</p>
+                <p class="info-sup">Au delà de 2h30 de travail, 30€/heure supplémentaire.<br>Possibilité de prise et remise à domicile dans un rayon de 10km du salon pour 5€.<br>Pas de Bancontact.</p>
             </div>
         </section>
     </div>
 <?php $content_main = ob_get_clean();
 
 ob_start();?>
-    <script src="assets/js/AnimeWhenVisible.js"></script>
+    <script src="/assets/js/AnimeWhenVisible.js"></script>
     <script>
         (function()
         {

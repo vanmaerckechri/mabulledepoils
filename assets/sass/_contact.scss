@@ -2,29 +2,54 @@
 {
     .container-large
     {
+
         position: relative;
-        flex-direction: row!important;
-        max-width: 1028px;
-        &:last-of-type
+        flex-direction: row;
+        flex-wrap: wrap;
+        & > p:last-of-type
         {
-            padding-bottom: 128px!important;
+            margin-bottom: 80px;
         }
     }
     .image-facade
     {
         background-image: url("../images/photo_facade.jpg");
     }
+    .introduction-container
+    {
+        .container-large
+        {
+            max-width: 920px;
+        }
+    }
+    .presentation-container
+    {
+        .container-large:first-of-type
+        {
+            margin-bottom: 180px;
+        }
+        .presentation-content
+        {
+            margin-right: 40px;
+            flex: 1;      
+            .text-container.animeWhenVisible-translateFromLeft-init
+            {
+                transition-delay: 0.7s;
+            }
+        }
+    }
     ul
     {
+        margin-top: 40px;
         li
         {
-            margin-bottom: 60px;
+            margin-bottom: 20px;
             &:last-of-type
             {
                 margin-bottom: 0;
             }
         }
-        .icon-container
+        .row-content
         {
             display: inline-flex;
             justify-content: flex-start;
@@ -49,10 +74,37 @@
                 background-image: url("../images/icone_mail.svg");
             }
         }
+        .row-content.animeWhenVisible-loadRowTable
+        {
+            transform: translate3d(0, 120%, 0);
+        }
+        .row
+        {
+            &:nth-child(1)
+            {
+                .row-content
+                {
+                    transition-delay: 1s;
+                }
+            }
+            &:nth-child(2)
+            {
+                .row-content
+                {
+                    transition-delay: 1.1s;
+                }
+            }
+            &:nth-child(3)
+            {
+                .row-content
+                {
+                    transition-delay: 1.2s;
+                }
+            }
+        }
     }
     .video
     {
-        margin-right: 14px;
         border-radius: 50%;
         display: block;
         width: 400px;
@@ -62,6 +114,7 @@
     .map-container
     {
         margin: 0 auto;
+        position: relative;
         width: 100%;
         height: 500px;
         .cadre
@@ -81,7 +134,7 @@
         }
         .image-chat
         {
-            top: -23px;
+            top: -87px;
             max-width: 51px;
             height: 80px;
             background-image: url("../images/silhouette_chat.svg");
@@ -89,7 +142,7 @@
         }
         .image-chiens
         {
-            bottom: 20px;
+            bottom: -80px;
             max-width: 600px;
             height: 180px;
             background-image: url("../images/silhouette-chiens.svg");
@@ -97,25 +150,45 @@
         }
     }
 }
-@media screen and (max-width: 750px)
+@media screen and (max-width: 1140px)
 {
     #main.page-contact
     {
         .container-large
         {
-            flex-direction: column!important;
+            flex-direction: column;
+        }
+        .presentation-content
+        {
+            flex: none;
+            order: 2;
+            text-align: center;
         }
         ul
         {
-            li
+            .row-content
             {
-                margin-bottom: 40px;
-                &:last-of-type
+                flex-direction: column;
+                .image
                 {
-                    margin-bottom: 80px;
+                    margin-right: 0;
                 }
             }
-            .icon-container
+        }
+        .video
+        {
+            margin-bottom: 60px;
+            order: 1;
+        }
+    }
+}
+@media screen and (max-width: 750px)
+{
+    #main.page-contact
+    {
+        ul
+        {
+            .row-content
             {
                 display: block;
                 text-align: center;
@@ -147,6 +220,10 @@
                 max-width: 100vw;
             }
         }
+        .image-facade
+        {
+            background-position: right 40% center;
+        }
         .map-container
         {
             .cadre
@@ -159,7 +236,7 @@
         }
         .image-chat
         {
-            top: -9px;
+            top: -73px;
         }
         .image-chiens
         {
@@ -179,7 +256,7 @@
         }
         .image-chiens
         {
-            bottom: 40px;
+            bottom: -50px;
             height: 127px;
         }
     }

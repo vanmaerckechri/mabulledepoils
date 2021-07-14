@@ -1,7 +1,7 @@
 <?php
 
-$content_title = "Accueil | Ma Bulle de Poils, Salon de Toilettage Canin";
-$meta_description = "Présentation de Géraldine Degueldre et du salon de toilettage canin Ma Bulle de Poils.";
+$content_title = "Ma Bulle de Poils, Salon de Toilettage pour Chien à Wavre";
+$meta_description = "Situé à Wavre, dans la localité de Bièrges, le salon de toilettage pour chien Ma Bulle de Poils vous accueille pour des soins de qualité réalisés par une toiletteuse diplomée.";
 
 ob_start();?>
     <div id="main" class="main page-accueil">
@@ -13,12 +13,8 @@ ob_start();?>
             </div>
             <div class="parallax-cover container-large">
                 <div id="salon-content" class="content">
-                    <h1 class="title-big">Ma Bulle de Poils,<br>
-                        Salon de Toilettage
-                    </h1>
-                    <p>Que vous soyez un chien, un chat ou toute autre petite boule de poils,<br>
-                        venez vous faire cajoler dans votre <strong>salon de toilettage inclusif situé à Wavre</strong>.
-                    </p>
+                    <h1 class="title-big">Ma Bulle de Poils, Salon de Toilettage pour Chien à Wavre</h1>
+                    <p>Pour <strong>un toilettage de qualité mettant au premier plan le bien-être du chien</strong>, venez offrir un soin réalisé avec amour à votre animal de compagnie au salon de toilettage pour chien situé à Wavre, dans la localité de Bièrges.</p>
                 </div>
                 <div id="salon-images" class="image-container">
                     <div class="image"></div>
@@ -44,8 +40,8 @@ ob_start();?>
                     </div>
                 </div>
                 <div id="toiletteuse-content" class="content">
-                    <h2 class="title-big">Géraldine Degueldre,</h2>
-                    <p><strong>toiletteuse</strong> et comportementaliste canin <strong>diplomée</strong> accueille tous vos compagnons quel que soit leur caractère.</p>
+                    <h2 class="title-big">Toiletteuse Qualifiée pour votre Chien</h2>
+                    <p>Géraldine Degueldre, <strong>toiletteuse et comportementaliste canin diplomée</strong>, procure des soins à votre chien quel que soit son caractère, qu'il soit de bon ou de mauvais poil.</p>
                 </div>
             </div>
         </section>
@@ -57,8 +53,8 @@ ob_start();?>
             </div>
             <div class="parallax-cover container-large">
                 <div id="soins-content" class="content">
-                    <h2 class="title-big">Des Soins Adaptés</h2>
-                    <p><strong>Entretien</strong> des dents et des griffres, shampoing, coupe, tonte, brossage, ... tous les <strong>soins</strong> sont pratiqués avec <strong>douceur</strong> et une attention particulière est accordée aux besoins de l’animal.
+                    <h2 class="title-big">Un Toilettage sur Mesure</h2>
+                    <p>Entretien des dents et des griffres, shampoing, coupe, tonte, brossage, ... <strong>tous les soins sont pratiqués avec douceur</strong> et une attention particulière est accordée aux besoins de votre chien.
                     </p>
                 </div>
                 <div id="soins-images" class="image-container">
@@ -67,10 +63,10 @@ ob_start();?>
                     </div>
                     <div class="slidecontainer">
                         <input type="range" min="0" max="100" value="50" class="slide-compare" id="slide-compare">
-                        <div class="legend">
+                        <label for="slide-compare" class="legend">
                             <span>avant</span>
                             <span>après</span>
-                        </div>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -79,10 +75,10 @@ ob_start();?>
 <?php $content_main = ob_get_clean();
 
 ob_start();?>
-    <script src="assets/js/AnimeWhenVisible.js"></script>
-    <script src="assets/js/Parallax.js"></script>
-    <script src="assets/js/SlideToAction.js"></script>
-    <script src="assets/js/RequestAnimationFrame.js"></script>
+    <script src="/assets/js/AnimeWhenVisible.js"></script>
+    <script src="/assets/js/Parallax.js"></script>
+    <script src="/assets/js/SlideToAction.js"></script>
+    <script src="/assets/js/RequestAnimationFrame.js"></script>
     <script>
         (function()
         {
@@ -95,7 +91,7 @@ ob_start();?>
             // Salon
             var animeWhenVisibleSalon_content = new CVM.AnimeWhenVisible(window, document.getElementById("salon-content"), document.getElementById("salon-content"), "animeWhenVisible-translateFromLeft", 0.25, true, true, true);
             var animeWhenVisibleSalon_images = new CVM.AnimeWhenVisible(window, document.getElementById("salon-images"), document.getElementById("salon-images"), "animeWhenVisible-unhide", 0.25, true, true, true);
-            var parallaxMousse = new CVM.Parallax(document.getElementById("parallax-mousse"), "scroll", {h_origin: 50, h_fixed: 50, v_origin: 75, v_min: 75, v_max: 150});
+            var parallaxSalonMousse = new CVM.Parallax(document.getElementById("parallax-mousse"), {h_origin: 50, h_fixed: 50, v_origin: 75, v_min: 75, v_max: 150});
 
             // Toiletteuse
             var animeWhenVisibleToiletteuse_content = new CVM.AnimeWhenVisible(window, document.getElementById("toiletteuse-content"), document.getElementById("toiletteuse-content"), "animeWhenVisible-translateFromRight", 0.1, true, true, true);
@@ -111,11 +107,11 @@ ob_start();?>
             var compareBeforeAfter = new CVM.SlideToAction(document.getElementById("image-pretty"), document.getElementById("slide-compare"), 50, 50, "width");
             var animeWhenVisibleSoins_compareBeforeAfter = new CVM.AnimeWhenVisible(window, document.getElementById("soins-images"), document.getElementById("soins-images"), compareBeforeAfter.startDemo.bind(compareBeforeAfter), 0.25, true, true, true);
 
-            // Activer uniquement le parallax d'accueil sur mobile (la mousse).
+            // Sur mobile, activer uniquement le parallax de la section "salon".
             var parallaxList;
             if (isMobile() === true)
             {
-                parallaxList = [parallaxMousse];
+                parallaxList = [parallaxSalonMousse];
             }
             else
             {
@@ -125,12 +121,12 @@ ob_start();?>
                 {
                     new CVM.AnimeWhenVisible(window, document.getElementById("toiletteuse-container"), toiletteuseBullesLayersList[i], "animeWhenVisible-translateFromBot", 0.4, true, true, true);
                 }
-                parallaxToiletteuse_bulles = new CVM.Parallax(document.getElementById("parallax-toiletteuse-bulles"), "mouse", {h_origin: 50, v_origin: 50, h_min: 40, v_min: 40, h_max: 60, v_max: 60, h_inverse: true, v_inverse: true});
+                parallaxToiletteuse_bulles = new CVM.Parallax(document.getElementById("parallax-toiletteuse-bulles"), {isMouse: true, h_origin: 50, v_origin: 50, h_min: 40, v_min: 40, h_max: 60, v_max: 60, h_inverse: true, v_inverse: true});
                 
                 // Soins
-                parallaxSoins_bulles = new CVM.Parallax(document.getElementById("parallax-soins-bulles"), "scroll", {h_origin: 50, h_fixed: 50, v_origin: 50, v_min: -100, v_max: 50});
+                parallaxSoins_bulles = new CVM.Parallax(document.getElementById("parallax-soins-bulles"), {h_origin: 50, h_fixed: 50, v_origin: 50, v_min: -100, v_max: 50});
 
-                parallaxList = [parallaxMousse, parallaxToiletteuse_bulles, parallaxSoins_bulles];
+                parallaxList = [parallaxSalonMousse, parallaxToiletteuse_bulles, parallaxSoins_bulles];
             }
 
             // Limiter les fps des différents parallax:
@@ -138,9 +134,9 @@ ob_start();?>
             {
                 for (var i = parallaxList.length - 1; i >= 0; i--)
                 {
-                    parallaxList[i].refreshDom();
+                    parallaxList[i].update();
                 }
-            }, 30);
+            }, 15);
         }());
     </script>
 <?php $content_jsClasses = ob_get_clean();?>

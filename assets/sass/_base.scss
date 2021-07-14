@@ -6,13 +6,14 @@
 	overflow-x: hidden;
 	a, p, span
 	{
-		font-size: 16px;
+		font-size: 18px;
 		line-height: 30px;
 		color: black;
 	}
 }
 .section
 {
+	padding: 120px 0;
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -34,10 +35,6 @@
 	{
 		color: $color-dark02;
 	}
-	.title-big, p, span
-	{
-		text-shadow: 2px 0 0 $color-light01, 2px 2px 0 $color-light01, 0 2px 0 $color-light01, -2px 2px 0 $color-light01, -2px 0 0 $color-light01, -2px -2px 0 $color-light01, 0 -2px 0 $color-light01, 2px -2px 0 $color-light01;
-	}
 }
 .section-dark
 {
@@ -46,15 +43,11 @@
     {
         color: $color-light02;
     }
-	.title-big, p, span
-	{
-		text-shadow: 2px 0 0 $color-main02, 2px 2px 0 $color-main02, 0 2px 0 $color-main02, -2px 2px 0 $color-main02, -2px 0 0 $color-main02, -2px -2px 0 $color-main02, 0 -2px 0 $color-main02, 2px -2px 0 $color-main02;
-	}
 }
 .container-large
 {
 	margin: 0 auto;
-	padding: 64px;
+	padding: 0 64px;
 	max-width: $maxWidth-l;
 	width: 100%;
 	display: flex;
@@ -110,13 +103,13 @@
 	{
 		text-align: center;
 		color: white;
-		text-shadow: 1px 0 0 $color-dark02, 1px 1px 0 $color-dark02, 0 1px 0 $color-dark02, -1px 1px 0 $color-dark02, -1px 0 0 $color-dark02, -1px -1px 0 $color-dark02, 0 -1px 0 $color-dark02, 1px -1px 0 $color-dark02;
+		text-shadow: 1px 0 0 black, 1px 1px 0 black, 0 1px 0 black, -1px 1px 0 black, -1px 0 0 black, -1px -1px 0 black, 0 -1px 0 black, 1px -1px 0 black;
 	}
 }
 .title-big
 {
 	margin-bottom: 40px;
-	font-weight: normal;
+	font-weight: 300;
 	font-size: 48px;
 	width: 100%;
 }
@@ -138,14 +131,19 @@
 	box-shadow: 0 0 0 13px white, 0 0 0 14px $color-dark02;
 	background-color:$color-light01;
 }
+.text-container
+{
+	p ~ p
+	{
+		margin-top: 20px;
+	}
+}
 .table
 {
 	margin-top: 10px;
 	width: 100%;
 	.row
 	{
-		position: relative;
-		overflow: hidden;
 		width: 100%;
 		.row-content
 		{
@@ -157,6 +155,25 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+		}
+		&:nth-child(odd)
+		{
+			background-image: url(../images/li_filtre.png);
+			span
+			{
+				text-shadow: none;
+			}
+		}
+	}
+}
+.table-animation
+{
+	.row
+	{
+		position: relative;
+		overflow: hidden;
+		.row-content
+		{
 			&:first-of-type
 			{
 				flex: 1;
@@ -215,14 +232,6 @@
 				transition-delay: 0.9s;
 			}
 		}
-		&:nth-child(odd)
-		{
-			background-image: url(../images/li_filtre.png);
-			span
-			{
-				text-shadow: none;
-			}
-		}
 	}
 }
 .parallax-container
@@ -257,7 +266,7 @@
 		.container-large
 		{
 			margin-top: 0;
-			padding: 64px 16px;
+			padding: 0 16px;
 			flex-direction: column;
 		}
 		.image-container

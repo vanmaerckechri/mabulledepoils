@@ -4,6 +4,20 @@
     {
         min-height: 100vh;
     }
+    .section-light
+    {
+        .title-big, p, span
+        {
+            text-shadow: 2px 0 0 $color-light01, 2px 2px 0 $color-light01, 0 2px 0 $color-light01, -2px 2px 0 $color-light01, -2px 0 0 $color-light01, -2px -2px 0 $color-light01, 0 -2px 0 $color-light01, 2px -2px 0 $color-light01;
+        }
+    }
+    .section-dark
+    {
+        .title-big, p, span
+        {
+            text-shadow: 2px 0 0 $color-main02, 2px 2px 0 $color-main02, 0 2px 0 $color-main02, -2px 2px 0 $color-main02, -2px 0 0 $color-main02, -2px -2px 0 $color-main02, 0 -2px 0 $color-main02, 2px -2px 0 $color-main02;
+        }
+    }
     .salon-container
     {
         .parallax-container
@@ -32,6 +46,11 @@
         .parallax-cover
         {
             margin-top: -20vh;
+            p
+            {
+                max-width: 540px;
+                width: 100%;
+            }
         }
         .image-container
         {
@@ -40,6 +59,10 @@
                 background-image: url("../images/logo.svg");
             }
         }
+        .title-big
+        {
+            max-width: 510px;
+        }
     }
     .toiletteuse-container
     {
@@ -47,12 +70,9 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.4);
         .content
         {
-            width: auto;
-            p
-            {
-                margin-left: auto;
-                max-width: 430px;
-            }
+            margin-left: auto;
+            max-width: 455px;
+            width: 100%;
         }
         .bulles-masque
         {
@@ -134,10 +154,6 @@
                 height: 160px;
                 background-image: url("../images/aureole.svg");
             }
-        }
-        h2, p
-        {
-            text-align: right;
         }
     }
     .soins-container
@@ -228,7 +244,7 @@
     {
         .salon-container
         {
-            padding-top: 32px;
+            padding-top: $header-height;
             .parallax-cover
             {
                 margin-top: 0;
@@ -244,6 +260,10 @@
         }
         .toiletteuse-container
         {
+            .content
+            {
+                margin-left: initial;
+            }
             .image-toque
             {
                 top: -58px;

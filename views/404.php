@@ -1,6 +1,7 @@
 <?php
 
-$content_title = "Ressource non Trouvée | Ma Bulle de Poils, Salon de Toilettage Canin";
+$content_title = "Cette Page est Indisponible!";
+$meta = "<meta name=\"robots\" content=\"noindex\" />";
 
 ob_start();?>
     <div id="main" class="main">

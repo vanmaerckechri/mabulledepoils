@@ -1,84 +1,112 @@
 footer
 {
+    padding-top: 32px;
+    padding-bottom: 16px;
     position: relative;
+    flex: 1 0 auto;
     background-color: $color-dark01;
-    .container
+    .container-large
     {
-        padding: 16px 64px;
-        display: flex;
+        max-width: 1030px;
         flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .title
+    {
+        margin-bottom: 32px;
+        width: 100%;
         font-family: $fontFamily-title;
-        font-size: 80%;
-        color: $color-light01;
-    }
-    .col-left, .col-right
-    {
-        width: 50%;
-    }
-    .col-left, .col-right
-    {
-        line-height: 21px;
+        font-size: 36px;
     }
     .col-left
     {
-        text-align: left;
+        margin-top: 18px;
+        p
+        {
+            max-width: 380px;
+        }
     }
     .col-right
     {
-        a
+        list-style: circle;
+        color: #b0b5bf;
+        span
         {
             display: block;
-            text-align: right;
-            color: $color-light01;
+        }
+        a
+        {
+            display: inline-block;
+            line-height: 48px;
         }
     }
-    /*
-    .link-facebook
+    .subCol
     {
-        margin-left: 28px;
+        margin-top: 32px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        p, a
+        {
+            color: #b0b5bf;
+        }
     }
-    .image-facebook
+    p, a
     {
-        width: 28px;
-        height: 28px;
-        background-image: url(../images/logo_facebook.png);
+        color: $color-light02;
+        font-size: 14px;
+        line-height: 28px;
+        font-weight: normal;
     }
-    */
+    .icone
+    {
+        margin-bottom: 4px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        pointer-events: auto;
+        &:nth-child(1)
+        {
+            margin-right: 5px;
+        }
+        &:nth-child(2)
+        {
+            margin-left: 5px;
+        }
+    }
 }
-@media screen and (max-width: 550px)
+@media screen and (max-width: 1140px)
+{
+	footer
+	{
+        .container-large
+        {
+            padding: 0 16px;
+        }
+    }
+}
+@media screen and (max-width: 888px)
 {
     footer
     {
-        .container
+        .container-large
         {
-            padding: 8px 16px;
+            flex-direction: column;
+            align-items: center;
         }
-        .col-left, .col-right
+        .title
         {
-            width: 100%;
-            line-height: 24px;
+            text-align: center;
         }
         .col-left
         {
-            p
-            {
-                text-align: center;
-            }
+            text-align: center;
         }
         .col-right
         {
-            a
-            {
-                text-align: center;
-            }
+            margin-top: 16px;
+            text-align: center;
         }
-        /*
-        .link-facebook
-        {
-            margin-left: 14px;
-        }
-        */
-    }  
+    }
 }

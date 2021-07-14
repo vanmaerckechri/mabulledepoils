@@ -1,3 +1,29 @@
+@font-face
+{
+	font-family: "Oxygen";
+	src: url("../fonts/Oxygen-Regular.ttf") format('truetype');
+	font-display: swap;
+}
+@font-face
+{
+	font-family: "Oxygen";
+	src: url("../fonts/Oxygen-Light.ttf") format('truetype');
+	font-display: swap;
+	font-weight: 300;
+}
+@font-face
+{
+	font-family: "Oxygen";
+	src: url("../fonts/Oxygen-Bold.ttf") format('truetype');
+	font-display: swap;
+	font-weight: bold;
+}
+@font-face
+{
+	font-family: "Ubuntu";
+	src: url("../fonts/Ubuntu-Light.ttf") format('truetype');
+	font-display: swap;
+}
 // SIZES
 $maxWidth-l: calc(1180px + 128px);
 $header-height: 80px;

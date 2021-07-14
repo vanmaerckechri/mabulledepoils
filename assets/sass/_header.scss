@@ -53,21 +53,22 @@ nav
             text-decoration: none;
             color: $color-main01;
             font-size: 14px;
-            font-weight: 300;
+            font-weight: bold;
             .image
             {
-                transition: transform 0.2s ease-out;
+                background-position: center center;
+                transition: background-size 0.2s ease-out;
             }
         }
         .btn-text
         {
-            margin-top: 2px;
+            margin-top: 6px;
         }
         &:hover
         {
             .image
             {
-                transform: scale3d(0.8, 0.8, 1);
+                background-size: 80% 80%;
             }
         }
     }
@@ -250,7 +251,7 @@ nav
 		}
 		input:checked ~ ul
 		{
-			max-height: 256px;
+			max-height: 300px;
             box-shadow: 0px 1px 2px 1px $color-boxShadow;
 			transition: max-height 0.4s ease-out, box-shadow 0s;
 		}

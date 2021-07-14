@@ -1,6 +1,6 @@
 <IfModule mod_headers.c>
-    <FilesMatch "\.(ico|svg|jpg|png|css|js)$">
-        Header set Cache-Control "max-age=86400, public"
+    <FilesMatch "\.(ico|svg|jpg|png|css|js|mp4|ttf)$">
+        Header set Cache-Control "max-age=31536000, public"
     </FilesMatch>
 </IfModule>
 
@@ -8,8 +8,8 @@ RewriteEngine On
 
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteCond %{HTTPS} !on
-RewriteCond %{HTTP_HOST} ^(?:www\.)?cvmdev\.be(?:.*)$ [nc]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?mabulledepoils\.be(?:.*)$ [nc]
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [redirect=301,L]
 
-RewriteCond %{REQUEST_URI} !(\.(png|jpg|svg|ico|css|js|mp4))
+RewriteCond %{REQUEST_URI} !(\.(png|jpg|svg|ico|css|js|mp4|xml|ttf|txt))
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

@@ -2,137 +2,117 @@
 {
 	"use strict";
 
-	CVM.Parallax = function(container, action, axesValue)
+	CVM.Parallax = function(elem, options)
 	{
-		this.container = container;
-		this.action = action
-		this.axesValue = axesValue ? axesValue : {};
+		this.elem = elem;
+		this.options = options ? options : {};
 
-		this.h_percent = null;
-		this.v_percent = null;
-		this.isWaitingRefreshDom = false;
-		this.isMouseOver = false;
+		this.isWaitingUpdate = false;
+
+		this.elemInfos;
+		this.screenHeight
+		this.screenHeightHalf; 
+		this.screenWidthHalf; 
+		this.mouseX;
+		this.mouseY;
+		this.h_percent;
+		this.v_percent;
 
 		this.init();
 	};
 
 	CVM.Parallax.prototype.init = function()
 	{	
-		this.axesValue.h_inverse = !this.axesValue.h_inverse ? 1 : -1;
-		this.axesValue.v_inverse = !this.axesValue.v_inverse ? 1 : -1;
+		this.elemInfos = this.elem.getBoundingClientRect();
 
-		if (this.action == "scroll")
+		this.options.isMouse = typeof this.options.isMouse == "undefined" ? false : this.options.isMouse;
+		this.options.h_min = typeof this.options.h_min == "undefined" ? -Infinity : this.options.h_min;
+		this.options.h_max = typeof this.options.h_max == "undefined" ? Infinity : this.options.h_max;
+		this.options.v_min = typeof this.options.v_min == "undefined" ? -Infinity : this.options.v_min;
+		this.options.v_max = typeof this.options.v_max == "undefined" ? Infinity : this.options.v_max;
+		this.options.h_inverse = !this.options.h_inverse ? 1 : -1;
+		this.options.v_inverse = !this.options.v_inverse ? 1 : -1;
+
+		window.addEventListener('resize', this.onResize.bind(this));
+		this.onResize();
+
+		// parallax basé sur le scrolling.
+		if (this.options.isMouse === false)
 		{
-			window.addEventListener('scroll', this.checkForUpdate.bind(this, this.updateWithScroll.bind(this)));
+			window.addEventListener('scroll', this.initUpdate.bind(this));
 		}
+		// parallax basé sur la position de la souris.
 		else
 		{
-			window.addEventListener('mousemove', this.checkForUpdate.bind(this, this.updateWithMouse.bind(this)));
-		}
-		if (this.axesValue.isOnlyHover)
-		{
-			this.container.addEventListener("mouseover", function(){this.isMouseOver = true;}.bind(this));
-			this.container.addEventListener("mouseout", function(){this.isMouseOver = false;}.bind(this));
+			window.addEventListener('mousemove', this.initUpdate.bind(this));
 		}
 	};
 
-	CVM.Parallax.prototype.checkForUpdate = function(update, e)
+	
+	CVM.Parallax.prototype.onResize = function()
 	{
-		var screenHeight = window.innerHeight || document.documentElement.clientHeight;
-		var containerInfos = this.container.getBoundingClientRect();
+		this.screenHeight = window.innerHeight || document.documentElement.clientHeight;
+		this.screenWidthHalf = (window.innerWidth || document.documentElement.clientWidth) / 2; 
+		this.screenHeightHalf = this.screenHeight / 2;
+	};
 
-		// Don't update if element is offscreen.
-		if (containerInfos.top + containerInfos.height < 0 || containerInfos.top > screenHeight)
+	CVM.Parallax.prototype.initUpdate = function(e)
+	{
+		// ne pas pratiquer la mise à jour si l'élément de référence est en dehors de l'écran.
+		this.elemInfos = this.elem.getBoundingClientRect();
+		if (this.elemInfos.top >= this.screenHeight || this.elemInfos.top + this.elemInfos.height <= 0)
 		{
 			return false;
 		}
-
-		update(containerInfos, e);
+		if (this.options.isMouse === true)
+		{
+			this.mouseX = e.clientX;
+			this.mouseY = e.clientY;
+		}
+		this.isWaitingUpdate = true;
 	};
 
-	CVM.Parallax.prototype.updateWithScroll = function(containerInfos)
+	CVM.Parallax.prototype.update = function()
 	{
-		var h_percent = this.axesValue.h_fixed ? this.axesValue.h_fixed : Math.round(this.axesValue.h_origin + ((this.axesValue.h_max - this.axesValue.h_min) * (1 / containerInfos.width) * containerInfos.left) * -1);
-		var v_percent = this.axesValue.v_fixed ? this.axesValue.v_fixed : Math.round(this.axesValue.v_origin + ((this.axesValue.v_max - this.axesValue.v_min) * (1 / containerInfos.height) * containerInfos.top) * -1);
+		if (this.isWaitingUpdate === false)
+		{
+			return;
+		}
 
-		this.updateValues(h_percent, v_percent);
+		if (this.options.isMouse === true)
+		{
+			var percents = this.calculatePercents(this.mouseX, this.mouseY);
+			this.refreshDom(
+				this.options.h_fixed ? this.options.h_fixed : percents.x,
+				this.options.v_fixed ? this.options.v_fixed : percents.y
+			);
+		}
+		else
+		{
+			this.refreshDom(
+				this.options.h_fixed ? this.options.h_fixed : Math.round(this.options.h_origin + ((this.options.h_max - this.options.h_min) * (-1 / this.elemInfos.width) * this.elemInfos.left)),
+				this.options.v_fixed ? this.options.v_fixed : Math.round(this.options.v_origin + ((this.options.v_max - this.options.v_min) * (-1 / this.elemInfos.height) * this.elemInfos.top))
+			);
+		}
 	};
-
-	CVM.Parallax.prototype.updateWithMouse = function(containerInfos, e)
-	{
-		var x = e.clientX;
-		var y = e.clientY;
-		var percents = this.calculatePercents(x, y);
-		var h_percent = this.axesValue.h_fixed ? this.axesValue.h_fixed : percents.x;
-		var v_percent = this.axesValue.v_fixed ? this.axesValue.v_fixed : percents.y;
-
-		this.updateValues(h_percent, v_percent);
-	};
-
+	
 	CVM.Parallax.prototype.calculatePercents = function(x, y)
 	{
-		var center = {};
-		var maxLength = {};
-		var centerToMouse_length = {};
-		var percents = {};
+		var diffX = this.screenWidthHalf - x;
+		var diffY = this.screenHeightHalf - y;
 
-		if (this.axesValue.isOnlyHover)
-		{
-			var container = this.container.getBoundingClientRect();
-			// reset parallax position if mouse is out of container
-			if (!this.isMouseOver)
-			{
-				return {x: this.axesValue.h_origin, y: this.axesValue.v_origin};
-			}
+		var ratioX = diffX > 0 ? this.options.h_max - this.options.h_origin : this.options.h_origin - this.options.h_min;
+		var ratioY = diffY > 0 ? this.options.v_max - this.options.v_origin : this.options.v_origin - this.options.v_min;
 
-			center.x = container.left + (container.width / 2); 
-			center.y = container.top + (container.height / 2);
-			maxLength.w = container.width / 2;
-			maxLength.h = container.height / 2;
-		}
-		else
-		{
-			center.x = (window.innerWidth || document.documentElement.clientWidth) / 2; 
-			center.y = (window.innerHeight || document.documentElement.clientHeight) / 2;
-			maxLength.w = (window.innerWidth || document.documentElement.clientWidth) - center.x;
-			maxLength.h = (window.innerHeight || document.documentElement.clientHeight) - center.y;
-		}
-
-		centerToMouse_length.x = center.x - x;
-		centerToMouse_length.y = center.y - y;
-
-		var ratio = this.calculateRatio(centerToMouse_length);
-
-		percents.x = Math.round(this.axesValue.v_origin + (ratio.x * this.axesValue.h_inverse * (centerToMouse_length.x / maxLength.w)));
-		percents.y = Math.round(this.axesValue.v_origin + (ratio.y * this.axesValue.v_inverse * (centerToMouse_length.y / maxLength.h)));
-
-		return percents;
+		return {
+			x: Math.round(this.options.v_origin + (ratioX * this.options.h_inverse * (diffX / this.screenWidthHalf))),
+			y: Math.round(this.options.v_origin + (ratioY * this.options.v_inverse * (diffY / this.screenHeightHalf)))
+		};
 	};
 
-	CVM.Parallax.prototype.calculateRatio = function(centerToMouse_length)
+	CVM.Parallax.prototype.refreshDom = function(h_percent, v_percent)
 	{
-		var ratio = {};
-		if (centerToMouse_length.x > 0)
-		{
-			ratio.x = this.axesValue.h_max - this.axesValue.h_origin;
-		}
-		else
-		{
-			ratio.x = this.axesValue.h_origin - this.axesValue.h_min;
-		}
-		if (centerToMouse_length.y > 0)
-		{
-			ratio.y = this.axesValue.v_max - this.axesValue.v_origin;
-		}
-		else
-		{
-			ratio.y = this.axesValue.v_origin - this.axesValue.v_min;
-		}
-		return ratio;
-	};
-
-	CVM.Parallax.prototype.updateValues = function(h_percent, v_percent)
-	{
+		// effectuer la mise à jour des valeur uniquement si elles ont changé.
 		if (h_percent != this.h_percent || v_percent != this.v_percent)
 		{
 			var list = [
@@ -141,32 +121,13 @@
 			];
 			for (var i = list.length - 1; i >= 0; i--)
 			{
-				// result is below the authorized limit
-				if (list[i][1] < this.axesValue[list[i][0] + "_min"])
-				{
-					this[list[i][0] + "_percent"] = this.axesValue[list[i][0] + "_min"];
-				}
-				// result is above the authorized limit
-				else if (list[i][1] > this.axesValue[list[i][0] + "_max"])
-				{
-					this[list[i][0] + "_percent"] = this.axesValue[list[i][0] + "_max"];
-				}
-				else
-				{
-					this[list[i][0] + "_percent"] = list[i][1];
-				}
+				// utiliser la valeur min. si la valeur actuelle lui est inf.
+				this[list[i][0] + "_percent"] = Math.max(this.options[list[i][0] + "_min"], list[i][1]);
+				// utiliser la valeur max. si la valeur actuelle lui est sup.
+				this[list[i][0] + "_percent"] = Math.min(this.options[list[i][0] + "_max"], list[i][1]);
 			}
-			this.isWaitingRefreshDom = true;
+			this.elem.style.perspectiveOrigin = this.h_percent + "% " + this.v_percent + "%";
 		}
-	};
-
-	CVM.Parallax.prototype.refreshDom = function()
-	{
-		if (this.isWaitingRefreshDom === false || this.v_percent === null || this.h_percent === null)
-		{
-			return;
-		}
-		this.isWaitingRefreshDom = false;
-		this.container.style.perspectiveOrigin = this.h_percent + "% " + this.v_percent + "%";
+		this.isWaitingUpdate = false;
 	};
 }());

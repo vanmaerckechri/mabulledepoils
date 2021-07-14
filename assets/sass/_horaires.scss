@@ -8,13 +8,24 @@
     {
         display: block;
     }
+    .introduction-container
+    {
+        .container-large
+        {
+            max-width: 660px;
+        }
+    }
     .presentation
     {
         z-index: 2;
-        margin-bottom: 18px;
+        margin-bottom: 50px;
         padding-left: 24px;
         padding-right: 24px;
         position: relative;
+        p
+        {
+            max-width: 515px;
+        }
     }
     .horaires-content
     {
@@ -106,14 +117,14 @@
         min-width: 300px!important;
         max-width: 300px!important;
         height: 300px!important;
-        perspective: 200px;
+        perspective: 100px;
         perspective-origin: 50% 50%;
         transition: perspective-origin 0.5s ease-out;
         min-height: auto;
         .layer
         {
-            width: 450px;
-            height: 450px;
+            width: 650px;
+            height: 650px;
             bottom: unset;
             top: 50%;
             left: 50%;
@@ -128,11 +139,11 @@
             .aiguille
             {
                 position: absolute;
-                left: 201px;
-                top: 183.5px;
-                width: 4px;
-                height: 35px;
-                transform-origin: 2px 26px;
+                left: 291px;
+                top: 265px;
+                width: 5px;
+                height: 50px;
+                transform-origin: 2px 37px;
                 display: block;
             }
         }

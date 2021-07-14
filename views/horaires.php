@@ -1,7 +1,7 @@
 <?php
 
-$content_title = "Horaires | Ma Bulle de Poils, Salon de Toilettage Canin";
-$meta_description = "Les heures d'ouverture du salon de toilettage canin Ma Bulle de Poils.";
+$content_title = "Les Heures d'Ouverture du Salon de Toilettage pour Chien";
+$meta_description = "Votre salon de toilettage pour chien préféré est ouvert du mardin au samedi, de 10h à 19h.";
 $og_page = "horaires.php";
 
 ob_start();?>
@@ -10,16 +10,16 @@ ob_start();?>
             <div id="intro" class="image image-salon"></div>
             <div class="section-transition"></div>
             <div class="container-large">
-                <h1 id="main-title" class="title-big">Horaires</h1>
+                <h1 id="main-title" class="title-big">Les Heures d'Ouverture du Salon de Toilettage pour Chien</h1>
             </div>
         </section>
         <section class="section section-light">
             <div class="container-large">
                 <div class="presentation">
-                    <p id="horaires-presentation">Nous vous accueillons sur rendez-vous de 10h à 19h, du mardi au samedi.</p>
+                    <p id="horaires-presentation">Votre salon de toilettage pour chien situé à Wavre vous accueille sur rendez-vous du mardi au samedi de 10h à 19h.</p>
                 </div>
                 <div class="horaires-content">
-                    <ul id="table" class="table">
+                    <ul id="table" class="table table-animation">
                         <li id="day1" class="row">
                             <span class="row-content">
                                 <span>lundi </span>
@@ -70,9 +70,9 @@ ob_start();?>
                                 <div class="layer layer3"></div>
                                 <div class="layer layer2"></div>
                                 <div class="layer layer1">
-                                    <img id="hours" src="assets/images/hourHand.svg" alt="" class="aiguille">
-                                    <img id="minutes" src="assets/images/minuteHand.svg" alt="" class="aiguille">
-                                    <img id="seconds" src="assets/images/secondHand.svg" alt="" class="aiguille seconds">
+                                    <img id="hours" src="/assets/images/hourHand.svg" alt="" class="aiguille">
+                                    <img id="minutes" src="/assets/images/minuteHand.svg" alt="" class="aiguille">
+                                    <img id="seconds" src="/assets/images/secondHand.svg" alt="" class="aiguille seconds">
                                 </div>
                             </div>
                         </div>
@@ -84,10 +84,10 @@ ob_start();?>
 <?php $content_main = ob_get_clean();
 
 ob_start();?>
-    <script src="assets/js/Clock.js"></script>
-    <script src="assets/js/Parallax.js"></script>
-    <script src="assets/js/AnimeWhenVisible.js"></script>
-    <script src="assets/js/RequestAnimationFrame.js"></script>
+    <script src="/assets/js/Clock.js"></script>
+    <script src="/assets/js/Parallax.js"></script>
+    <script src="/assets/js/AnimeWhenVisible.js"></script>
+    <script src="/assets/js/RequestAnimationFrame.js"></script>
     <script>
         (function()
         {
@@ -107,12 +107,12 @@ ob_start();?>
             {
                 new CVM.AnimeWhenVisible(window, document.getElementById("table"), rowsList[i], "animeWhenVisible-loadRowTable", 0.1, true, true, false);
             }
-            var parallaxNiche = new CVM.Parallax(document.getElementById("parallax-niche"), "mouse", {h_origin: 50, h_min: 40, h_max: 60, v_origin: 50, v_min: 40, v_max: 60, h_inverse: true, v_inverse: true});
+            var parallaxNiche = new CVM.Parallax(document.getElementById("parallax-niche"), {isMouse: true, isMouseHover: true, h_origin: 50, h_min: 40, h_max: 60, v_origin: 50, v_min: 40, v_max: 60, h_inverse: true, v_inverse: true});
 
             // Limit dom refresh per sec:
             var refreshDom = new CVM.RequestAnimationFrame(function()
             {
-                parallaxNiche.refreshDom();
+                parallaxNiche.update();
             }, 30);
         }());
     </script>
