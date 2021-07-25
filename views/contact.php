@@ -18,7 +18,7 @@ ob_start();?>
                 <div class="presentation-content">
                     <div id="presentation-content" class="text-container">
                         <p>Situé dans un <strong>quartier calme et vert</strong> face à l'église de Saint-Pierre et Marcelin dans la localité de Bièrges à Wavre, venez faire profiter votre animal de compagnie d'<strong>un toilettage de qualité dans un cadre agréable</strong></p>
-                        <p>Voici les coordonnées du salon de toilettage pour chien préféré de votre chien, n'hésitez pas à me joindre par téléphone ou par mail.</p>
+                        <p>Voici les coordonnées du salon de toilettage préféré de votre chien, n'hésitez pas à me joindre par téléphone ou par mail.</p>
                     </div>
                     <ul id="contact-infos" class="table-animation">
                         <li class="row">
