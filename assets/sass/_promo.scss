@@ -1,0 +1,207 @@
+@keyframes magic-box
+{
+    0% 
+    {
+        transform: rotate3d(0, 0, 1, -3deg) translate3d(0, 0, 0);
+    }
+    50%
+    {
+        transform: rotate3d(0, 0, 1, 0deg) translate3d(0, 5px, 0);
+    }
+    100%
+    {
+        transform: rotate3d(0, 0, 1, 3deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes magic-box-cache
+{
+    0% 
+    {
+        transform: rotate3d(0, 0, 1, 1deg) translate3d(-60%, 0, 0);
+    }
+    50%
+    {
+        transform: rotate3d(0, 0, 1, 0deg) translate3d(-60%, 0, 0);
+    }
+    100%
+    {
+        transform: rotate3d(0, 0, 1, -1deg) translate3d(-60%, 0, 0);
+    }
+}
+
+@keyframes promo-bulles
+{
+    0% 
+    {
+        transform: translate3d(0, 100%, 0);
+    }
+    100%
+    {
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+@keyframes promo-mousse01
+{
+    0% 
+    {
+        transform: translate3d(0, 40px, 0) rotate3d(0, 0, 1, -1deg);
+    }
+    100%
+    {
+        transform: translate3d(0, 40px, 0) rotate3d(0, 0, 1, 1deg);
+    }
+}
+
+@keyframes promo-mousse02
+{
+    0% 
+    {
+        transform: translate3d(0, 40px, 0) rotate3d(0, 0, 1, 1deg);
+    }
+    100%
+    {
+        transform: translate3d(0, 40px, 0) rotate3d(0, 0, 1, -1deg);
+    }
+}
+
+.page-promo
+{       
+    background-color: $color-light01;
+    .section
+    {
+        min-height: 100vh;
+    }
+    .section-light
+    {
+        background-color: transparent;
+    }
+    .content
+    {
+        z-index: 5;
+        position: relative;
+        max-width: 470px;
+    }
+    .image-container
+    {
+        position: relative;
+        transform: translate3d(-50px, 180px, 0);
+    }
+    .image
+    {
+        transform-origin: bottom center;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-timing-function: linear; 
+    }
+    .image-bulles
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-position: center center;
+        transform: translate3d(0, 100%, 0);
+        background-image: url("../images/bulles01_01.svg");
+        background-repeat: repeat-x;
+        animation-duration: 90s;
+        animation-name: promo-bulles;
+        transform-origin: center center;
+        animation-direction: normal;
+        background-size: 1908px 930px;
+    }
+    .image-bulles02
+    {
+        animation-delay: -45s;
+    }
+    .image-bulles03, .image-bulles04
+    {
+        background-image: url("../images/bulles01_02.svg");
+        animation-duration: 60s;
+    }
+    .image-bulles03
+    {
+        animation-delay: -30s;
+    }
+    .image-mousse
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 110vw;
+        height: 480px;
+        transform: translate3d(0, 40px, 0) rotate3d(0, 0, 1, -1deg);
+        background-image: url("../images/mousse02-sans-bulles.svg");
+        background-repeat: repeat-x;
+        background-position: center bottom;
+        background-size: 1920px 480px;
+        transform-origin: center center;
+        animation-name: promo-mousse01;
+        animation-duration: 5s;
+    }
+    .image-mousse02
+    {
+        transform: translate3d(0, 40px, 0) rotate3d(0, 0, 1, -1deg);
+        background-image: url("../images/mousse03-sans-bulles.svg");
+        animation-name: promo-mousse02;
+    }
+    .image-magicBox
+    {
+        min-width: 287px;
+        max-width: 287px;
+        min-height: 370px;
+        max-height: 370px;
+        background-image: url("../images/magic-box.png");
+        transform: rotate3d(0, 0, 1, -3deg) translate3d(0, 0, 0);
+        animation-name: magic-box;
+        animation-duration: 4s;
+    }
+    .image-magicBoxCache
+    {
+        position: absolute;
+        left: 50%;
+        bottom: -100px;
+        min-width: 325px;
+        max-width: 325px;
+        min-height: 196px;
+        max-height: 196px;
+        background-image: url("../images/magic-box-mousse.svg");
+        transform: rotate3d(0, 0, 1, 1deg) translate3d(-60%, 0, 0);
+        animation-name: magic-box-cache;
+        animation-duration: 3s;
+    }
+}
+
+@media screen and (max-width: 1920px)
+{
+    #main.page-promo
+    {
+        .section
+        {
+            background-size: 1920px 480px, 1908px 930px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1140px)
+{
+    #main.page-promo
+    {
+        .content
+        {
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+        .image-container, .content
+        {
+            order: initial;
+        }
+        .image-magicBoxCache
+        {
+            bottom: 50px;
+        }
+    }
+}
