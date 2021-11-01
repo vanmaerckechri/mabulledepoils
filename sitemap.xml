@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://mabulledepoils.be/</loc>
-        <lastmod>2021-07-08</lastmod>
+        <lastmod>2021-11-01</lastmod>
         <priority>1</priority>
     </url>
     <url>
         <loc>https://mabulledepoils.be/toilettage</loc>
-        <lastmod>2021-07-08</lastmod>
+        <lastmod>2021-11-01</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://mabulledepoils.be/horaires</loc>
-        <lastmod>2021-07-08</lastmod>
+        <lastmod>2021-11-01</lastmod>
         <priority>0.8</priority>
     </url>
         <url>
         <loc>https://mabulledepoils.be/contact</loc>
-        <lastmod>2021-07-25</lastmod>
+        <lastmod>2021-11-01</lastmod>
         <priority>0.8</priority>
     </url>
 </urlset>
