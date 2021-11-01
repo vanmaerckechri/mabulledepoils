@@ -13,7 +13,7 @@ ob_start();?>
             <div class="image image-bulles image-bulles03"></div>
             <div class="image image-bulles image-bulles04"></div>
             <div class="image image-mousse"></div>
-            <div class="container-large">
+            <div class="container-large cadeau-container">
                 <div class="content">
                     <h1 class="title-big">Cadeau de Bienvenue</h1>
                     <p>Pour un <strong>premier toilettage</strong>, votre boule de poils se verra offrir une magic box remplie de <strong>friandises et d’un jouet</strong>. N’attendez plus, faites profiter votre compagnon d’un <strong>toilettage professionnels à des prix accessibles</strong>.</p>
