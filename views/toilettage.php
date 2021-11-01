@@ -22,203 +22,191 @@ ob_start();?>
                         <p>Voici les divers soins que proposent le salon de toilettage pour chien de Wavre, ils sont classés en fonction de la taille de votre chien.</p>
                     </div>
                     <h2 class="subTitle">Chiens de Très Petite Taille <span class="details">(Chihuahua, Yorkshire Toy, ...)</span></h2>
-                    <ul class="table table-animation">
-                        <li class="row">
+                    <dl class="table table-animation">
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain <span class="details">(poils courts) </span></span>
-                                <span>20€ - 25€</span>
+                                <dt>Bain <span class="details">(poils courts)</span></dt>
+                                <dd>20€ - 25€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain + Démêlage <span class="details">(poils longs) </span></span>
-                                <span>25€ - 30€</span>
+                                <dt>Bain + Démêlage <span class="details">(poils longs)</span></dt>
+                                <dd>25€ - 30€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain + Tonte </span>
-                                <span>30€ - 35€</span>
+                                <dt>Bain + Tonte </dt>
+                                <dd>30€ - 35€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain + Coupe <span class="details">(tondeuse - ciseaux) </span></span>
-                                <span>35€ - 40€</span>
+                                <dt>Bain + Coupe <span class="details">(ciseaux)</span></dt>
+                                <dd>35€ - 40€</dd>
                             </span>
-                        </li>
-                        <li class="row">
-                            <span class="row-content">
-                                <span>Bain + Trimming </span>
-                                <span>40€ - 45€</span>
-                            </span>
-                        </li>
-                        <li class="row">
-                            <span class="row-content">
-                                <span>Trimming sans bain</span>
-                                <span>35€ - 40€</span>
-                            </span>
-                        </li>
+                        </div>
                     </ul>
                 </div>
                 <div>
                     <h2 class="subTitle">Chiens de Petite Taille <span class="details">(Shih-Tzu, Bichon, Yorkshire, ...)</span></h2>
                     <ul class="table table-animation">
-                        <li class="row">
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain <span class="details">(poils courts) </span></span>
-                                <span>25€ - 30€</span>
+                                <dt>Bain <span class="details">(poils courts)</span></dt>
+                                <dd>25€ - 30€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain + Démêlage <span class="details">(poils longs) </span></span>
-                                <span>35€ - 40€</span>
+                                <dt>Bain + Démêlage <span class="details">(poils longs)</span></dt>
+                                <dd>35€ - 40€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain + Tonte </span>
-                                <span>40€ - 45€</span>
+                                <dt>Bain + Tonte </dt>
+                                <dd>40€ - 45€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain + Coupe <span class="details">(tondeuse - ciseaux) </span></span>
-                                <span>45€ - 50€</span>
+                                <dt>Bain + Coupe <span class="details">(ciseaux)</span></dt>
+                                <dd>50€ - 55€</dd>
                             </span>
-                        </li>
-                        <li class="row">
-                            <span class="row-content">
-                                <span>Bain + Trimming </span>
-                                <span>50€ - 55€</span>
-                            </span>
-                        </li>
-                        <li class="row">
-                            <span class="row-content">
-                                <span>Trimming sans bain</span>
-                                <span>45€ - 50€</span>
-                            </span>
-                        </li>
+                        </div>
                     </ul>
                 </div>
                 <div>
                     <h2 class="subTitle">Chiens de Taille Moyenne <span class="details">(Caniche, Terrier Tibétain, Cocker, ...)</span></h2>
                     <ul class="table table-animation">
-                        <li class="row">
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain <span class="details">(poils courts) </span></span>
-                                <span>35€ - 40€</span>
+                                <dt>Bain <span class="details">(poils courts)</span></dt>
+                                <dd>35€ - 40€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain + Démêlage <span class="details">(poils longs) </span></span>
-                                <span>40€ - 60€</span>
+                                <dt>Bain + Démêlage <span class="details">(poils longs)</span></dt>
+                                <dd>40€ - 60€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain + Tonte </span>
-                                <span>50€ - 60€</span>
+                                <dt>Bain + Tonte </dt>
+                                <dd>50€ - 60€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain + Coupe <span class="details">(tondeuse - ciseaux) </span></span>
-                                <span>55€ - 60€</span>
+                                <dt>Bain + Coupe <span class="details">(ciseaux)</span></dt>
+                                <dd>60€ - 65€</dd>
                             </span>
-                        </li>
-                        <li class="row">
-                            <span class="row-content">
-                                <span>Bain + Trimming </span>
-                                <span>60€ - 70€</span>
-                            </span>
-                        </li>
-                        <li class="row">
-                            <span class="row-content">
-                                <span>Trimming sans bain</span>
-                                <span>50€ - 60€</span>
-                            </span>
-                        </li>
+                        </div>
                     </ul>
                 </div>
                 <div>
                     <h2 class="subTitle">Chiens de Grande Taille <span class="details">(Berger, Golden, Beauceron, Bernois, ...)</span></h2>
                     <ul class="table table-animation">
-                        <li class="row">
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain <span class="details">(poils courts) </span></span>
-                                <span>45€ - 55€</span>
+                                <dt>Bain <span class="details">(poils courts)</span></dt>
+                                <dd>45€ - 55€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain + Débourrage <span class="details">(poils longs) </span></span>
-                                <span>50€ - 70€</span>
+                                <dt>Bain + Débourrage <span class="details">(poils longs)</span></dt>
+                                <dd>50€ - 70€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain + Tonte </span>
-                                <span>55€ - 60€</span>
+                                <dt>Bain + Tonte </dt>
+                                <dd>55€ - 60€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain + Coupe <span class="details">(tondeuse - ciseaux) </span></span>
-                                <span>60€ - 70€</span>
+                                <dt>Bain + Coupe <span class="details">(ciseaux)</span></dt>
+                                <dd>70€ - 75€</dd>
                             </span>
-                        </li>
+                        </div>
                     </ul>
                 </div>
                 <div>
                     <h2 class="subTitle">Chiens de Très Grande Taille <span class="details">(Bobtail, Terre Neuve, Dogues, ...)</span></h2>
                     <ul class="table table-animation">
-                        <li class="row">
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain <span class="details">(poils courts) </span></span>
-                                <span>55€ - 70€</span>
+                                <dt>Bain <span class="details">(poils courts)</span></dt>
+                                <dd>55€ - 70€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain + Débourrage <span class="details">(poils longs) </span></span>
-                                <span>à partir de 75€</span>
+                                <dt>Bain + Débourrage <span class="details">(poils longs)</span></dt>
+                                <dd>75€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Bain + Tonte </span>
-                                <span>85€ - 95€</span>
+                                <dt>Bain + Tonte </dt>
+                                <dd>85€ - 95€</dd>
                             </span>
-                        </li>
+                        </div>
                     </ul>
                 </div>
                 <div>
                     <h2 class="subTitle">Services Supplémentaires <span class="details">(hors toilettage) </span></h2>
                     <ul class="table table-animation">
-                        <li class="row">
+                        <div class="row">
                             <span class="row-content">
-                                <span>Coupe des Ongles </span>
-                                <span>5€</span>
+                                <dt>Débourrage</dt>
+                                <dd>40€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Soins Yeux et Oreilles <span class="details">(nettoyer - dégager) </span></span>
-                                <span>5€</span>
+                                <dt>Trimming <span class="details">(en cours de perfectionnement chez une spécialiste des chiens à poils durs)</span></dt>
+                                <dd>20€</dd>
                             </span>
-                        </li>
-                        <li class="row">
+                        </div>
+                        <div class="row">
                             <span class="row-content">
-                                <span>Hygiène </span>
-                                <span>5€</span>
+                                <dt>Coupe des Ongles</dt>
+                                <dd>5€</dd>
                             </span>
-                        </li>
+                        </div>
+                        <div class="row">
+                            <span class="row-content">
+                                <dt>Soins Yeux et Oreilles <span class="details">(nettoyer - dégager)</span></dt>
+                                <dd>5€</dd>
+                            </span>
+                        </div>
+                        <div class="row">
+                            <span class="row-content">
+                                <dt>Hygiène </dt>
+                                <dd>5€</dd>
+                            </span>
+                        </div>
+                        <div class="row">
+                            <span class="row-content">
+                                <dt>Antiparasite <span class="details">(1 dose = chien Toy)</dt>
+                                <dd>2€</dd>
+                            </span>
+                        </div>
+                        <div class="row">
+                            <span class="row-content">
+                                <dt>Possibilité de prise et remise à domicile <span class="details">(rayon de 10km du salon)</dt>
+                                <dd>5€</dd>
+                            </span>
+                        </div>
                     </ul>
                 </div>
-                <p class="info-sup">Au delà de 2h30 de travail, 30€/heure supplémentaire.<br>Possibilité de prise et remise à domicile dans un rayon de 10km du salon pour 5€.<br>Pas de Bancontact.</p>
+                <p class="info-sup">Au delà de 2h30 de travail, 30€/heure supplémentaire.<br>Possibilité de soins cosmétiques particuliers (problèmes de peau, de poils ou en maintenance), discutez-en avec votre toiletteuse.<br>Pas de Bancontact.</p>
             </div>
         </section>
     </div>

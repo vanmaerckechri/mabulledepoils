@@ -69,7 +69,7 @@
         </header>
         <?=$content_main ?? ''?>
         <footer>
-            <div class="container-large">
+            <address class="container-large">
                 <span class="col-left">
                     <p class="title">Ma Bulle de Poils</p>
                     <p>Salon de toilettage professionnel pour chien situé à Wavre, dans la localité de Bièrges.</p>
@@ -83,7 +83,7 @@
                     <p>© mabulledepoils - 2021.</p>
                     <a href="https://cvmdev.be" target="_blank" rel="noopener">Webmaster</a>
                 </span>
-            </div>
+            </address>
         </footer>
         <script src="/assets/js/Namespaces.js"></script>
         <script src="/assets/js/ToggleNavVisibility.js"></script>
