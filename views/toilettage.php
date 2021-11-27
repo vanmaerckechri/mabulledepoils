@@ -51,7 +51,7 @@ ob_start();?>
                 </div>
                 <div>
                     <h2 class="subTitle">Chiens de Petite Taille <span class="details">(Shih-Tzu, Bichon, Yorkshire, ...)</span></h2>
-                    <ul class="table table-animation">
+                    <dl class="table table-animation">
                         <div class="row">
                             <span class="row-content">
                                 <dt>Bain <span class="details">(poils courts)</span></dt>
@@ -76,11 +76,11 @@ ob_start();?>
                                 <dd>50€ - 55€</dd>
                             </span>
                         </div>
-                    </ul>
+                    </dl>
                 </div>
                 <div>
                     <h2 class="subTitle">Chiens de Taille Moyenne <span class="details">(Caniche, Terrier Tibétain, Cocker, ...)</span></h2>
-                    <ul class="table table-animation">
+                    <dl class="table table-animation">
                         <div class="row">
                             <span class="row-content">
                                 <dt>Bain <span class="details">(poils courts)</span></dt>
@@ -105,11 +105,11 @@ ob_start();?>
                                 <dd>60€ - 65€</dd>
                             </span>
                         </div>
-                    </ul>
+                    </dl>
                 </div>
                 <div>
                     <h2 class="subTitle">Chiens de Grande Taille <span class="details">(Berger, Golden, Beauceron, Bernois, ...)</span></h2>
-                    <ul class="table table-animation">
+                    <dl class="table table-animation">
                         <div class="row">
                             <span class="row-content">
                                 <dt>Bain <span class="details">(poils courts)</span></dt>
@@ -134,11 +134,11 @@ ob_start();?>
                                 <dd>70€ - 75€</dd>
                             </span>
                         </div>
-                    </ul>
+                    </dl>
                 </div>
                 <div>
-                    <h2 class="subTitle">Chiens de Très Grande Taille <span class="details">(Bobtail, Terre Neuve, Dogues, ...)</span></h2>
-                    <ul class="table table-animation">
+                    <h2 class="subTitle">Chiens de Très Grande Taille <span class="details">(Bobtail, Terre Neuve, Dogues, ...)</span><span class="details">uniquement le dimanche et le lundi</span></h2>
+                    <dl class="table table-animation">
                         <div class="row">
                             <span class="row-content">
                                 <dt>Bain <span class="details">(poils courts)</span></dt>
@@ -157,11 +157,11 @@ ob_start();?>
                                 <dd>85€ - 95€</dd>
                             </span>
                         </div>
-                    </ul>
+                    </dl>
                 </div>
                 <div>
                     <h2 class="subTitle">Services Supplémentaires <span class="details">(hors toilettage) </span></h2>
-                    <ul class="table table-animation">
+                    <dl class="table table-animation">
                         <div class="row">
                             <span class="row-content">
                                 <dt>Débourrage</dt>
@@ -204,7 +204,7 @@ ob_start();?>
                                 <dd>5€</dd>
                             </span>
                         </div>
-                    </ul>
+                    </dl>
                 </div>
                 <p class="info-sup">Au delà de 2h30 de travail, 30€/heure supplémentaire.<br>Possibilité de soins cosmétiques particuliers (problèmes de peau, de poils ou en maintenance), discutez-en avec votre toiletteuse.<br>Pas de Bancontact.</p>
             </div>
